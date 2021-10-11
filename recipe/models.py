@@ -79,7 +79,8 @@ class Recipe(models.Model):
     category = models.CharField(
         max_length=2,
         choices=RECIPE_CATEGORY_CHOICES,
-        blank=False
+        blank=False,
+        default=MAIN
     )
 
     VEGETARIAN = 'V'
