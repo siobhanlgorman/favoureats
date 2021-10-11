@@ -104,8 +104,39 @@ class Recipe(models.Model):
         max_length=200)
 
     class Meta:
+        """
+        Recipes ordered to show newest first to show regular updates
+        """
         ordering = [
             '-created_on']
 
     def __str__(self):
         return self.title
+
+    def number_of_favourites(self):
+        return self.favourites.count()
+
+
+class Review(models.Model):
+    recipe = models.ForeignKey(
+        Recipe,
+        on_delete=models.CASCADE,
+        related_name='reviews')
+    name = models.CharField(
+        max_length=100)
+    email = models.EmailField(
+        default=None)
+    body = models.TextField(
+        blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(
+        default=False)
+
+    class Meta:
+        """
+        Reviews ordered from oldest to newest like a conversation
+        """
+        ordering = ['created_on']
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"
