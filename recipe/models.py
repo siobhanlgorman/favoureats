@@ -30,7 +30,7 @@ class Recipe(models.Model):
     steps = models.TextField(
         blank=False,
         )
-    servings = models.models.PositiveIntegerField(
+    servings = models.PositiveIntegerField(
         default=1,
         validators=[
             MinValueValidator(1),
@@ -45,7 +45,7 @@ class Recipe(models.Model):
         validators=[
             MinValueValidator(1),
             MaxValueValidator(59)])
-    recipe_image = models.CloudinaryField(
+    recipe_image = CloudinaryField(
         'image',
         default='placeholder')
     status = models.IntegerField(
