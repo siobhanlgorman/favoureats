@@ -22,14 +22,14 @@ class Recipe(models.Model):
     updated_on = models.DateTimeField(
         auto_now=True)
     introduction = models.TextField(
-        blank=False,
-        default='')
+        blank=True,
+        )
     ingredients = models.TextField(
         blank=False,
-        default='')
+        )
     steps = models.TextField(
         blank=False,
-        default='')
+        )
     servings = models.models.PositiveIntegerField(
         default=1,
         validators=[
@@ -99,8 +99,13 @@ class Recipe(models.Model):
         blank=False
     )
 
+    notes = models.TextField(
+        blank=True,
+        max_length=200)
+
     class Meta:
-        ordering = ['-created_on']
+        ordering = [
+            '-created_on']
 
     def __str__(self):
         return self.title
