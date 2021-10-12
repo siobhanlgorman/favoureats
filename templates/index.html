@@ -4,38 +4,41 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="row">
-            { % for recipe in recipe_list %}
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <div class="image-container">
-                            {% if 'placeholder' in recipe.recipe_image.url %}
-                            <img class="card-img-top" src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg" alt="">
-                            {% else %}
-                            <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
-                            {% endif %}
-                            <div>
-                                <p> {{ recipe.title }}</p>
+
+        <!-- Recipe Snapshot Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for recipe in recipe_list %}
+
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if 'placeholder' in recipe.recipe_image.url %}
+                                <img class="card-img-top" src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg" alt="">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
+                                {% endif %}
+                                <div>
+                                    <p class="recipe-title"> {{ recipe.title }}</p>
+                                </div>
                             </div>
                             <a href="#" class="recipe-link">
                                 <p> {{ recipe.title }}</p>
                             </a>
                             <hr>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-
-            </div>                    
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div>
+                {% endif %}
+                {% endfor %}
         </div>
-       
-        <div class="row">
-           
-            
         </div>
     </div>
-
 </div>
 
 {% endblock %}
