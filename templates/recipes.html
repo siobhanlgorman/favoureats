@@ -29,6 +29,9 @@
                             </a>                       
                             <p class="card-text"> {{ recipe.introduction | safe }} </p>
                             <hr>
+                            <p class="card-text">{{ post.created_on}}
+                                <i class="far fa-star">{{ post.number_of_favourites }}</i>
+                            </p>
                         </div>
                     </div>
                 </div>
