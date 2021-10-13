@@ -1,5 +1,18 @@
 body {
     background-color: whitesmoke;
+
+}
+
+p {
+    font-family: 'Poppins', sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero-image {
@@ -10,22 +23,48 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    
-    
+    /* opacity: 0.4; */
+        
 }
 
-.hero-text h1, p {
+
+.hero-text h1 {
     color: white;  
     text-align: center;
     
 }
 
-.hero-text {
-    
+.hero-text p {
+    color: white;
+    text-align: center;
+
 }
+
 .card-img-top {
     width: 100%;
     height: auto
+}
+
+.card {
+    background-color: yellow;
+}
+
+.card-title {
+    text-align: center;
+    color: red
+}
+
+.card-text p {
+    text-align: justify;
+    color: green;
+}
+
+.image-banner {
+    position: center;
+    
+    /* min-width: 30%;
+    left: -2px; */
+    background-color: green;
 }
 
 #logo {

@@ -2,13 +2,16 @@
 
 {% block content %}
 
-<section class="hero-image">
+<header class="hero-image">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                <h1>Favoureats</h1>
-                <p>tried and tested favourite recipes</p>
-                <p>choose from a selection and store your own favourites</p>
+            <div class="col-12 full-height hero-overlay">
+                <div class="hero-text">
+
+                    <h1>Favoureats</h1>
+                    <p>tried and tested favourite recipes</p>
+                    <p>choose from a selection and store your own favourites</p>
+                </div>
             </div>
 
 
@@ -17,7 +20,7 @@
     </div>
 
 
-</section>
+</header>
 
 
 <section>
@@ -47,7 +50,7 @@
                                     </div>
                                 </div>
                                 <a href="#" class="recipe-link">
-                                    <p> {{ recipe.title }}</p>
+                                    <h2 class="card-title"> {{ recipe.title }}</h2>
                                 </a>
                                 <hr>
 

@@ -3,9 +3,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div>
-            <h1>Favoureats</h1>
-        </div>
+        
 
         <!-- Recipes Column -->
         <div class="col-12 mt-3 left">
@@ -21,15 +19,16 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
                                 {% endif %}
-                                <div>
-                                    <p class="recipe-title"> {{ recipe.title }}</p>
+                                <div class="image-banner">
+                                    <p class="recipe-type"> {{ recipe.type }}</p>
                                 </div>
-                            </div>
+                            </div>                          
                             <a href="#" class="recipe-link">
-                                <p> {{ recipe.title }}</p>
-                            </a>
+                                <h2 class="card-title"> {{ recipe.title }}</h2>
+                                
+                            </a>                       
+                            <p class="card-text"> {{ recipe.introduction | safe }} </p>
                             <hr>
-
                         </div>
                     </div>
                 </div>
