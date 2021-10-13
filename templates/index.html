@@ -2,43 +2,66 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row">
+<section class="hero-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h1>Favoureats</h1>
+                <p>tried and tested favourite recipes</p>
+                <p>choose from a selection and store your own favourites</p>
+            </div>
 
-        <!-- Recipe Snapshot Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for recipe in recipe_list %}
 
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if 'placeholder' in recipe.recipe_image.url %}
-                                <img class="card-img-top" src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg" alt="">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
-                                {% endif %}
-                                <div>
-                                    <p class="recipe-title"> {{ recipe.title }}</p>
+        </div>
+
+    </div>
+
+
+</section>
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12"></div>
+        </div>
+        <div class="row">
+            <!-- Recipe Snapshot Column -->
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for recipe in recipe_list %}
+
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    {% if 'placeholder' in recipe.recipe_image.url %}
+                                    <img class="card-img-top"
+                                        src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg"
+                                        alt="">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
+                                    {% endif %}
+                                    <div>
+                                        <p class="recipe-title"> {{ recipe.title }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <a href="#" class="recipe-link">
-                                <p> {{ recipe.title }}</p>
-                            </a>
-                            <hr>
+                                <a href="#" class="recipe-link">
+                                    <p> {{ recipe.title }}</p>
+                                </a>
+                                <hr>
 
+                            </div>
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
+                <div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
-            <div>
-                {% endif %}
-                {% endfor %}
-        </div>
         </div>
     </div>
-</div>
-
+</section>
 {% endblock %}
