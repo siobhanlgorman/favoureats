@@ -2,5 +2,45 @@
 
 {% block content %}
 
+<div class="container">
+    <div class="row">
+        <div class="col- " > <img src="" alt=""></div>
+        <div>
+            <h1></h1>
+            <p>number of favourites</p>
+            <p>number of reviews</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">intro</div>
+    </div>
+    <div class="row">
+        <div class="col">ingredients</div>
+        <div class="col">steps</div>
+    </div>
+
+    <form action=""></form>
+    
+    
+
+
+
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="image-container">
+                    {% if 'placeholder' in recipe.recipe_image.url %}
+                                <img class="card-img-top" src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg" alt="">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
+                                {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
 
 {% endblock %}
