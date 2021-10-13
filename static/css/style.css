@@ -65,7 +65,7 @@ h5 {
 }
 
 .card {
-    background-color: yellow;
+    background-color: white;
 }
 
 .card-title {
@@ -78,14 +78,16 @@ h5 {
     color: green;
 }
 
+.image-container {
+    position: relative;
+}
+
 .image-banner {
-    position: center;
-    
-    /* min-width: 30%;
-    left: -2px; */
+   
+    position: absolute;
+    bottom: 0;
+    min-width: 30%;
+    left: -2px;
     background-color: green;
 }
 
-#logo {
-    color: green;
-}
