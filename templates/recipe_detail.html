@@ -4,41 +4,63 @@
 
 <div class="container">
     <div class="row">
-        <div class="col- " > <img src="" alt=""></div>
+        <div class="col ">
+            {% if "placeholder" in recipe.recipe_image.url %}
+            <img class="card-img-top"
+                src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg"
+                alt="">
+            {% else %}<img src="{{ recipe.image }}" alt="">
+            {% endif %}</div>
         <div>
-            <h1></h1>
-            <p>number of favourites</p>
-            <p>number of reviews</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">intro</div>
-    </div>
-    <div class="row">
-        <div class="col">ingredients</div>
-        <div class="col">steps</div>
-    </div>
-
-    <form action=""></form>
-    
-    
-
-
-
-
-        <div class="card mb-4">
-            <div class="card-body">
-                <div class="image-container">
-                    {% if 'placeholder' in recipe.recipe_image.url %}
-                                <img class="card-img-top" src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg" alt="">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
-                                {% endif %}
-                </div>
+            <h1>{{recipe.title}}</h1>
+            <div>
+                <p><i class="far fa-star"
+                        aria-hidden="true">{{ recipe.number_of_favourites }}</i>{{ recipe.number_of_favourites }}</p>
+            </div>
+            <div>
+                {% with reviews.count as total_reviews %}
+                <i class="fa fa-comments" aria-hidden="true"></i>
+                <p>{{ total_reviews }}</p>
+                {% endwith %}
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="recipe-intro">
+                {% recipe.recipe_intro %}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="col recipe-ingred">{{recipe.recipe-ingred}}</div>
+        </div>
+        <div class="col">
+            <div class="col recipe-steps">{{recipe.recipe-steps}}</div>
+        </div>
+
 
     </div>
+
+
+    <div class="row">
+        <div class="col card mb-4 mt-3">
+            <h3>Reviews:</h3>
+            <div class="card-body">
+                {% for review in reviews %}
+                <div class="reviews">
+                    <p>{{ review.review_author }}
+                    <span>{{ review.created_on }}</span>
+                    <span> wrote: </span>
+                </p>
+                    {{ | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
 
 
 </div>
