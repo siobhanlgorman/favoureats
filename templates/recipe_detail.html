@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <div class="container">
     <div class="row">
         <div class="col ">
@@ -14,8 +16,7 @@
         <div class="col">
             <h1>{{recipe.title}}</h1>
             <div>
-                <i class="far fa-star"
-                        aria-hidden="true"></i> {{ recipe.number_of_favourites }}
+                <i class="far fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}
             </div>
             <div>
                 {% with reviews.count as total_reviews %}
@@ -25,23 +26,23 @@
         </div>
     </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <p class="recipe-intro">
-                {{ recipe.introduction |safe }} 
-            </p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="recipe-intro">
+                    {{ recipe.introduction |safe }}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="col recipe-ingred">{{recipe.ingredients | safe}}</div>
+            </div>
+            <div class="col">
+                <div class="col recipe-steps">{{recipe.steps | safe}}</div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <div class="col recipe-ingred">{{recipe.ingredients | safe}}</div>
-        </div>
-        <div class="col">
-            <div class="col recipe-steps">{{recipe.steps | safe}}</div>
-        </div>
-    </div>
-</div>
 
 
     <div class="row">
@@ -59,11 +60,33 @@
                 {% endfor %}
             </div>
         </div>
+
+        <!-- review form -->
+
+        <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="card-body">
+                <!-- {% if reviewed %}
+                <div class="alert alert-success" role="alert">
+                    Your review is awaiting approval
+
+                </div>
+                {% else %} -->
+                {% if user.is_authenticated%}
+
+                <h3>Leave a review:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ review_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signin btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+
+            </div>
+        </div>
     </div>
-
-
-
-
 </div>
+
 
 {% endblock %}
