@@ -15,11 +15,11 @@
             <h1>{{recipe.title}}</h1>
             <div>
                 <i class="far fa-star"
-                        aria-hidden="true"></i>{{ recipe.number_of_favourites }}
+                        aria-hidden="true"></i> {{ recipe.number_of_favourites }}
             </div>
             <div>
                 {% with reviews.count as total_reviews %}
-                <i class="far fa-comments" aria-hidden="true"></i>{{ total_reviews }}
+                <i class="far fa-comments" aria-hidden="true"></i> {{ total_reviews }}
                 {% endwith %}
             </div>
         </div>
@@ -29,13 +29,13 @@
     <div class="row">
         <div class="col">
             <p class="recipe-intro">
-                {{ recipe.introduction }} 
+                {{ recipe.introduction |safe }} 
             </p>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <div class="col recipe-ingred">{{recipe.ingredients}}</div>
+            <div class="col recipe-ingred">{{recipe.ingredients | safe}}</div>
         </div>
         <div class="col">
             <div class="col recipe-steps">{{recipe.steps | safe}}</div>
@@ -50,9 +50,9 @@
             <div class="card-body">
                 {% for review in reviews %}
                 <div class="reviews">
-                    <p>{{ review.review_author }}
+                    <p>
                         <span>{{ review.created_on }}</span>
-                        <span> wrote: </span>
+                        <span> {{ review.name }} wrote: </span>
                     </p>
                     {{ review.body | linebreaks }}
                 </div>
