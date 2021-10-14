@@ -11,36 +11,37 @@
                 alt="">
             {% else %}<img src="{{ recipe.image }}" alt="">
             {% endif %}</div>
-        <div>
+        <div class="col">
             <h1>{{recipe.title}}</h1>
             <div>
-                <p><i class="far fa-star"
-                        aria-hidden="true">{{ recipe.number_of_favourites }}</i>{{ recipe.number_of_favourites }}</p>
+                <i class="far fa-star"
+                        aria-hidden="true"></i>{{ recipe.number_of_favourites }}
             </div>
             <div>
                 {% with reviews.count as total_reviews %}
-                <i class="fa fa-comments" aria-hidden="true"></i>
-                <p>{{ total_reviews }}</p>
+                <i class="far fa-comments" aria-hidden="true"></i>{{ total_reviews }}
                 {% endwith %}
             </div>
         </div>
     </div>
+
+<div class="container">
     <div class="row">
         <div class="col">
-            <div class="recipe-intro">
-                {% recipe.recipe_intro %}</div>
+            <p class="recipe-intro">
+                {{ recipe.introduction }} 
+            </p>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <div class="col recipe-ingred">{{recipe.recipe-ingred}}</div>
+            <div class="col recipe-ingred">{{recipe.ingredients}}</div>
         </div>
         <div class="col">
-            <div class="col recipe-steps">{{recipe.recipe-steps}}</div>
+            <div class="col recipe-steps">{{recipe.steps | safe}}</div>
         </div>
-
-
     </div>
+</div>
 
 
     <div class="row">
@@ -50,10 +51,10 @@
                 {% for review in reviews %}
                 <div class="reviews">
                     <p>{{ review.review_author }}
-                    <span>{{ review.created_on }}</span>
-                    <span> wrote: </span>
-                </p>
-                    {{ | linebreaks }}
+                        <span>{{ review.created_on }}</span>
+                        <span> wrote: </span>
+                    </p>
+                    {{ review.body | linebreaks }}
                 </div>
                 {% endfor %}
             </div>

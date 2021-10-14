@@ -27,17 +27,17 @@ class RecipeDetail(View):
         recipe = get_object_or_404(queryset, slug=slug)
         reviews = recipe.reviews.filter(approved=True).order_by('created_on')
         # check if logged in user has liked this recipe
-        favourite = False
-        if recipe.favourite.filter(id=self.request.user.id).exists():
-            favourite = True
+        favourites = False
+        if recipe.favourites.filter(id=self.request.user.id).exists():
+            favourites = True
 
         return render(
             request,
             'recipe_detail.html',
             {
                 "recipe": recipe,
-                "reviews": reviews,
-                "favourite": favourite,
-               
+                "reviews": reviews,        
+                "favourites": favourites,
+
             },
         )
