@@ -9,8 +9,11 @@
                     <h1>Favoureats</h1>
                     <p>tried and tested favourite recipes</p>
                     <p>choose from a selection and store your own favourites</p>
-                    <p><a href="{% url 'account_signup' %}"><button class="btn btn-lg btn-success">Register now!</button></a></p>
-                    
+                    {% if user.is_authenticated %}
+                    <p><a href="{% url 'account_signup' %}" class="hidden"></a></p>
+                    {% else %}
+                    <p><a href="{% url 'account_signup' %}" class="btn btn-lg btn-success">Register now!</a></p>
+                    {% endif %}
                 </div>
                 <div></div>       
         </div>
