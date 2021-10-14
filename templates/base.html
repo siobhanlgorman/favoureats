@@ -45,9 +45,18 @@
           <li class="nav-item">
             <a class="nav-link disabled">My Recipes</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link">Sign In</a>
+          {% if user.is_authenticated %}
+          <li class="nav-item"> 
+            <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
           </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </div>
