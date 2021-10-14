@@ -36,7 +36,7 @@ class RecipeDetail(View):
             'recipe_detail.html',
             {
                 "recipe": recipe,
-                "reviews": reviews,        
+                "reviews": reviews,
                 "favourites": favourites,
 
             },
