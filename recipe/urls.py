@@ -7,4 +7,5 @@ urlpatterns = [
     path('about/', views.AboutPage.as_view(), name='about'),
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
     path('favourite/<slug:slug>', views.RecipeFavourite.as_view(), name='recipe_favourite'),
+    path('recipe_form', views.RecipeForm.as_view(), name='recipe_form'),
 ]

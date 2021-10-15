@@ -94,4 +94,3 @@ class RecipeFavourite(View):
 
 class RecipeForm(generic.CreateView):
     template_name = 'recipe_form.html'
-
