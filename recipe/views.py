@@ -81,3 +81,15 @@ class RecipeDetail(View):
 
             },
         )
+
+
+class RecipeFavourite(View):
+    def recipe(self, request, slug):
+        recipe = get_object_or_404(Recipe, slug=slug)
+
+        if recipe.favourites.filter(id=request.user.id).exists():
+            recipe.favourites.remove(request.user)
+        else:
+            recipe.favourites.add(request.user)
+
+        return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
