@@ -56,14 +56,14 @@ class Recipe(models.Model):
         related_name='recipe_favourites',
         blank=True)
 
-    BREAKFAST = 'BR'
-    STARTER = 'SR'
-    MAIN = 'MN'
-    SIDE = 'SD'
-    DESSERT = 'DS'
-    BAKES = 'BK'
-    SALAD = 'SL'
-    SOUP = 'SP'
+    BREAKFAST = 'Breakfast'
+    STARTER = 'Starter'
+    MAIN = 'Main'
+    SIDE = 'Salad'
+    DESSERT = 'Dessert'
+    BAKES = 'Bakes'
+    SALAD = 'Salad'
+    SOUP = 'Soup'
 
     RECIPE_CATEGORY_CHOICES = [
         (BREAKFAST, 'Breakfast'),
@@ -77,15 +77,15 @@ class Recipe(models.Model):
     ]
 
     category = models.CharField(
-        max_length=2,
+        max_length=15,
         choices=RECIPE_CATEGORY_CHOICES,
         blank=False,
         default=MAIN
     )
 
-    VEGETARIAN = 'V'
-    VEGAN = 'VV'
-    FISH = 'F'
+    VEGETARIAN = 'Vegetarian'
+    VEGAN = 'Vegan'
+    FISH = 'Fish'
 
     RECIPE_TYPE_CHOICES = [
         (VEGETARIAN, 'Vegetarian'),
@@ -94,7 +94,7 @@ class Recipe(models.Model):
     ]
 
     type = models.CharField(
-        max_length=2,
+        max_length=15,
         choices=RECIPE_TYPE_CHOICES,
         default=VEGETARIAN,
         blank=False
