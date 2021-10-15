@@ -1,7 +1,5 @@
 {% extends "base.html" %}
-
 {% block content %}
-
 {% load crispy_forms_tags %}
 
 <div class="container">
@@ -16,7 +14,26 @@
         <div class="col">
             <h1>{{recipe.title}}</h1>
             <div>
-                <i class="far fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}
+                
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'recipe_favourite' recipe.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if favourited %}
+
+                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
+                            class="fas fa-star"></i></button>
+
+                {% else %}
+
+                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
+                            class="far fa-star"></i></button>
+
+                {% endif %}
+                </form>
+                {% else %} -->
+                <span><i class="far fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}</span>
+                {% endif %}
+
             </div>
             <div>
                 {% with reviews.count as total_reviews %}
@@ -25,26 +42,27 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p class="recipe-intro">
-                    {{ recipe.introduction |safe }}
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="col recipe-ingred">{{recipe.ingredients | safe}}</div>
-            </div>
-            <div class="col">
-                <div class="col recipe-steps">{{recipe.steps | safe}}</div>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="recipe-intro">
+                {{ recipe.introduction |safe }}
+            </p>
         </div>
     </div>
+    <div class="row">
+        <div class="col">
+            <div class="col recipe-ingred">{{recipe.ingredients | safe}}</div>
+        </div>
+        <div class="col">
+            <div class="col recipe-steps">{{recipe.steps | safe}}</div>
+        </div>
+    </div>
+</div>
 
-
+<div class="container">
     <div class="row">
         <div class="col card mb-4 mt-3">
             <h3>Reviews:</h3>
@@ -71,7 +89,6 @@
                 </div>
                 {% else %}
                 {% if user.is_authenticated%}
-
                 <h3>Leave a review:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">

@@ -6,7 +6,6 @@ from .models import Recipe
 from .forms import ReviewForm
 
 
-
 class HomeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')[0:3]
@@ -31,9 +30,9 @@ class RecipeDetail(View):
         recipe = get_object_or_404(queryset, slug=slug)
         reviews = recipe.reviews.filter(approved=True).order_by('created_on')
         # check if logged in user has liked this recipe
-        favourites = False
+        favourited = False
         if recipe.favourites.filter(id=self.request.user.id).exists():
-            favourites = True
+            favourited = True
 
         return render(
             request,
@@ -42,7 +41,7 @@ class RecipeDetail(View):
                 "recipe": recipe,
                 "reviews": reviews,
                 "reviewed": False,
-                "favourites": favourites,
+                "favourited": favourited,
                 "review_form": ReviewForm()
 
             },
@@ -51,14 +50,13 @@ class RecipeDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
-        reviews = recipe.reviews.filter(approved=True).order_by('created_on')
+        reviews = recipe.reviews.filter(approved=True).order_by('-created_on')
         # check if logged in user has liked this recipe
-        favourites = False
+        favourited = False
         if recipe.favourites.filter(id=self.request.user.id).exists():
-            favourites = True
+            favourited = True
 
         review_form = ReviewForm(data=request.POST)
-
         if review_form.is_valid():
             review_form.instance.email = request.user.email
             review_form.instance.name = request.user.username
@@ -76,7 +74,7 @@ class RecipeDetail(View):
                 "recipe": recipe,
                 "reviews": reviews,
                 "reviewed": True,
-                "favourites": favourites,
+                "favourited": favourited,
                 "review_form": ReviewForm()
 
             },
@@ -84,9 +82,9 @@ class RecipeDetail(View):
 
 
 class RecipeFavourite(View):
-    def recipe(self, request, slug):
-        recipe = get_object_or_404(Recipe, slug=slug)
 
+    def post(self, request, slug, *args, **kwargs):
+        recipe = get_object_or_404(Recipe, slug=slug)
         if recipe.favourites.filter(id=request.user.id).exists():
             recipe.favourites.remove(request.user)
         else:

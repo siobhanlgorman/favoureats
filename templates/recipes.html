@@ -36,7 +36,7 @@
                                     <i class="far fa-star">{{ recipe.number_of_favourites }}</i>
                                     <span>
                                         {% with reviews.count as total_reviews %}
-                                        <i class="far fa-comments" aria-hidden="true"></i> {{ total_reviews }}
+                                        <i class="far fa-comments" aria-hidden="true"> {{ recipe.total_reviews }} </i>
                                         {% endwith %}
                                     </span>
                                     
