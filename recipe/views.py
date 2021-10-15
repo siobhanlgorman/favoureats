@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import Recipe
-from .forms import ReviewForm
+from .forms import ReviewForm, RecipeForm
 
 
 class HomeList(generic.ListView):
@@ -91,3 +91,7 @@ class RecipeFavourite(View):
             recipe.favourites.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+class RecipeForm(generic.CreateView):
+    template_name = 'recipe_form.html'
+
