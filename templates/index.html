@@ -10,7 +10,7 @@
                     <p>tried and tested favourite recipes</p>
                     <p>choose from a selection and store your own favourites</p>
                     {% if user.is_authenticated %}
-                    <p><a href="{% url 'account_signup' %}" class="hidden"></a></p>
+                    <p class="invisible"><a href="{% url 'account_signup' %}" >Register now!</a></p>
                     {% else %}
                     <p><a href="{% url 'account_signup' %}" class="btn btn-lg btn-success">Register now!</a></p>
                     {% endif %}

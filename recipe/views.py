@@ -1,5 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
+from django.contrib import messages
 from .models import Recipe
 from .forms import ReviewForm
 
@@ -45,6 +47,7 @@ class RecipeDetail(View):
 
             },
         )
+
     def post(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
@@ -62,9 +65,9 @@ class RecipeDetail(View):
             review = review_form.save(commit=False)
             review.recipe = recipe
             review.save()
+            messages.success(request, 'Thanks for reviewing this recipe!')
         else:
             review_form = ReviewForm()
-
 
         return render(
             request,
@@ -77,4 +80,4 @@ class RecipeDetail(View):
                 "review_form": ReviewForm()
 
             },
-        ) 
+        )
