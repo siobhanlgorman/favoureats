@@ -43,7 +43,7 @@
             <a class="nav-link" href="{% url 'recipes' %}">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" >My Recipes</a>
+            <a class="nav-link" href="{% url 'myrecipes' %}" >My Recipes</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item"> 
