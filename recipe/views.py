@@ -105,4 +105,3 @@ class RecipeCreate(generic.CreateView):
     fields = ['title', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
-
