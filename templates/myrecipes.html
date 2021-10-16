@@ -4,7 +4,6 @@
 
 <h3>My Recipes</h3>
 
-
 <table>
     <tr>
         <th>Recipe</th>
@@ -14,7 +13,9 @@
     {% for recipe in recipes %}
     <tr>
         <td>{{ recipe.title }}</td>
-        <td><a href="{% url 'recipe' recipe.slug %}"></a>View</td>
+        <td><a href="{#}"></a>View</td>
+        <!-- <td><a href="{% url 'recipe' recipe.author %}"></a>View</td> -->
+        <td><a href="{#}"></a>View</td>
     </tr>
     {% empty %}
     <h3>No recipes to view</h3>
