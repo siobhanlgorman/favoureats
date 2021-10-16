@@ -31,14 +31,33 @@
                 {% endif %}
                 </form>
                 {% else %}
-                <span><i class="far fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}</span>
+                <span><i class="fas fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }} </span>
                 {% endif %}
 
             </div>
             <div>
                 {% with reviews.count as total_reviews %}
-                <i class="far fa-comments" aria-hidden="true"></i> {{ total_reviews }}
+                <i class="far fa-comments" aria-hidden="true"></i> {{ total_reviews }} reviews
                 {% endwith %}
+            </div>
+            <div>
+                <i class="fas fa-user-friends"></i>
+                {{ recipe.servings }}
+            
+            </div>
+            <div>
+                <i class="fas fa-clock"></i>
+                {{ recipe.cooktime_hours }} hrs {{ recipe.cooktime_mins }} mins
+            
+            </div>
+            <div>
+                <p> Category:
+                {{ recipe.category }}</p>
+            </div>
+            <div>
+                <p>Type: 
+                {{ recipe.type }}</p>
+
             </div>
         </div>
     </div>
@@ -51,13 +70,17 @@
                 {{ recipe.introduction |safe }}
             </p>
         </div>
+        <hr>
     </div>
     <div class="row">
+        <div class="col recipe-ingred">
+            <h4>Ingredients</h4>
+            {{recipe.ingredients | safe}}</div>
+        
         <div class="col">
-            <div class="col recipe-ingred">{{recipe.ingredients | safe}}</div>
-        </div>
-        <div class="col">
-            <div class="col recipe-steps">{{recipe.steps | safe}}</div>
+            <div class="col recipe-steps">
+                <h4>Steps</h4>
+                {{recipe.steps | safe}}</div>
         </div>
     </div>
 </div>
