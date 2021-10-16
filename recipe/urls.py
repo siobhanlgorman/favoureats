@@ -8,4 +8,5 @@ urlpatterns = [
     path('myrecipes/', views.MyRecipeList.as_view(), name='myrecipes'),
     path('<slug:slug>/', views.RecipeDetail.as_view(), name='recipe_detail'),
     path('favourite/<slug:slug>', views.RecipeFavourite.as_view(), name='recipe_favourite'),
+    path('recipecreate/', views.RecipeCreate.as_view(), name='recipecreate'),
 ]

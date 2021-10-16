@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import Recipe
 from .forms import ReviewForm
+from django.urls import reverse_lazy
 
 
 class HomeList(generic.ListView):
@@ -99,5 +100,9 @@ class MyRecipeList(generic.ListView):
     paginate_by = 6
 
 
-# class RecipeForm(generic.CreateView):
-#     template_name = 'recipe_form.html'
+class RecipeCreate(generic.CreateView):
+    model = Recipe
+    fields = ['title', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', ]
+    template_name = 'recipe_form.html'
+    success_url = reverse_lazy('myrecipes')
+
