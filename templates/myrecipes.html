@@ -14,7 +14,7 @@
     {% for recipe in recipes %}
     <tr>
         <td>{{ recipe.title }}</td>
-        <td><a href="{% url 'recipe' recipe.slug %}"></a></td>
+        <td><a href="{% url 'recipe' recipe.slug %}"></a>View</td>
     </tr>
     {% empty %}
     <h3>No recipes to view</h3>

@@ -102,6 +102,6 @@ class MyRecipeList(generic.ListView):
 
 class RecipeCreate(generic.CreateView):
     model = Recipe
-    fields = ['title', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', ]
+    fields = ['author', 'title', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')

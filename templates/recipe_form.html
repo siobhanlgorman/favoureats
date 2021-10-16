@@ -3,6 +3,7 @@
 <div class="container-fluid">
     <div class="row" >
         <form method="POST" action="">
+            {% csrf_token %}
             {{form.as_p}}
 
             <input type="submit" value="Submit Recipe">
