@@ -91,3 +91,13 @@ class RecipeFavourite(View):
             recipe.favourites.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+class MyRecipeList(generic.ListView):
+    model = Recipe
+    queryset = Recipe.objects.filter(status=1).order_by('-created_on')
+    template_name = 'myrecipes.html'
+    paginate_by = 6
+
+
+# class RecipeForm(generic.CreateView):
+#     template_name = 'recipe_form.html'
