@@ -3,7 +3,27 @@
 {% block content %}
 
 <h3>My Recipes</h3>
-<a href="{#}">Add Recipe</a>
+
+<table>
+    <tr>
+        <th>Recipe</th>
+
+    </tr>
+
+    {% for recipe in recipes %}
+    <tr>
+        <td>{{ recipe.title }}</td>
+        <td><a href="{% url 'recipe' recipe.slug %}"></a></td>
+    </tr>
+    {% empty %}
+    <h3>No recipes to view</h3>
+    {% endfor %}
+
+
+
+</table>
+
+<a href="#">Add Recipe</a>
 
 
 
