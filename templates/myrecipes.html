@@ -10,15 +10,15 @@
 
     </tr>
 
-    {% for recipe in recipes %}
+    {% for recipe in recipe_list %}
     <tr>
         <td>{{ recipe.title }}</td>
         <td><a href="{#}"></a>View</td>
-        <!-- <td><a href="{% url 'recipe' recipe.author %}"></a>View</td> -->
-        <td><a href="{#}"></a>View</td>
+        <td><a href="{#}"></a>Edit</td>
+        <td><a href="{#}"></a>Delete</td>
     </tr>
     {% empty %}
-    <h3>No recipes to view</h3>
+        <h3>No recipes to view</h3>
     {% endfor %}
 
 
