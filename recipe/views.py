@@ -102,7 +102,7 @@ class MyRecipeList(generic.ListView):
 
 class RecipeCreate(generic.CreateView):
     model = Recipe
-    fields = ['author', 'slug','recipe_image', 'title', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes',]
+    fields = ['author', 'slug','recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes',]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
 
@@ -112,7 +112,7 @@ class RecipeCreate(generic.CreateView):
 
 class RecipeEdit(generic.UpdateView):
     model = Recipe
-    fields = ['author', 'slug','recipe_image', 'title', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes',]
+    fields = ['author', 'slug','recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes',]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
 

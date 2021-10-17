@@ -1,10 +1,14 @@
 {% extends "base.html" %}
-
 {% block content %}
+
+
+<h3>{{ request.user}}'s recipes</h3>
+
+
 
 <a href="{% url 'recipecreate' %}">Add Recipe</a>
 
-<h3>My Recipes</h3>
+
 
 <table>
     <tr>
