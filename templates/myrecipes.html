@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <a href="{% url 'recipecreate' %}">Add Recipe</a>
+
 <h3>My Recipes</h3>
 
 <table>
@@ -14,8 +16,8 @@
     <tr>
         <td>{{ recipe.title }}</td>
         <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
-        <td><a href="{#}"></a>Edit</td>
-        <td><a href="{#}"></a>Delete</td>
+        <td><a href="{% url 'recipeedit' recipe.slug %}">Edit</a></td>
+        <td><a href="{#}">Delete</a></td>
     </tr>
     {% empty %}
         <h3>No recipes to view</h3>

@@ -110,3 +110,13 @@ class RecipeCreate(generic.CreateView):
         form.instance.status = 1
         return super(RecipeCreate, self).form_valid(form)
 
+class RecipeEdit(generic.UpdateView):
+    model = Recipe
+    fields = ['author', 'slug','recipe_image', 'title', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes',]
+    template_name = 'recipe_form.html'
+    success_url = reverse_lazy('myrecipes')
+
+    def form_valid(self, form):
+        form.instance.status = 1
+        return super(RecipeCreate, self).form_valid(form)
+
