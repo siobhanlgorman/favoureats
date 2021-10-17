@@ -13,7 +13,7 @@
     {% for recipe in recipe_list %}
     <tr>
         <td>{{ recipe.title }}</td>
-        <td><a href="{#}"></a>View</td>
+        <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
         <td><a href="{#}"></a>Edit</td>
         <td><a href="{#}"></a>Delete</td>
     </tr>
