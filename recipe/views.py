@@ -116,7 +116,6 @@ class RecipeEdit(generic.UpdateView):
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
 
-    def form_valid(self, form):
-        form.instance.status = 1
-        return super(RecipeCreate, self).form_valid(form)
-
+class RecipeDelete(generic.DeleteView):
+    model = Recipe
+    success_url = reverse_lazy('myrecipes')

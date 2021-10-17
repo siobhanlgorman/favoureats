@@ -1,0 +1,9 @@
+<a href="{% url 'myrecipes' %}">Go Back</a>
+<form method="POST" action="">
+    {% csrf token %}
+    <p>Are you sure you want to delete this recipe? "{{recipe}}"</p>
+    <input type = "submit" value = "delete">
+
+
+
+</form>
