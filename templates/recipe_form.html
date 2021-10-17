@@ -1,10 +1,12 @@
+{% load crispy_forms_tags %}
+
 <h3>Recipe Form</h3>
 
 <div class="container-fluid">
     <div class="row" >
         <form method="POST" action="">
             {% csrf_token %}
-            {{form.as_p}}
+            {{ form | crispy }}
 
             <input type="submit" value="Submit Recipe">
 
