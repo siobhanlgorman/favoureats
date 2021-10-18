@@ -135,7 +135,6 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
         """
         context = super().get_context_data(**kwargs)
         context['recipe'] = context['recipe'].filter(author=self.request.user)
-        # context['recipe'] = ['recipe'].filter(status=1).count
         return context
 
 
@@ -144,11 +143,16 @@ class RecipeCreate(LoginRequiredMixin, generic.CreateView):
     Logged in user can create a recipe and add to my recipes list
     """
     model = Recipe
-    fields = ['author', 'slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
+    fields = ['slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
 
     def form_valid(self, form):
+        """
+        Sets logged in user as author field in form
+        Sets form default status to published
+        """
+        form.instance.author = self.request.user
         form.instance.status = 1
         return super(RecipeCreate, self).form_valid(form)
 
