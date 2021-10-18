@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Recipe
 from .forms import ReviewForm
 from django.urls import reverse_lazy
@@ -24,7 +25,7 @@ class AboutPage(generic.TemplateView):
     template_name = 'about.html'
 
 
-class RecipeDetail(View):
+class RecipeDetail(LoginRequiredMixin, View):
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
@@ -93,7 +94,7 @@ class RecipeFavourite(View):
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
-class MyRecipeList(generic.ListView):
+class MyRecipeList(LoginRequiredMixin, generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'myrecipes.html'
