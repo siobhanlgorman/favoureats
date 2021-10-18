@@ -112,13 +112,21 @@ class RecipeFavourite(LoginRequiredMixin, View):
 
 
 class MyRecipeList(LoginRequiredMixin, generic.ListView):
-     """
+    """
     Displays logged in user's own recipes
     """
     model = Recipe
+    # queryset = Recipe.objects.filter(author=self.request.user).order_by('-created_on')
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'myrecipes.html'
-    paginate_by = 6
+    
+    context_object_name = 'recipe'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['recipe'] = context['recipe'].filter(author=self.request.user)
+        # context['recipe'] = ['recipe'].filter(status=1).count
+        return context
 
 
 class RecipeCreate(LoginRequiredMixin, generic.CreateView):
@@ -139,8 +147,6 @@ class RecipeEdit(LoginRequiredMixin, generic.UpdateView):
     """
     Logged in user can edit a recipe from their my recipes list
     """
-
-
     model = Recipe
     fields = ['author', 'slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
