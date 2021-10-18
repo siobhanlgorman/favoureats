@@ -5,9 +5,21 @@
 ## Scope
 ## Structure
 ## Skeleton
+### Wireframes
+
 ## Surface
-## Database Schema
-## Technologies
-## Testing
-## Deployment
-## Credits
+# Features
+## Existing Features
+## Future Features
+## Design
+### Colours
+### Typography
+### Images
+# Database
+# Technologies
+# Testing
+## Bugs Resolved
+## Gitpod Forking and Cloning
+# Deployment
+## Heroku
+# Credits

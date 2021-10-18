@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-import mimetypes
 from django.contrib.messages import constants as messages
 
 if os.path.isfile('env.py'):
@@ -164,10 +163,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-# mimetype bug fixed
-mimetypes.add_type("text/css", ".css", True)
-mimetypes.add_type("text/html", ".html", True)
 
 
 # Default primary key field type
