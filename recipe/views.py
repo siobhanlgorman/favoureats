@@ -135,6 +135,14 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
         """
         context = super().get_context_data(**kwargs)
         context['recipe'] = context['recipe'].filter(author=self.request.user)
+
+        search_input = self.request.GET.get('search-area') or ''
+        if search_input:
+            context['recipe'] = context['recipe'].filter(
+                title__icontains=search_input
+            )
+        context['search_input'] = search_input
+
         return context
 
 

@@ -6,7 +6,6 @@
 ## Structure
 ## Skeleton
 ### Wireframes
-
 ## Surface
 # Features
 ## Existing Features
