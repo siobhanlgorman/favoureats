@@ -41,10 +41,15 @@ class RecipeDetail(LoginRequiredMixin, View):
     """
 
     def get(self, request, slug, *args, **kwargs):
+        """
+        Gets full published recipe with approved comments and checks if recipe has been favourited by current user
+        User can favourite/unfavourite recipe
+        """
+
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         reviews = recipe.reviews.filter(approved=True).order_by('created_on')
-        # check if logged in user has liked this recipe
+        
         favourited = False
         if recipe.favourites.filter(id=self.request.user.id).exists():
             favourited = True
@@ -63,10 +68,14 @@ class RecipeDetail(LoginRequiredMixin, View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """
+        Gets full published recipe with approved comments and checks if recipe has been favourited by current user
+        User can submit a review form for approval by admin
+        """
+
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         reviews = recipe.reviews.filter(approved=True).order_by('-created_on')
-        # check if logged in user has liked this recipe
         favourited = False
         if recipe.favourites.filter(id=self.request.user.id).exists():
             favourited = True
@@ -118,10 +127,12 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'myrecipes.html'
-    
     context_object_name = 'recipe'
 
     def get_context_data(self, **kwargs):
+        """
+        Filters recipe list by name of currently logged in user
+        """
         context = super().get_context_data(**kwargs)
         context['recipe'] = context['recipe'].filter(author=self.request.user)
         # context['recipe'] = ['recipe'].filter(status=1).count
