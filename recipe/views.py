@@ -116,7 +116,6 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
     Displays logged in user's own recipes
     """
     model = Recipe
-    # queryset = Recipe.objects.filter(author=self.request.user).order_by('-created_on')
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'myrecipes.html'
     
