@@ -3,18 +3,24 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
 from .models import Recipe
 from .forms import ReviewForm
-from django.urls import reverse_lazy
 
 
 class HomeList(generic.ListView):
+    """
+    Displays three most recent recipes on landing page
+    """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')[0:3]
     template_name = 'index.html'
 
 
 class RecipeList(generic.ListView):
+    """
+    Displays summary view of all recipes with 6 to a page
+    """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipes.html'
@@ -22,10 +28,17 @@ class RecipeList(generic.ListView):
 
 
 class AboutPage(generic.TemplateView):
+    """
+    Displays information about the site
+    """
     template_name = 'about.html'
 
 
 class RecipeDetail(LoginRequiredMixin, View):
+    """
+    Displays full recipe to logged in users.
+    Logged in user can favourite/unfavourite a recipe and leave a review
+    """
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Recipe.objects.filter(status=1)
@@ -83,7 +96,10 @@ class RecipeDetail(LoginRequiredMixin, View):
         )
 
 
-class RecipeFavourite(View):
+class RecipeFavourite(LoginRequiredMixin, View):
+    """
+    Logged in user can favourite/unfavourite a recipe
+    """
 
     def post(self, request, slug, *args, **kwargs):
         recipe = get_object_or_404(Recipe, slug=slug)
@@ -94,16 +110,23 @@ class RecipeFavourite(View):
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
+
 class MyRecipeList(LoginRequiredMixin, generic.ListView):
+     """
+    Displays logged in user's own recipes
+    """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'myrecipes.html'
     paginate_by = 6
 
 
-class RecipeCreate(generic.CreateView):
+class RecipeCreate(LoginRequiredMixin, generic.CreateView):
+    """
+    Logged in user can create a recipe and add to my recipes list
+    """
     model = Recipe
-    fields = ['author', 'slug','recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes',]
+    fields = ['author', 'slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
 
@@ -111,12 +134,22 @@ class RecipeCreate(generic.CreateView):
         form.instance.status = 1
         return super(RecipeCreate, self).form_valid(form)
 
-class RecipeEdit(generic.UpdateView):
+
+class RecipeEdit(LoginRequiredMixin, generic.UpdateView):
+    """
+    Logged in user can edit a recipe from their my recipes list
+    """
+
+
     model = Recipe
-    fields = ['author', 'slug','recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes',]
+    fields = ['author', 'slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
 
-class RecipeDelete(generic.DeleteView):
+
+class RecipeDelete(LoginRequiredMixin, generic.DeleteView):
+    """
+    Logged in user can delete a recipe from their my recipes list
+    """
     model = Recipe
     success_url = reverse_lazy('myrecipes')
