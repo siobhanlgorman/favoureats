@@ -132,6 +132,7 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, **kwargs):
         """
         Filters recipe list by name of currently logged in user
+        User can search recipes by title
         """
         context = super().get_context_data(**kwargs)
         context['recipe'] = context['recipe'].filter(author=self.request.user)
