@@ -2,41 +2,51 @@
 {% load static %}
 {% block content %}
 
-{% if request.user.is_authenticated %}
-<h3>{{ request.user }}'s recipes</h3>
+<div class="container-fluid">
 
-{% endif %}
+    <div class="row justify-content-md-center">
+        <div class="col-6 offset-2">
+            {% if request.user.is_authenticated %}
+            <h3>{{ request.user }}'s recipes</h3>
 
-<a href="{% url 'recipecreate' %}">Add Recipe</a>
+            {% endif %}
+        </div>
+    </div>
 
-<form method = "GET" action="">
-    <input type="text" name="search-area" value="{{search_input}}">
-    <input type="submit" value="Search">
-</form>
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <form method="GET" action="">
+                <input type="text" name="search-area" value="{{search_input}}">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
 
-<table>
-    <tr>
-        <th>Recipe</th>
+    <div class="btn-add">
+        <a href="{% url 'recipecreate' %}" id="btn-add">Add A Recipe</a>
+    </div>
+</div>
+<div class="row justify-content-md-center">
+    <div class="col-12">
+        <table class="table">
+            <!-- <tr>
+                <th>Recipe</th>
+            </tr> -->
 
-    </tr>
-
-
-    {% for recipe in recipe %}
-    <tr>
-        <td>{{ recipe.title }}</td>
-        <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
-        <td><a href="{% url 'recipeedit' recipe.slug %}">Edit</a></td>
-        <td><a href="{% url 'recipedelete' recipe.slug %}">Delete</a></td>
-    </tr>
-    {% empty %}
-        <h3>No recipes to view</h3>
-    {% endfor %}
-
-
-
-</table>
-
-
+            {% for recipe in recipe %}
+            <tr>
+                <td>{{ recipe.title }}</td>
+                <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
+                <td><a href="{% url 'recipeedit' recipe.slug %}">Edit</a></td>
+                <td><a href="{% url 'recipedelete' recipe.slug %}">Delete</a></td>
+            </tr>
+            {% empty %}
+            <h3>No recipes to view</h3>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+</div>
 
 
 
