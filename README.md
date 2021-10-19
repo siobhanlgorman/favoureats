@@ -9,11 +9,25 @@
 ## Surface
 # Features
 ## Existing Features
+
+### Home Page
+
+#### Hero image
+#### Register Now button disappears if user is logged in
+
 ## Future Features
+### User sign-in with Google/Facebooks
+### Search/Filter on Recipes page
+### Search/Filter by ingredient
+### Apply full CRUD functionality to user's own reviews
+### Add favourite recipes to user's list
+
+
 ## Design
 ### Colours
 ### Typography
 ### Images
+
 # Database
 # Technologies
 # Testing
