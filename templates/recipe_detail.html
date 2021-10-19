@@ -12,10 +12,11 @@
                 alt="">
             {% else %}<img src="{{ recipe.image }}" alt="">
             {% endif %}</div>
+
         <div class="col">
-            <h1>{{recipe.title}}</h1>
+            <h2>{{recipe.title}}</h2>
             <div>
-                
+
                 {% if user.is_authenticated %}
                 <form class="d-inline" action="{% url 'recipe_favourite' recipe.slug %}" method="POST">
                     {% csrf_token %}
@@ -24,12 +25,12 @@
                     <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
                             class="fas fa-star"></i></button>
 
-                {% else %}
+                    {% else %}
 
                     <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
                             class="far fa-star"></i></button>
 
-                {% endif %}
+                    {% endif %}
                 </form>
                 {% else %}
                 <span><i class="fas fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }} </span>
@@ -44,20 +45,20 @@
             <div>
                 <i class="fas fa-user-friends"></i>
                 {{ recipe.servings }}
-            
+
             </div>
             <div>
                 <i class="fas fa-clock"></i>
                 {{ recipe.cooktime_hours }} hrs {{ recipe.cooktime_mins }} mins
-            
+
             </div>
             <div>
                 <p> Category:
-                {{ recipe.category }}</p>
+                    {{ recipe.category }}</p>
             </div>
             <div>
-                <p>Type: 
-                {{ recipe.type }}</p>
+                <p>Type:
+                    {{ recipe.type }}</p>
 
             </div>
         </div>
@@ -65,6 +66,9 @@
 </div>
 
 <div class="container">
+    <div class="row">
+        <p>Recipe added by: {{ user.username }} on: {{ recipe.created_on }}</p>
+    </div>
     <div class="row">
         <div class="col">
             <p class="recipe-intro">
@@ -76,12 +80,14 @@
     <div class="row">
         <div class="col recipe-ingred">
             <h4>Ingredients</h4>
-            {{recipe.ingredients | safe}}</div>
-        
+            {{recipe.ingredients | safe}}
+        </div>
+
         <div class="col">
             <div class="col recipe-steps">
                 <h4>Steps</h4>
-                {{recipe.steps | safe}}</div>
+                {{recipe.steps | safe}}
+            </div>
         </div>
     </div>
 </div>
