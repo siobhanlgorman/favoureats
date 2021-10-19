@@ -4,7 +4,7 @@
 <html class="h-100">
 
 <head>
- 
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favoureats</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
   <nav class="navbar navbar-expand-md navbar-light" style="background-color: #fafafa" role="navigation">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static 'images/leaf_logo2.png' %}" alt="" class="d-inline-block align-text-top" id="logo" >
+        <img src="{% static 'images/leaf_logo2.png' %}" alt="" class="d-inline-block align-text-top" id="logo">
       </a>
     </div>
     <div class="container-fluid">
@@ -44,10 +44,10 @@
             <a class="nav-link" href="{% url 'recipes' %}">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'myrecipes' %}" >My Recipes</a>
+            <a class="nav-link" href="{% url 'myrecipes' %}">My Recipes</a>
           </li>
           {% if user.is_authenticated %}
-          <li class="nav-item"> 
+          <li class="nav-item">
             <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
           </li>
           {% else %}
@@ -64,19 +64,19 @@
   </nav>
 
   <div class="container">
-<div class="row">
-  <div class="col-md-8 offset-md-2">
-    {% for message in messages %}
-    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-      {{ message | safe}}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" ></button>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        {% for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+          {{ message | safe}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+
+
+      </div>
     </div>
-    {% endfor %}
-
-
   </div>
-</div>
-</div>
 
   <main>
     {% block content %}
@@ -92,20 +92,20 @@
                 (opens in a new tab)"><i class="fab fa-facebook-square ms-3"></i></a>
       <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page 
                 (opens in a new tab)"><i class="fab fa-twitter-square ms-3"></i></a>
-            </li>
+      </li>
       <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page 
                 (opens in a new tab)"><i class="fab fa-instagram-square ms-3"></i></a>
-            </li>
-      
+      </li>
+
     </p>
   </footer>
 
   <script>
-    setTimeout(function(){
+    setTimeout(function () {
       let messages = document.getElementById("msg");
       let alert = new bootstrap.Alert(messages);
       alert.close();
-    }, 3000);
+    }, 1500);
   </script>
 </body>
 </main>
