@@ -4,6 +4,8 @@ The Agile methodology was used to plan the project. Github was used as the tool 
 # UX
 ## Strategy
 ### Project Goal
+
+The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from a book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
 ### Epics and User Stories
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
 #### Epic: Enable users to register on the site to access full features

@@ -121,10 +121,7 @@ a:hover {
     border: none;
 }
 
-.about-image {
-    width: 100%;
-    height: auto;
-}
+
 
 .btn-add {
     margin-top: 1em;
@@ -140,4 +137,21 @@ a:hover {
 .btn-add i {
     color: black;
 }
+
+
+
+/* .about-image {
+    width: 100%;
+    min-height: 100%;
+} */
+
+.about-text h3 {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.about-text {
+    text-align: justify;
+}
+
 
