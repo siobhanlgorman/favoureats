@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
+from django.template.defaultfilters import slugify
 from .models import Recipe
 from .forms import ReviewForm
 
@@ -163,6 +164,7 @@ class RecipeCreate(LoginRequiredMixin, generic.CreateView):
         """
         form.instance.author = self.request.user
         form.instance.status = 1
+        form.instance.slug = slugify(recipe.title)
         return super(RecipeCreate, self).form_valid(form)
 
 
