@@ -2,97 +2,120 @@
 {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
+<main>
+    <div class="container">
+        <section>
+            <!-- recipe-title -->
+            <div class="row">
+                <div class="col recipe-title">
+                    <h1>{{recipe.title}}</h1>
+                </div>
+            </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col ">
-            {% if "placeholder" in recipe.recipe_image.url %}
-            <img class="card-img-top"
-                src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg"
-                alt="">
-            {% else %}<img src="{{ recipe.image }}" alt="">
-            {% endif %}</div>
-
-        <div class="col">
-            <h2>{{recipe.title}}</h2>
-            <div>
-
-                {% if user.is_authenticated %}
-                <form class="d-inline" action="{% url 'recipe_favourite' recipe.slug %}" method="POST">
-                    {% csrf_token %}
-                    {% if favourited %}
-
-                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
-                            class="fas fa-star"></i></button>
-
-                    {% else %}
-
-                    <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
-                            class="far fa-star"></i></button>
+            <div class="row">
+                <!-- recipe image -->
+                <div class="col-sm-6 image-container recipe-detail-image">
+                    {% if "placeholder" in recipe.recipe_image.url %}
+                    <img class="card-img-top"
+                        src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg"
+                        alt="">
+                    {% else %}<img src="{{ recipe.image }}" alt="">
 
                     {% endif %}
-                </form>
-                {% else %}
-                <span><i class="fas fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }} </span>
-                {% endif %}
+                    <p class="recipe-image-banner">Recipe added by: {{ user.username }} on: {{ recipe.created_on }}</p>
+                </div>
 
-            </div>
-            <div>
-                {% with reviews.count as total_reviews %}
-                <i class="far fa-comments" aria-hidden="true"></i> {{ total_reviews }} reviews
-                {% endwith %}
-            </div>
-            <div>
-                <i class="fas fa-user-friends"></i>
-                {{ recipe.servings }}
+                <!-- recipe icons list-->
+                <div class="col-sm-6 recipe">
+                    <div class="row">
+                        <!-- recipe favourite -->
+                        <div class="col favourite-icon">
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'recipe_favourite' recipe.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if favourited %}
 
-            </div>
-            <div>
-                <i class="fas fa-clock"></i>
-                {{ recipe.cooktime_hours }} hrs {{ recipe.cooktime_mins }} mins
+                            <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
+                                    class="fas fa-star"></i></button>
 
-            </div>
-            <div>
-                <p> Category:
-                    {{ recipe.category }}</p>
-            </div>
-            <div>
-                <p>Type:
-                    {{ recipe.type }}</p>
+                            {% else %}
 
+                            <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
+                                    class="fa fa-star"></i></button>
+
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <i class="fas fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}
+                        {% endif %}
+                    </div>
+
+                    </div>
+                    <!-- recipe no. of reviews -->
+                    <div>
+                        <ul class="icon-list fa-ul">
+                            <li>
+                                {% with reviews.count as total_reviews %}
+                                <i class="fa-li fas fa-comments" aria-hidden="true"></i>
+                                <p>{{ total_reviews }} reviews</p>
+                                {% endwith %}
+                            </li>
+                            <!-- recipe no of servings -->
+                            <li>
+                                <i class="fa-li fas fa-user-friends"></i>
+                                <p>{{ recipe.servings }} servings</p>
+                            </li>
+
+                            <!-- recipe cook time -->
+                            <li>
+                                <i class="fa-li fas fa-clock"></i>
+                                <p>{{ recipe.cooktime_hours }} hrs {{ recipe.cooktime_mins }} mins</p>
+                            </li>
+
+                            <!-- recipe category -->
+                            <li>
+
+                                <i class="fa-li fas fa-utensils"></i>
+                                <p>{{ recipe.category }}</p>
+                            </li>
+                            <!-- recipe type -->
+                            <li>
+                                <i class="fa-li fas fa-carrot"></i>
+                                <p>{{ recipe.type }}</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+        </section>
+        
+        <section>
+            <div class="row">
+                <div class="col">
+                    <p class="recipe-intro">
+                        {{ recipe.introduction |safe }}
+                    </p>
+                </div>
             </div>
-        </div>
+            <!-- recipe ingredients -->
+            <div class="row">
+                <div class="col recipe-ingred">
+                    <h4>Ingredients</h4>
+                    {{recipe.ingredients | safe}}
+                </div>
+                <!-- recipe steps -->
+                <div class="col">
+
+                    <h4>Steps</h4>
+                    {{recipe.steps | safe}}
+                    <hr>
+                    <h4>Notes:</h4>
+                    {{recipe.notes | safe}}
+                </div>
+            </div>
     </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <p>Recipe added by: {{ user.username }} on: {{ recipe.created_on }}</p>
     </div>
-    <div class="row">
-        <div class="col">
-            <p class="recipe-intro">
-                {{ recipe.introduction |safe }}
-            </p>
-        </div>
-        <hr>
-    </div>
-    <div class="row">
-        <div class="col recipe-ingred">
-            <h4>Ingredients</h4>
-            {{recipe.ingredients | safe}}
-        </div>
-
-        <div class="col">
-            <div class="col recipe-steps">
-                <h4>Steps</h4>
-                {{recipe.steps | safe}}
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
+    <!-- recipe reviews -->
     <div class="row">
         <div class="col card mb-4 mt-3">
             <h3>Reviews:</h3>
@@ -108,10 +131,10 @@
                 {% endfor %}
             </div>
         </div>
-
-        <!-- review form -->
-
-        <div class="col-md-4 card mb-4  mt-3 ">
+    </div>
+  <!-- recipe review form -->
+    <div class="row">
+        <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 {% if reviewed %}
                 <div class="alert alert-success" role="alert">
@@ -132,7 +155,7 @@
             </div>
         </div>
     </div>
-</div>
 
+</main>
 
 {% endblock %}
