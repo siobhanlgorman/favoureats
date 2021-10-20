@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
@@ -116,6 +117,11 @@ class Recipe(models.Model):
 
     def number_of_favourites(self):
         return self.favourites.count()
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super(Recipe, self).save(*args, **kwargs)
 
 
 class Review(models.Model):

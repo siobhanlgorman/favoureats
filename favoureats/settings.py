@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'crispy_forms',
-    'recipe',
+    'recipe.apps.RecipeConfig',
 ]
 
 SITE_ID = 1
