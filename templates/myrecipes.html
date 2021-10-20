@@ -14,7 +14,7 @@
     </div>
 
     <div class="row justify-content-md-center">
-        <div class="col-12">
+        <div class="col">
             <form method="GET" action="">
                 <input type="text" name="search-area" value="{{search_input}}">
                 <input type="submit" value="Search">
@@ -23,11 +23,11 @@
     </div>
 
     <div class="btn-add">
-        <a href="{% url 'recipecreate' %}" id="btn-add">Add A Recipe <i class="fas fa-plus-square"></i></a>
+        <a href="{% url 'recipecreate' %}" id="btn-add">Add A Recipe</a>
     </div>
 </div>
-<div class="row justify-content-md-center">
-    <div class="col-12">
+<div class="row justify-content-md-left">
+    <div class="col-12 col-md-9 table-container">
         <table class="table">
             <!-- <tr>
                 <th>Recipe</th>
