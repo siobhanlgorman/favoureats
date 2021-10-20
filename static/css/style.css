@@ -186,6 +186,7 @@ a:hover {
 .recipe-title {
     text-align: center;
     padding: 1rem;
+    background-color: white;
     
 }
 
@@ -202,9 +203,9 @@ a:hover {
 
 }
 
-/* .recipe-title h1 {
-    font-size: 2rem; */
-
+.review-title {
+    color: green;
+}
 
 
 /* .icon-list li > i {

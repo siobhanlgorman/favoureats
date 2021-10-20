@@ -14,7 +14,7 @@
 
             <div class="row">
                 <!-- recipe image -->
-                <div class="col-sm-6 image-container recipe-detail-image">
+                <div class="col-sm-6 image-container card recipe-detail-image">
                     {% if "placeholder" in recipe.recipe_image.url %}
                     <img class="card-img-top"
                         src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg"
@@ -26,33 +26,33 @@
                 </div>
 
                 <!-- recipe icons list-->
-                <div class="col-sm-6 recipe">
+                <div class="col-sm-6 card recipe">
                     <div class="row">
                         <!-- recipe favourite -->
-                        <div class="col favourite-icon">
-                        {% if user.is_authenticated %}
-                        <form class="d-inline" action="{% url 'recipe_favourite' recipe.slug %}" method="POST">
-                            {% csrf_token %}
-                            {% if favourited %}
+                        <div class="col card-body favourite-icon">
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'recipe_favourite' recipe.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if favourited %}
 
-                            <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
-                                    class="fas fa-star"></i></button>
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
+                                        class="fas fa-star"></i></button>
 
+                                {% else %}
+
+                                <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
+                                        class="fa fa-star"></i></button>
+
+                                {% endif %}
+                            </form>
                             {% else %}
-
-                            <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
-                                    class="fa fa-star"></i></button>
-
+                            <i class="fas fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}
                             {% endif %}
-                        </form>
-                        {% else %}
-                        <i class="fas fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}
-                        {% endif %}
-                    </div>
+                        </div>
 
                     </div>
                     <!-- recipe no. of reviews -->
-                    <div>
+                    <div class="card-text">
                         <ul class="icon-list fa-ul">
                             <li>
                                 {% with reviews.count as total_reviews %}
@@ -88,74 +88,85 @@
                     </div>
                 </div>
         </section>
-        
+
         <section>
             <div class="row">
-                <div class="col">
-                    <p class="recipe-intro">
-                        {{ recipe.introduction |safe }}
-                    </p>
+                <div class="col-12 card">
+                    <div class="card-body">
+                        <h4 class="card-title">About this recipe:</h4>
+                        <p class="recipe-intro card-text">
+                            {{ recipe.introduction |safe }}
+                        </p>
+                    </div>
                 </div>
             </div>
             <!-- recipe ingredients -->
             <div class="row">
-                <div class="col recipe-ingred">
-                    <h4>Ingredients</h4>
-                    {{recipe.ingredients | safe}}
+                <div class="col-12 col-md-6 card recipe-ingred">
+                    <div class="card-body">
+                        <h4 class="card-title">Ingredients</h4>
+                        <p class="card-text">
+                            {{recipe.ingredients | safe}}
+                        </p>
+                    </div>
                 </div>
                 <!-- recipe steps -->
-                <div class="col">
+                <div class="col-12 col-md-6 card">
+                    <div class="card-body">
+                        <h4 class="card-title">Steps</h4>
+                        <p class="card-text">
+                            {{recipe.steps | safe}}
+                        </p>
+                        <p class="card-text">
+                            <h4 class="card-title">Notes:</h4>
+                            {{recipe.notes | safe}}
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-                    <h4>Steps</h4>
-                    {{recipe.steps | safe}}
-                    <hr>
-                    <h4>Notes:</h4>
-                    {{recipe.notes | safe}}
+
+            <!-- recipe reviews -->
+            <div class="row card">
+                <div class="col-12 col-md-6 card-body">
+                    <h4 class="review-title">Reviews:</h4>
+                    <div class="card-text">
+                        {% for review in reviews %}
+                        <div class="reviews">
+                            <p class="card-text">
+                                <span>{{ review.created_on }}</span>
+                                <span> {{ review.name }} wrote: </span>
+                            </p>
+                            {{ review.body | linebreaks }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- recipe review form -->
+            <div class="row">
+                <div class="col-12 col-md-6 card mb-6 mt-3">
+                    <div class="card-body">
+                        {% if reviewed %}
+                        <div class="alert alert-success" role="alert">
+                            Your review is pending approval!
+                        </div>
+                        {% else %}
+                        {% if user.is_authenticated%}
+                        <h4 class="card-title">Leave a review:</h4>
+                        <p>Posting as: {{ user.username }}</p>
+                        <form method="post">
+                            {{ review_form | crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-signin btn-lg">Submit</button>
+                        </form>
+                        {% endif %}
+                        {% endif %}
+
+                    </div>
                 </div>
             </div>
     </div>
-    </div>
-    <!-- recipe reviews -->
-    <div class="row">
-        <div class="col card mb-4 mt-3">
-            <h3>Reviews:</h3>
-            <div class="card-body">
-                {% for review in reviews %}
-                <div class="reviews">
-                    <p>
-                        <span>{{ review.created_on }}</span>
-                        <span> {{ review.name }} wrote: </span>
-                    </p>
-                    {{ review.body | linebreaks }}
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-  <!-- recipe review form -->
-    <div class="row">
-        <div class="col-md-4 card mb-4 mt-3">
-            <div class="card-body">
-                {% if reviewed %}
-                <div class="alert alert-success" role="alert">
-                    Your review is pending approval!
-                </div>
-                {% else %}
-                {% if user.is_authenticated%}
-                <h3>Leave a review:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ review_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit" class="btn btn-signin btn-lg">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
-
-            </div>
-        </div>
-    </div>
-
 </main>
 
 {% endblock %}
