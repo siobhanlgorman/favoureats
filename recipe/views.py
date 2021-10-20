@@ -50,7 +50,6 @@ class RecipeDetail(LoginRequiredMixin, View):
         queryset = Recipe.objects.filter(status=1)
         recipe = get_object_or_404(queryset, slug=slug)
         reviews = recipe.reviews.filter(approved=True).order_by('created_on')
-        
         favourited = False
         if recipe.favourites.filter(id=self.request.user.id).exists():
             favourited = True
@@ -164,7 +163,6 @@ class RecipeCreate(LoginRequiredMixin, generic.CreateView):
         """
         form.instance.author = self.request.user
         form.instance.status = 1
-        form.instance.slug = slugify(recipe.title)
         return super(RecipeCreate, self).form_valid(form)
 
 
