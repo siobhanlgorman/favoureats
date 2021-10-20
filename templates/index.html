@@ -46,9 +46,6 @@
                                         <h3 class="recipe-title"> {{ recipe.title }}</h3>
                                     </div>
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -59,6 +56,11 @@
                     {% endfor %}
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <a class="btn btn-lg btn-success" href="{% url 'recipes' %}">View the Recipes</a>
         </div>
     </div>
 </section>

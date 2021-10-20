@@ -42,8 +42,8 @@ i {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
     margin: 0;
+    
     
     /* background-color: rgba(0,0,0,0); */
     /* display: flex; */
@@ -122,16 +122,19 @@ a {
 }
 
 /* cursor */
+
 a:hover {
     background-color: #ccc;
     cursor: pointer;
-
+    
 }
 
-/* a:active {
-    background-color: white;
-    color: white;
-} */
+a.page-link {
+    color: green;
+}
+.navbar-nav a:active {
+    background-color: green;
+}
 
 .btn-fave {
     border: none;
