@@ -153,7 +153,7 @@ class RecipeCreate(LoginRequiredMixin, generic.CreateView):
     Logged in user can create a recipe and add to my recipes list
     """
     model = Recipe
-    fields = ['slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
+    fields = ['recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
 
