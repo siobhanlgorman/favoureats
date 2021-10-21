@@ -33,11 +33,11 @@
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">    
-          {% url 'home' as url %}    
+        <ul class="navbar-nav">
+          {% url 'home' as url %}
           <li class="nav-item {% if request.path == url %}active{% endif %}">
             <a class="nav-link" href="{{ url }}">Home</a>
-          </li>       
+          </li>
           {% url 'about' as url %}
           <li class="nav-item {% if request.path == url %}active{% endif %}">
             <a class="nav-link" href="{{ url }}">About</a>
@@ -63,7 +63,7 @@
           </li>
           {% endif %}
         </ul>
-        
+
       </div>
     </div>
   </nav>
