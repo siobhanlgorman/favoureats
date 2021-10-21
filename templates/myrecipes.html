@@ -2,52 +2,52 @@
 {% load static %}
 {% block content %}
 
-<div class="container-fluid">
 
-    <div class="row justify-content-md-center">
-        <div class="col-6 offset-2">
-            {% if request.user.is_authenticated %}
-            <h3>{{ request.user }}'s recipes</h3>
-
-            {% endif %}
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <form method="GET" action="" class="recipe-search">
-                <input type="text" name="search-area" placeholder="search recipe titles" value="{{search_input}}">
-                <input type="submit" value="Search">
-            </form>
-        </div>
-    </div>
-
-    <div class="btn-add">
-        <a href="{% url 'recipecreate' %}" id="btn-add">Add A Recipe</a>
+<div class="row justify-content-md-center">
+    <div class="col text-center">
+        {% if request.user.is_authenticated %}
+        <h3>{{ request.user }}'s recipes</h3>
+        {% endif %}
     </div>
 </div>
-<div class="row justify-content-md-left">
-    <div class="col-12 col-md-9 table-container">
-        <table class="table">
-            <!-- <tr>
+
+<div class="row">
+    <div class="col text-center">
+        <form method="GET" action="" class="recipe-search">
+            <input type="text" name="search-area" placeholder="search recipe titles" value="{{search_input}}">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col text-center">
+        <a class="btn btn-lg btn-success" href="{% url 'recipecreate' %}">Add a Recipe</a>
+    </div>
+</div>
+
+<div class="card ">
+    <div class="col card-body my-recipes-list">
+        <div class="row">
+            <div class="table-container">
+                <table class="table">
+                    <!-- <tr>
                 <th>Recipe</th>
             </tr> -->
-
-            {% for recipe in recipe %}
-            <tr>
-                <td>{{ recipe.title }}</td>
-                <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
-                <td><a href="{% url 'recipeedit' recipe.slug %}">Edit</a></td>
-                <td><a href="{% url 'recipedelete' recipe.slug %}">Delete</a></td>
-            </tr>
-            {% empty %}
-            <h3>No recipes to view</h3>
-            {% endfor %}
-        </table>
+                    {% for recipe in recipe %}
+                    <tr>
+                        <td>{{ recipe.title }}</td>
+                        <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
+                        <td><a href="{% url 'recipeedit' recipe.slug %}">Edit</a></td>
+                        <td><a href="{% url 'recipedelete' recipe.slug %}">Delete</a></td>
+                    </tr>
+                    {% empty %}
+                    <h3>No recipes to view</h3>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
     </div>
 </div>
-</div>
-
-
 
 {% endblock %}

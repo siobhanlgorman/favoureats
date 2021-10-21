@@ -144,6 +144,11 @@ a.page-link {
 
 /* My Recipes page */
 
+.my-recipes-list {
+    width: 75%;
+    margin: auto;
+}
+
 .btn-add {
     margin-top: 1rem;
     margin-left: 0;
@@ -231,7 +236,8 @@ table {
 }
 
 .recipe-form {
-    background-color: red;
+    width: 75%;
+    margin: auto;
 }
 
 /* .icon-list li > i {
