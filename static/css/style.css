@@ -190,6 +190,10 @@ table {
     text-align: justify;
 }
 
+.button-container {
+    padding-top: 2rem;
+}
+
 /* Recipe detail page */
 
 /* .recipe h1 {
@@ -226,6 +230,9 @@ table {
     color: green;
 }
 
+.recipe-form {
+    background-color: red;
+}
 
 /* .icon-list li > i {
     padding: 0.5rem;
