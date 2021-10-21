@@ -31,20 +31,24 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        
-        <ul class="navbar-nav">          
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
+        <ul class="navbar-nav">    
+          {% url 'home' as url %}    
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">Home</a>
           </li>       
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+          {% url 'about' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'recipes' %}">Recipes</a>
+          {% url 'recipes' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">Recipes</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'myrecipes' %}">My Recipes</a>
+          {% url 'myrecipes' as url %}
+          <li class="nav-item {% if request.path == url %}active{% endif %}">
+            <a class="nav-link" href="{{ url }}">My Recipes</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
