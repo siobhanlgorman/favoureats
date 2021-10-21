@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="card">
+    <div class="card-body">
+        <div class="row button-container">
+            <div class="col text-center">
+                <a href="{% url 'myrecipes' %}" class="btn btn-lg btn-success">Go Back</a>
+            </div>
+        </div>
+        <div class="row button-container">
+            <div class="col text-center">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <p>Are you sure you want to delete this recipe? "{{recipe}}"</p>
+                    <input type="submit" value="Delete" class="btn btn-lg btn-danger">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
