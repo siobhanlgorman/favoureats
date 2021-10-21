@@ -87,9 +87,10 @@ The goal of the project is to create a recipe website with tried and tested reci
 2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
 
 ### Unresolved Bugs
+1. Min and Max validators imported and set for cook_time but not working.
 2. User created posts are added to public recipe list inside of only their own created recipes list
-3. Number of comments does not appear on home page but 
-4. User generate ingredients and steps do not appear as lists
+3. Number of comments does not appear on recipes page but number of favourites does 
+4. User generated ingredients and steps do not appear as lists
 ## Gitpod Forking and Cloning
 # Deployment
 ## Heroku
