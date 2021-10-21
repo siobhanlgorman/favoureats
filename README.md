@@ -86,6 +86,7 @@ The goal of the project is to create a recipe website with tried and tested reci
 1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
 2. User created posts are added to public recipe list inside of only their own created recipes list
 3. Number of comments does not appear on home page but 
+4. User generate ingredients and steps do not appear as lists
 
 ### Unresolved Bugs
 ## Gitpod Forking and Cloning

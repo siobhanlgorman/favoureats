@@ -15,7 +15,7 @@ class RecipeAdmin(SummernoteModelAdmin):
     prepopulated_fields = {
         'slug': ('title',)}
     summernote_fields = (
-        'introduction', 'ingredients', 'steps')
+        'introduction', 'ingredients', 'steps', 'notes')
 
 
 @admin.register(Review)
