@@ -52,7 +52,13 @@ The goal of the project is to create a recipe website with tried and tested reci
 # Database
 # Technologies
 # Testing
-## Bugs Resolved
+## Bugs
+### Resolved Bugs
+1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page
+2. User created posts are added to public recipe list inside of only their own created recipes list
+3. Number of comments does not appear on home page but 
+
+### Unresolved Bugs
 ## Gitpod Forking and Cloning
 # Deployment
 ## Heroku
