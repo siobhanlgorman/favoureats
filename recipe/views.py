@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.template.defaultfilters import slugify
@@ -147,7 +148,7 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
         return context
 
 
-class RecipeCreate(LoginRequiredMixin, generic.CreateView):
+class RecipeCreate(SuccessMessageMixin, LoginRequiredMixin, generic.CreateView):
     """
     Logged in user can create a recipe and add to my recipes list
     """
@@ -155,6 +156,8 @@ class RecipeCreate(LoginRequiredMixin, generic.CreateView):
     fields = ['recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
+    success_message = "You have added a recipe to your list!"
+
 
     def form_valid(self, form):
         """
@@ -164,9 +167,10 @@ class RecipeCreate(LoginRequiredMixin, generic.CreateView):
         form.instance.author = self.request.user
         form.instance.status = 1
         return super(RecipeCreate, self).form_valid(form)
+        
 
 
-class RecipeEdit(LoginRequiredMixin, generic.UpdateView):
+class RecipeEdit(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
     """
     Logged in user can edit a recipe from their my recipes list
     """
@@ -174,11 +178,18 @@ class RecipeEdit(LoginRequiredMixin, generic.UpdateView):
     fields = ['author', 'slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
+    success_message = "You have updated your recipe!"
 
 
-class RecipeDelete(LoginRequiredMixin, generic.DeleteView):
+class RecipeDelete(SuccessMessageMixin, LoginRequiredMixin, generic.DeleteView):
     """
     Logged in user can delete a recipe from their my recipes list
     """
     model = Recipe
     success_url = reverse_lazy('myrecipes')
+    success_message = "You have deleted a recipe!"
+
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(RecipeDelete, self).delete(request, *args, **kwargs)
+
