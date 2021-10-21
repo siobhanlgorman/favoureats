@@ -84,11 +84,12 @@ The goal of the project is to create a recipe website with tried and tested reci
 ## Bugs
 ### Resolved Bugs
 1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
+2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
+
+### Unresolved Bugs
 2. User created posts are added to public recipe list inside of only their own created recipes list
 3. Number of comments does not appear on home page but 
 4. User generate ingredients and steps do not appear as lists
-
-### Unresolved Bugs
 ## Gitpod Forking and Cloning
 # Deployment
 ## Heroku
