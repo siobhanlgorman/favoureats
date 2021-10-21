@@ -8,21 +8,40 @@ The Agile methodology was used to plan the project. Github was used as the tool 
 The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from a book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
 ### Epics and User Stories
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
+  * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)
+  * As a Site Admin I can CRUD posts so that I can manage my site content (must-have / complete)
+  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)
+  * As an admin I can view the number of likes on a recipe post so that I can know which are the most popular
+  * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe
+  * As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts
+
 #### Epic: Enable users to register on the site to access full features
+  * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)
 #### Epic: Enable users to login/logout on the site to access full features
+  * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)
 #### Epic: Enable registered users to review recipe posts
+  * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)
 #### Epic: Create landing page to attract users to the site
-#### Epic: Enable users to register on the site to access full features
+  * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is
 #### Epic: Enable registered users to read full recipe posts and reviews
+  * As a registered user I can click on a post in the recipe list so that I open the full recipe post
 #### Epic: Enable registered users to CRUD their own recipes
+  * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)
 #### Epic: Create recipe list page to showcase content to users
+  * As a user I can view a paginated list of recipes so that I can see what I would like to select if registered (must-have / complete)
 #### Epic: Enable registered users to search through their own recipes to enhance UX
+  * As a user I can search my own recipe posts by title so that easily find a recipe (should-have / complete)
+  * As a user I can search recipes by ingredient so that I can easily find a recipe that I want to use (could-have / future features)
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
-
-
-#### Epic: Enable users to sign-in/register with Google/Facebook account
-#### Epic: Enable users to CRUD own reviews
+  * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)
+  * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)
 #### Epic: Enable users to filter recipe posts to enhance UX
+  * As a user I can search recipes by ingredient so that I can easily find a recipe that I want to use (could-have / future feature)
+  * As a registered user I can filter favourite recipes to a list so that I can find all my favourites easily (should-have / future feature)
+#### Epic: Enable users to sign-in/register with Google/Facebook account
+  * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)
+#### Epic: Enable users to CRUD own reviews
+  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content
 ## Scope
 ## Structure
 ## Skeleton
@@ -54,7 +73,7 @@ The goal of the project is to create a recipe website with tried and tested reci
 # Testing
 ## Bugs
 ### Resolved Bugs
-1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page
+1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
 2. User created posts are added to public recipe list inside of only their own created recipes list
 3. Number of comments does not appear on home page but 
 
