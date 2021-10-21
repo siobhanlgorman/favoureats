@@ -21,12 +21,9 @@ h2,
 h3,
 h4,
 h5 {
-    /* font-weight: bold; */
     font-family: 'Roboto', sans-serif;
 }
 
-/* .hero-container {
-    background-color: #3a3a3a; */
 
 /* Icons */
 
@@ -43,12 +40,6 @@ i {
     background-position: center;
     background-size: cover;
     margin: 0;
-    
-    
-    /* background-color: rgba(0,0,0,0); */
-    /* display: flex; */
-    
-    /* opacity: 0.3; */        
 }
 
 .hero-overlay {
@@ -109,20 +100,19 @@ i {
     background-color: green;
 }
 
-/* Register link on hero image */
-.btn-signin {
-    background-color: green;
-    color: white;
-}
-
 /* Links */
 a {
     text-decoration: none;
     color: green;
 }
 
-/* cursor */
+/* Account forms */
+.account-form {
+    width: 75%;
+    margin:auto
+}
 
+/* cursor */
 a:hover {
     background-color: #ccc;
     cursor: pointer;
@@ -143,7 +133,6 @@ a.page-link {
 }
 
 /* My Recipes page */
-
 .my-recipes-list {
     width: 75%;
     margin: auto;
@@ -179,6 +168,7 @@ table {
     margin: 1rem, 0, 0;
     padding: 1rem;
 }
+
 /* About page */
 
 /* .about-image {
