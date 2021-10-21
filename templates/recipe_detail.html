@@ -19,7 +19,7 @@
                     <img class="card-img-top"
                         src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg"
                         alt="">
-                    {% else %}<img src="{{ recipe.image }}" alt="">
+                    {% else %}<img src="{{ recipe.recipe_image.url }}" alt="">
 
                     {% endif %}
                     <p class="recipe-image-banner">Recipe added by: {{ user.username }} on: {{ recipe.created_on }}</p>
@@ -36,12 +36,12 @@
                                 {% if favourited %}
 
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
-                                        class="fas fa-star"></i></button>
+                                        class="fa fa-star"></i></button>
 
                                 {% else %}
 
                                 <button type="submit" name="recipe_id" value="{{recipe.slug}}" class="btn-fave"><i
-                                        class="fa fa-star"></i></button>
+                                        class="far fa-star"></i></button>
 
                                 {% endif %}
                             </form>
