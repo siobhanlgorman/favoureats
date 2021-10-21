@@ -41,7 +41,7 @@ The goal of the project is to create a recipe website with tried and tested reci
 #### Epic: Enable users to sign-in/register with Google/Facebook account
   * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)
 #### Epic: Enable users to CRUD own reviews
-  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content
+  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (should-have / complete)
 ## Scope
 ## Structure
 ## Skeleton
@@ -50,17 +50,27 @@ The goal of the project is to create a recipe website with tried and tested reci
 # Features
 ## Existing Features
 
+### All Pages
+  * Navbar
+  * Footer
+  * Social media icons
 ### Home Page
+  * Hero Image with overlay text highlighting the purpose of the site
+  * Register link button on hero image to encourage users to register. Button becomes invisible if user is signed in
+  * Snapshot images of three most recent recipe posts
+  * View recipes link button at bottom of page to direct users easily to view the full recipe list
+### About Page
+### Recipes Page
+### My Recipes Page
 
-#### Hero image
-#### Register Now button disappears if user is logged in
 
 ## Future Features
 ### User sign-in with Google/Facebooks
 ### Search/Filter on Recipes page
 ### Search/Filter by ingredient
+### Filter by favourites
 ### Apply full CRUD functionality to user's own reviews
-### Add favourite recipes to user's list
+
 
 
 ## Design
