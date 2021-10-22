@@ -6,8 +6,10 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.template.defaultfilters import slugify
+from django.db.models import Q
 from .models import Recipe
 from .forms import ReviewForm
+
 
 
 class HomeList(generic.ListView):
@@ -137,13 +139,12 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
         """
         context = super().get_context_data(**kwargs)
         context['recipe'] = context['recipe'].filter(author=self.request.user)
-
         search_input = self.request.GET.get('search-area') or ''
+        
+        queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
         if search_input:
-            context['recipe'] = context['recipe'].filter(
-                ingredients__icontains=search_input
-            )
-        context['search_input'] = search_input
+            context['recipe'] = context['recipe'].filter(queries)
+            context['search_input'] = search_input
 
         return context
 
