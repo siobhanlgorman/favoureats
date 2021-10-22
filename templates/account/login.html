@@ -11,7 +11,7 @@
     <a href="{% url 'home' %}" class="btn btn-lg btn-success">Go Back</a>
   </div>
   <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
+    <div class="col-md-8 mt-3 offset-md-2 msg">
       <h3>{% trans "Sign In" %}</h3>
       <p>{% blocktrans %}Welcome back to Favoureats.
         Please sign in to leave a review or favourite <i class="far fa-star"></i> our recipes - we'd love to hear what
@@ -28,8 +28,9 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <button class="btn btn-lg btn-success" type="submit">{% trans "Sign In" %}</button>
+        
       </form>
-
+      <a href="{% url 'home' %}" class="btn btn-lg btn-success">Go Back</a>
     </div>
 
   </div>
