@@ -37,20 +37,17 @@
                                 <h3 class="card-title"> {{ recipe.title }}</h3>
 
                             </a>
-                            <p class="card-text"> {{ recipe.introduction | safe }} </p>
                             <hr>
                             <div>
-                                <p class="card-text">added by {{ recipe.author}}</p>
-                                <p class="card-text">{{ recipe.created_on}}
-                                    <i class="far fa-star">{{ recipe.number_of_favourites }}</i>
-                                    <span>
-                                      
-                                        {% with reviews.count as total_reviews %}
-                                        <i class="far fa-comments" aria-hidden="true"> {{ total_reviews }} </i>
-                                        {% endwith %}
-                                    </span>
-                                    
-                                </p>
+                                <p class="card-text">added by {{ recipe.author}} on
+                                    {{ recipe.created_on}}</p>
+                                <i class="far fa-star">{{ recipe.number_of_favourites }}</i>
+
+
+                                {% with reviews.count as total_reviews %}
+                                <i class="far fa-comments" aria-hidden="true"> {{ total_reviews }} </i>
+                                {% endwith %}
+                               
                             </div>
                         </div>
                     </div>
