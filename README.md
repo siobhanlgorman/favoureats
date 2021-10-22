@@ -87,17 +87,20 @@ The goal of the project is to create a recipe website with tried and tested reci
 2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
 
 ### Unresolved Bugs
-1. Min and Max validators imported and set for cook_time but although error is raised if value outsdie these is entered the dropdown indicated all integer values.
+1. Min and Max validators imported and set for cook_time but although error is raised if value outside these is entered the dropdown indicated all integer values.
 2. User created posts are added to public recipe list inside of only their own created recipes list
 3. Number of comments does not appear on recipes page but number of favourites does 
-4. User generated ingredients and steps do not appear as lists
+4. User generated ingredients and steps do not appear as lists. Fixed by adding `|linebreaks` to the steps and ingredients sections of the recipe detail template
 ## Gitpod Forking and Cloning
 # Deployment
 ## Heroku
 # Credits
 
-[Dennis Ivy 'Django To Do List App With User Registration & Login'](https://www.youtube.com/watch?v=llbtoQTt4qw&t=68s) was useful for full CRUD functionality application
-This tutorial was used to auto generate slugs from the fron-end: [Kodnito](https://kodnito.com/posts/slugify-urls-django/)
+[Dennis Ivy 'Django To Do List App With User Registration & Login'](https://www.youtube.com/watch?v=llbtoQTt4qw&t=68s) was useful for full CRUD functionality application.
+
+This tutorial was used to auto generate slugs from the front-end: [Kodnito](https://kodnito.com/posts/slugify-urls-django/)
+
 [Stack Overflow](https://stackoverflow.com/) was used for general queries
+
 ## Images
 Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
