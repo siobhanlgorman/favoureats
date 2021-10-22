@@ -106,7 +106,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Ingredients</h4>
                         <p class="card-text">
-                            {{recipe.ingredients | safe}}
+                            {{recipe.ingredients|safe|linebreaks}}
                         </p>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Steps</h4>
                         <p class="card-text">
-                            {{recipe.steps | safe}}
+                            {{recipe.steps|safe|linebreaks}}
                         </p>
                         <h4 class="card-title">Notes:</h4>
                         <p class="card-text">

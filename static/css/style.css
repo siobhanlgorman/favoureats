@@ -119,6 +119,10 @@ a:hover {
     
 }
 
+a.nav-link.active {
+    color: rgba(0,0,0,.7);
+    background-color: #ccc;
+}
 a.page-link {
     color: green;
 }
@@ -165,7 +169,7 @@ table {
 }
 
 .recipe-search {
-    margin: 1rem, 0, 0;
+    
     padding: 1rem;
 }
 
@@ -230,16 +234,3 @@ table {
     margin: auto;
 }
 
-/* .icon-list li > i {
-    padding: 0.5rem;
-
-} */
-
-/* messages */
-/* .delete-msg p {
-    font-weight: bold; */
-    
-/*     
-.msg p {
-    font-weight: bold;
-} */

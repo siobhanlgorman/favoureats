@@ -34,32 +34,28 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          {% url 'home' as url %}
-          <li class="nav-item {% if request.path == url %}active{% endif %}">
-            <a class="nav-link" href="{{ url }}">Home</a>
+          <li class="nav-item ">
+            <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}">Home</a>
           </li>
-          {% url 'about' as url %}
-          <li class="nav-item {% if request.path == url %}active{% endif %}">
-            <a class="nav-link" href="{{ url }}">About</a>
+          <li class="nav-item ">
+            <a class="nav-link {% if '/about/' in request.path %}active{% endif %}" href="{% url 'about' %}">About</a>
           </li>
-          {% url 'recipes' as url %}
-          <li class="nav-item {% if request.path == url %}active{% endif %}">
-            <a class="nav-link" href="{{ url }}">Recipes</a>
+          <li class="nav-item ">
+            <a class="nav-link {% if '/recipes/' in request.path %}active{% endif %}" href="{% url 'recipes' %}">Recipes</a>
           </li>
-          {% url 'myrecipes' as url %}
-          <li class="nav-item {% if request.path == url %}active{% endif %}">
-            <a class="nav-link" href="{{ url }}">My Recipes</a>
+          <li class="nav-item">
+            <a class="nav-link {% if '/myrecipes/' in request.path %}active{% endif %}" href="{% url 'myrecipes' %}">My Recipes</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_logout' %}">Sign Out</a>
           </li>
           {% else %}
-          <li class="nav-item {% if request.path == 'account_signup' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+          <li class="nav-item">
+            <a class="nav-link {% if '/accounts/signup/' in request.path %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
           </li>
-          <li class="nav-item {% if request.path == 'account_login' %}active{% endif %}">
-            <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+          <li class="nav-item">
+            <a class="nav-link {% if '/accounts/login/' in request.path %}active{% endif %}" href="{% url 'account_login' %}">Sign In</a>
           </li>
           {% endif %}
         </ul>
@@ -84,7 +80,7 @@
   </div>
 
   <main>
-    
+
     {% block content %}
     <!-- Content -->
     {% endblock %}
@@ -107,8 +103,10 @@
   <script>
     setTimeout(function () {
       let messages = document.getElementById("msg");
-      let alert = new bootstrap.Alert(messages);
-      alert.close();
+      if (messages) {
+        let alert = new bootstrap.Alert(messages);
+        alert.close();
+      }
     }, 1500);
   </script>
 

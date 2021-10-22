@@ -39,12 +39,12 @@ class Recipe(models.Model):
     cooktime_hours = models.PositiveIntegerField(
         default=0,
         validators=[
-            MinValueValidator(1),
+            MinValueValidator(0),
             MaxValueValidator(48)])
     cooktime_mins = models.PositiveIntegerField(
         default=0,
         validators=[
-            MinValueValidator(1),
+            MinValueValidator(0),
             MaxValueValidator(59)])
     recipe_image = CloudinaryField(
         'image',
