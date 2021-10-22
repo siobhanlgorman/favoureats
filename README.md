@@ -81,19 +81,83 @@ The goal of the project is to create a recipe website with tried and tested reci
 # Database
 # Technologies
 # Testing
+## Browser compatibility
+## Responsiveness
+## Code Validation
+## User Story Testing
+## Manual Testing
+## Automated Testing
+  * test files in testing md?
+
 ## Bugs
 ### Resolved Bugs
 1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
 2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
+3. User generated ingredients and steps do not appear as lists. Fixed by adding `|linebreaks` to the steps and ingredients sections of the recipe detail template
 
 ### Unresolved Bugs
 1. Min and Max validators imported and set for cook_time but although error is raised if value outside these is entered the dropdown indicated all integer values.
-2. User created posts are added to public recipe list inside of only their own created recipes list
-3. Number of comments does not appear on recipes page but number of favourites does 
-4. User generated ingredients and steps do not appear as lists. Fixed by adding `|linebreaks` to the steps and ingredients sections of the recipe detail template
+2. Number of comments does not appear on recipes page but number of favourites does 
 ## Gitpod Forking and Cloning
 # Deployment
+## Local Deployment: Forking and Cloning
 ## Heroku
+1. First follow these steps to create your app:
+* Install Django and gunicorn: `pip3 install django gunicorn`
+* Install supporting database libraries dj_database_url and psycopg2 liibrary: `pip3 install dj_database_url psycopg2`
+* Install Cloudinary libraries to manage photos: in the terminal window type `pip3 install dj-3-cloudinary-storage`
+* Create file for requirements: in the terminal window type `pip freeze --local > requirements.txt`
+* Create project: in the terminal window type `django-admiin startproject project_name .`
+* Create app: in the terminal window type `python3 manage.py startapp app_name`
+* Add app to list of `installed apps` in settings.py file: `'app_name'`
+* Migrate changes: in the terminal window type `python3 manage.py migrate`
+* Run the server to test if the app is installed: in the terminal window type `python3 manage.py runserver`
+* If the app has been installed correctly the window will display `The install worked successfully! Congratulations!`
+
+2. Create your Heroku app
+* Navigate to the Heroku website
+* In the Heroku browser window, create an account by entering your email address and a password
+* Activate the account through the authentication email sent to your email account
+* Click the new button and select create a new app from the dropdown menu
+* Enter a name for the application which must be unique, in this case the app name is 'favoureats'
+* Select a region, in this case Europe
+* Click create app
+
+3. Connect the Databse
+
+
+
+
+
+Heroku settings
+* From the horizontal menu bar select 'Settings'.
+* 
+
+
+
+
+Deployment
+In the top menu bar select 'Deploy'.
+In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
+In the 'search' box enter the Github repository name for the project. Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository which in this case is After the Party.
+Scroll down to select either automatic or manual deployment. For this project automatic deployment was selected. If you wish to choose automatic deployment select the button 'Enable Automatic Deploys'. This will rebuild the app every time a change is pushed to Github. If you wish to manually deploy click the button 'Deploy Branch'. The default 'Master' option in the dropdown menu should be selected in both cases.
+When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen here
+The app starts automatically and can be restarted by pressing the 'Run Program' button.
+Forking the Repository
+If you wish to fork the repository to make changes without affecting the original you can fork the repository
+
+Navigate to the After the Party repository
+Click the 'Fork' button at the top right of the page.
+A forked copy of the repository will appear in your Repositories page.
+Cloning the Repository
+On Github navigate to the main page of the After the Party.
+Above the list of files click the dropdown code menu.
+Select the https option and copy the link.
+Open the terminal.
+Change the current working directory to the desired destination location.
+Type the git clone command with the copied URL: git clone https://github.com/siobhanlgorman/After-the-Party.git.
+Press enter to create the local clone.
+
 # Credits
 
 [Dennis Ivy 'Django To Do List App With User Registration & Login'](https://www.youtube.com/watch?v=llbtoQTt4qw&t=68s) was useful for full CRUD functionality application.
