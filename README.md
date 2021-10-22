@@ -123,7 +123,15 @@ The goal of the project is to create a recipe website with tried and tested reci
 * Select a region, in this case Europe
 * Click create app
 
-3. Connect the Databse
+3. Connect the Database in Heroku to Gitpod
+* In the Heroku dashboard click on the Resources tab
+* Scroll down to Add-Ons, search for and select 'Heroku Postgres'
+* In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
+
+4. Set up Environment Variables
+* In Gitpod create a new env.py file in the top level directory
+* Add env.py to the .gitignore file
+* In env.pyImport the os library
 
 
 
@@ -139,14 +147,14 @@ Heroku settings
 Deployment
 In the top menu bar select 'Deploy'.
 In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
-In the 'search' box enter the Github repository name for the project. Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository which in this case is After the Party.
+In the 'search' box enter the Github repository name for the project. Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository which in this case is Favoureats.
 Scroll down to select either automatic or manual deployment. For this project automatic deployment was selected. If you wish to choose automatic deployment select the button 'Enable Automatic Deploys'. This will rebuild the app every time a change is pushed to Github. If you wish to manually deploy click the button 'Deploy Branch'. The default 'Master' option in the dropdown menu should be selected in both cases.
 When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen here
 The app starts automatically and can be restarted by pressing the 'Run Program' button.
 Forking the Repository
 If you wish to fork the repository to make changes without affecting the original you can fork the repository
 
-Navigate to the After the Party repository
+Navigate to the Favoureats GitHub repository
 Click the 'Fork' button at the top right of the page.
 A forked copy of the repository will appear in your Repositories page.
 Cloning the Repository
