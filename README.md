@@ -164,6 +164,9 @@ python3 manage.py migrate`
 ```
 7. Store the static and media files on Cloudinary
 * Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the envy.py file by typing: ` os.environ["CLOUDINARY_URL"] = "your link goes here but you must remove the start so it begins with 'cloudinary://"`
+* Add Cloudinary url to 'settings' 'config vars' in Heroku: type CLOUDINARY_URL: your url here e.g. cloudinary://
+* Add DISABLE_COLLECTSTATIC to Heroku 'config vars': type DISABLE_COLLECTSTATIC in the box for 'key' and '1' in the value box (note: this must be removed for final deployment)
+
 
 Deployment
 In the top menu bar select 'Deploy'.
