@@ -31,23 +31,7 @@ class RecipeList(generic.ListView):
     paginate_by = 6
 
     # new code from here
-    context_object_name = 'recipe'
-
-    def get_context_data(self, **kwargs):
-        """
-        Filters recipe list by name of currently logged in user
-        User can search recipes by title
-        """
-        context = super().get_context_data(**kwargs)
-        context['recipe'] = context['recipe'].filter(author=self.request.user)
-        search_input = self.request.GET.get('search-area') or ''
-        
-        queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
-        if search_input:
-            context['recipe'] = context['recipe'].filter(queries)
-            context['search_input'] = search_input
-
-        return context
+  
 
 class AboutPage(generic.TemplateView):
     """
@@ -194,7 +178,7 @@ class RecipeEdit(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
     Logged in user can edit a recipe from their my recipes list
     """
     model = Recipe
-    fields = ['author', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
+    fields = ['author', 'slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
     success_message = "You have updated your recipe!"

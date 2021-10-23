@@ -166,6 +166,18 @@ python3 manage.py migrate`
 * Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the envy.py file by typing: ` os.environ["CLOUDINARY_URL"] = "your link goes here but you must remove the start so it begins with 'cloudinary://"`
 * Add Cloudinary url to 'settings' 'config vars' in Heroku: type CLOUDINARY_URL: your url here e.g. cloudinary://
 * Add DISABLE_COLLECTSTATIC to Heroku 'config vars': type DISABLE_COLLECTSTATIC in the box for 'key' and '1' in the value box (note: this must be removed for final deployment)
+* Add Cloudinary libraries to installed apps section of settings.py in this order: 
+ 'cloudinary_storage'
+ 'django.contrib.staticfiles''
+ 'cloudinary'
+* Tell Django to use Cloudinary to store media and static files. Type this in Static Files section of settings.py:
+STATIC_URL = '/static'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'STATIC')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE =
+'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 Deployment
