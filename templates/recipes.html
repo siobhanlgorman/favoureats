@@ -7,14 +7,17 @@
             <form method="GET" action="" class="recipe-search">
                 <input type="text" name="search-area" placeholder="search recipe titles" value="{{search_input}}">
                 <input type="submit" value="Search">
+                <a class="btn btn-success" href="{% url 'recipes' %}">Clear</a>
             </form>
         </div>
     </div>
+    
     <div class="row">
 
         <!-- Recipes Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
+                
                 {% for recipe in recipe_list %} 
                 <!-- what is recipe_list and where's it from? why not recipe? Why recipe in myrecipes line 37 -->
                 <div class="col-md-4">

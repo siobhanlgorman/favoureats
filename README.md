@@ -178,6 +178,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE =
 'cloudinary_storage.storage.MediaCloudinaryStorage'
+* Link file to the templates directory in Heroku 
+Place under the BASE_DIR
 
 
 Deployment

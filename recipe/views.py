@@ -11,7 +11,6 @@ from .models import Recipe
 from .forms import ReviewForm
 
 
-
 class HomeList(generic.ListView):
     """
     Displays three most recent recipes on landing page
@@ -28,10 +27,28 @@ class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipes.html'
-    paginate_by = 6
 
     # new code from here
-  
+    context_object_name = 'recipe_list'
+
+    def get_context_data(self, **kwargs):
+
+        """
+        User can search recipes by title/ingredient
+        """
+        context = super().get_context_data(**kwargs)
+        context['recipe_list'] = context['recipe_list'].all()
+        search_input = self.request.GET.get('search-area') or ''
+        print(search_input)
+        queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
+        
+        if search_input:
+            context['recipe_list'] = context['recipe_list'].filter(queries)
+            context['search_input'] = search_input
+
+        
+        paginate_by = 6
+        return context
 
 class AboutPage(generic.TemplateView):
     """
@@ -133,14 +150,16 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'myrecipes.html'
     context_object_name = 'recipe'
+    
 
     def get_context_data(self, **kwargs):
         """
         Filters recipe list by name of currently logged in user
-        User can search recipes by title
+        User can search recipes by title/ingredient
         """
         context = super().get_context_data(**kwargs)
         context['recipe'] = context['recipe'].filter(author=self.request.user)
+        
         search_input = self.request.GET.get('search-area') or ''
         
         queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
