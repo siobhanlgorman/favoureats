@@ -128,19 +128,36 @@ The goal of the project is to create a recipe website with tried and tested reci
 * Scroll down to Add-Ons, search for and select 'Heroku Postgres'
 * In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
 
-4. Set up Environment Variables
+4. Set up Environment Variables (Database url and Secret Key)
 * In Gitpod create a new env.py file in the top level directory
 * Add env.py to the .gitignore file
-* In env.pyImport the os library
+* In env.py import the os library
+* In env.py add `os.environ["DATABASE_URL"] = "Paste in the text link copied above from Heroku DATABASE_URL"`
+TIM DO I PASTE IN MY DB URL HERE?
+* In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`
+* In Heroku Settings tab Config Vars enter the same secret key created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
 
+5. Prepare the environment and settings.py file
+* In Gitpod in the 'settings.py' file type:
 
+ ```
+ from pathlib import Path
+ import os
+ import dj_database_url
 
-
-
-Heroku settings
-* From the horizontal menu bar select 'Settings'.
-* 
-
+ if os.path.isfile("env.py"):
+  import env
+ ```
+* Remove the default insecure secret key in settings.py and replace with the link to the secret key variable i Heroku by typing: `SECRET_KEY = os.environ.get(SECRET_KEY)`
+* Comment out the `DATABASES` section in settings.py and replace with:
+```
+DATABASES = {
+  'default': 
+  dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }`
+```
+6. Make migrations for the database
+* In the terminal type `python3 manage.py migrate`
 
 
 
