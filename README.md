@@ -157,9 +157,13 @@ DATABASES = {
   }`
 ```
 6. Make migrations for the database
-* In the terminal type `python3 manage.py migrate`
-
-
+* In the terminal type:
+```
+python3 manage.py makemigrations`
+python3 manage.py migrate`
+```
+7. Store the static and media files on Cloudinary
+* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the envy.py file by typing: ` os.environ["CLOUDINARY_URL"] = "your link goes here but you must remove the start so it begins with 'cloudinary://"`
 
 Deployment
 In the top menu bar select 'Deploy'.
