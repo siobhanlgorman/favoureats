@@ -11,6 +11,7 @@ from .models import Recipe
 from .forms import ReviewForm
 
 
+
 class HomeList(generic.ListView):
     """
     Displays three most recent recipes on landing page
