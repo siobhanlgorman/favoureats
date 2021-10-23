@@ -97,6 +97,7 @@
                         <p class="recipe-intro card-text">
                             {{ recipe.introduction |safe }}
                         </p>
+                        <p class="update">Recipe last updated on: {{ recipe.updated_on}}</p>
                     </div>
                 </div>
             </div>
@@ -117,7 +118,7 @@
                         <p class="card-text">
                             {{recipe.steps|safe|linebreaks}}
                         </p>
-                        <h4 class="card-title">Notes:</h4>
+                        <h4 class="card-title">Notes and Tips:</h4>
                         <p class="card-text">
                         {{recipe.notes | safe}}
                         </p>

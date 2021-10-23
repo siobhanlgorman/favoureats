@@ -61,7 +61,7 @@ i {
 
 }
 
-/* Recipe images on Landing page */
+/* Recipe images styling */
 
 .card-img-top {
     width: 100%;
@@ -69,31 +69,19 @@ i {
     object-fit: cover;
     }
 
-/* .card-img-top {
-    flex-grow: 1;
-    object-fit: contain;
-}
-
-.card-body {
-    flex-grow: 0;
-} */
-
-
 .card {
     background-color: white;
-    margin-bottom: 1rem;
-    
+    margin-bottom: 1rem;  
 }
 
 .card-title {
     text-align: center;
-    color: green;
-    margin-top: 1rem, 1rem;
+    margin: 1rem;
 }
 
 .card-text p {
     text-align: justify;
-    color: green;
+    
 }
 
 .image-container {
@@ -107,6 +95,10 @@ i {
     left: -2px;
     background-color: green;
     padding: 3px;
+}
+
+.update {
+    font-size: small;
 }
 
 /* Links */

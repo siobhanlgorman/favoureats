@@ -29,7 +29,7 @@
                                 <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
                                 {% endif %}
                                 <div class="image-banner">
-                                    <p class="recipe-type"> {{ recipe.type }}</p>
+                                    <p class="recipe-type"> {{ recipe.type }} / {{ recipe.category}}</p>
                                 </div>
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link">
