@@ -94,10 +94,9 @@ The goal of the project is to create a recipe website with tried and tested reci
 1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
 2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
 3. User generated ingredients and steps do not appear as lists. Fixed by adding `|linebreaks` to the steps and ingredients sections of the recipe detail template
-4. My recipe_confirm_delete template could not be found when located with the other messages templates and provoked an error on delete file could not be found. As the error message stated that it looked in file path: 'recipe/templates` I duly created this folder and placed it there to fix the error.
+4. My recipe_confirm_delete template could not be found when located with the other messages templates and provoked an error on delete file could not be found. As the error message stated that it looked in file path: `recipe/templates`. In order to fix this error speedily I created the folder `recipe` and placed the recipe_confirm_delete.html template there to fix the error. Given more time I would investigate this further.
 
 ### Unresolved Bugs
-1. Min and Max validators imported and set for cook_time but although error is raised if value outside these is entered the dropdown indicated all integer values.
 2. Number of comments does not appear on recipes page but number of favourites does 
 ## Gitpod Forking and Cloning
 # Deployment

@@ -41,13 +41,14 @@
                             </a>
                             <hr>
                             <div>
-                                <p>added by {{ recipe.author}} on
+                                <p>added by {{ recipe.author }} on
                                     {{ recipe.created_on}}</p>
-                                <i class="far fa-star">{{ recipe.number_of_favourites }}</i>
-
+                                <i class="far fa-star">{{ recipe.number_of_favourites }}</i>                              
 
                                 {% with reviews.count as total_reviews %}
-                                <i class="far fa-comments" aria-hidden="true"> {{ total_reviews }} </i>
+                                
+                                <i class="far fa-comments" aria-hidden="true"> {{ recipe.reviews.count }} </i>
+                                
                                 {% endwith %}
 
                             </div>
