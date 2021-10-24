@@ -192,15 +192,26 @@ DEFAULT_FILE_STORAGE =
 9. Create `media`, `static` and `templates` folders in top level directory in Gitpod
 10. Create Procfile in top level directory: `workspace/favoureats/Procfile`
 * In Procfile add: `web: gunicorn favoureats .wsgi
-`
+11. In Gitpod terminal add commit and push: 
+```
+git add .
+git commit -m “Deployment Commit”
+git push
+```
+12. Heroku Deployment: 
+* In the top menu bar select 'Deploy'.
+* In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
+* In the 'search' box enter the Github repository name for the project: favoureats: https://github.com/siobhanlgorman/favoureats
+Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
 
+13. Final Deployment
+In Gitpod: 
+* When development is complete in `settings.py` change the debug setting to: `DEBUG = False`
+* In settings.py add: `X_FRAME_OPTIONS = 'SAMEORIGIN'`
+* In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0 or delete if no more development will be undertaken??????????
+* Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
+* To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com/myrecipes/)
 
-Deployment
-In the top menu bar select 'Deploy'.
-In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
-In the 'search' box enter the Github repository name for the project. Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository which in this case is Favoureats.
-Scroll down to select either automatic or manual deployment. For this project automatic deployment was selected. If you wish to choose automatic deployment select the button 'Enable Automatic Deploys'. This will rebuild the app every time a change is pushed to Github. If you wish to manually deploy click the button 'Deploy Branch'. The default 'Master' option in the dropdown menu should be selected in both cases.
-When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen here
 The app starts automatically and can be restarted by pressing the 'Run Program' button.
 Forking the Repository
 If you wish to fork the repository to make changes without affecting the original you can fork the repository
@@ -214,7 +225,7 @@ Above the list of files click the dropdown code menu.
 Select the https option and copy the link.
 Open the terminal.
 Change the current working directory to the desired destination location.
-Type the git clone command with the copied URL: git clone https://github.com/siobhanlgorman/After-the-Party.git.
+Type the git clone command with the copied URL: git clone https://github.com/siobhanlgorman/favoureats.git.
 Press enter to create the local clone.
 
 # Credits
