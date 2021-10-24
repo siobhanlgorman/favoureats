@@ -8,7 +8,7 @@
             <div class="col-12 hero-text">
                 <h1>Favoureats</h1>
                 <p>tried and tested favourite recipes</p>
-                <p>choose from a selection and store your own favourites</p>
+                <p>choose from a selection and add your own favourites</p>
                 {% if user.is_authenticated %}
                 <p class="invisible"><a href="{% url 'account_signup' %}">Register now!</a></p>
                 {% else %}
@@ -23,8 +23,9 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12"></div>
+            <div class="col-12"><h1 class="display-1 ldg-header">Latest Recipes</h1></div>
         </div>
+        <hr>
         <div class="row">
             <!-- Recipe Snapshot Column -->
             <div class="col-12 mt-3 left">
