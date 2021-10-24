@@ -5,9 +5,8 @@
     <div class="row">
         <div class="col text-center">
             <form method="GET" action="" class="recipe-search">
-                <input type="text" name="search-area" placeholder="search recipe titles" value="{{search_input}}">
+                <input type="search" name="search-area" placeholder="search" value="{{search_input}}" required=true>
                 <input type="submit" value="Search">
-                <a class="btn btn-light" href="{% url 'recipes' %}">Clear</a>
             </form>
         </div>
     </div>
