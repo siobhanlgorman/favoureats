@@ -28,26 +28,24 @@
 
     <div class="row">
         <div class="card">
-            <div class="col card-body my-recipes-list">
-                <div class="row">
-                    <div class="table-container">
-                        <table class="table">
-                            <!-- <tr>
+            <div class="col card-body">
+
+                <table class="table">
+                    <!-- <tr>
                 <th>Recipe</th>
             </tr> -->
-                            {% for recipe in recipe %}
-                            <tr>
-                                <td>{{ recipe.title }}</td>
-                                <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
-                                <td><a href="{% url 'recipeedit' recipe.slug %}">Edit</a></td>
-                                <td><a href="{% url 'recipedelete' recipe.slug %}">Delete</a></td>
-                            </tr>
-                            {% empty %}
-                            <h3>No recipes to view</h3>
-                            {% endfor %}
-                        </table>
-                    </div>
-                </div>
+                    {% for recipe in recipe %}
+                    <tr>
+                        <td>{{ recipe.title }}</td>
+                        <td><a href="{% url 'recipe_detail' recipe.slug %}">View</a></td>
+                        <td><a href="{% url 'recipeedit' recipe.slug %}">Edit</a></td>
+                        <td><a href="{% url 'recipedelete' recipe.slug %}">Delete</a></td>
+                    </tr>
+                    {% empty %}
+                    <h3>No recipes to view</h3>
+                    {% endfor %}
+                </table>
+
             </div>
         </div>
     </div>
