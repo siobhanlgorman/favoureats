@@ -3,11 +3,11 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center search-bar">
+        <div class="col text-center input-group">
             <form method="GET" action="" class="recipe-search">
-                <input type="text" name="search-area" class="btn btn-outline-dark btn-sm" value="{{search_input}}" required=true>
-                <input type="submit" class="btn btn-outline-dark btn-sm" value="Search">
-                <a href="{% url 'recipes' %}" class="btn btn-outline-dark btn-sm" type="submit">&#x2715</a>
+                <input type="text" name="search-area" class="btn btn-outline-secondary btn-sm" value="{{search_input}}" required=true>
+                <input type="submit" class="btn btn-outline-secondary btn-sm" value="Search">
+                <a href="{% url 'recipes' %}" class="btn btn-outline-secondary btn-sm" type="submit">&#x2715</a>
             </form>
         </div>
     </div>
