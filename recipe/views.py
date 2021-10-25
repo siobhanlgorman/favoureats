@@ -28,7 +28,6 @@ class RecipeList(generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'recipes.html'
 
-    # new code from here
     context_object_name = 'recipe_list'
 
     def get_context_data(self, **kwargs):
