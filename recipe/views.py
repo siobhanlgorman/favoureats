@@ -41,14 +41,14 @@ class RecipeList(generic.ListView):
         search_input = self.request.GET.get('search-area') or ''
         print(search_input)
         queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
-        
+
         if search_input:
             context['recipe_list'] = context['recipe_list'].filter(queries)
             context['search_input'] = search_input
 
-        
         paginate_by = 6
         return context
+
 
 class AboutPage(generic.TemplateView):
     """
@@ -150,7 +150,6 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
     queryset = Recipe.objects.filter(status=1).order_by('-created_on')
     template_name = 'myrecipes.html'
     context_object_name = 'recipe'
-    
 
     def get_context_data(self, **kwargs):
         """
@@ -159,9 +158,9 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
         """
         context = super().get_context_data(**kwargs)
         context['recipe'] = context['recipe'].filter(author=self.request.user)
-        
+
         search_input = self.request.GET.get('search-area') or ''
-        
+
         queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
         if search_input:
             context['recipe'] = context['recipe'].filter(queries)
@@ -180,7 +179,6 @@ class RecipeCreate(SuccessMessageMixin, LoginRequiredMixin, generic.CreateView):
     success_url = reverse_lazy('myrecipes')
     success_message = "You have added a recipe to your list!"
 
-
     def form_valid(self, form):
         """
         Sets logged in user as author field in form
@@ -189,7 +187,6 @@ class RecipeCreate(SuccessMessageMixin, LoginRequiredMixin, generic.CreateView):
         form.instance.author = self.request.user
         form.instance.status = 1
         return super(RecipeCreate, self).form_valid(form)
-        
 
 
 class RecipeEdit(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
@@ -214,4 +211,3 @@ class RecipeDelete(SuccessMessageMixin, LoginRequiredMixin, generic.DeleteView):
     def delete(self, request, *args, **kwargs):
         messages.warning(self.request, self.success_message)
         return super(RecipeDelete, self).delete(request, *args, **kwargs)
-

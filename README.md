@@ -98,6 +98,12 @@ The goal of the project is to create a recipe website with tried and tested reci
 5. Number of comments does not appear on recipes page but number of favourites does: I troubleshooted with various print() statements to determine what was being read and fixed by renaming variable to `{{ recipe.reviews.count }}`
 
 ### Unresolved Bugs
+Safari rendering: 
+* search button x appears rounded
+* cannot type into search box
+* iphone 10R hamburger menu overlapping logo
+
+
 ## Gitpod Forking and Cloning
 # Deployment
 ## Local Deployment: Forking and Cloning

@@ -107,12 +107,12 @@ WSGI_APPLICATION = 'favoureats.wsgi.application'
 development = os.environ.get('DEVELOPMENT', False)
 
 if (development == 'True'):
-                DATABASES = {
-                    'default': {
-                        'ENGINE': 'django.db.backends.sqlite3',
-                        'NAME': BASE_DIR / 'db.sqlite3',
-                    }
-                }
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3', 
+            'NAME': BASE_DIR / 'db.sqlite3',
+            }
+            }
 else:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -128,10 +128,10 @@ else:
 #     }
 # }
 
-DATABASES = {
-    'default':
-    dj_database_url.parse(os.environ.get('DATABASE_URL'))
-}
+# DATABASES = {
+#     'default':
+#     dj_database_url.parse(os.environ.get('DATABASE_URL'))
+# }
 
 
 # Password validation
