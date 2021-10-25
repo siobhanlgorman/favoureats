@@ -17,7 +17,7 @@
                 <div class="col-sm-6 image-container card recipe-detail-image">
                     {% if "placeholder" in recipe.recipe_image.url %}
                     <img class="card-img-top"
-                        src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1632902970/pexels-ella-olsson-1640777_sketq6.jpg"
+                    src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
                         alt="">
                     {% else %}<img src="{{ recipe.recipe_image.url }}" alt="">
 
@@ -93,7 +93,7 @@
             <div class="row">
                 <div class="col-12 card">
                     <div class="card-body">
-                        <h4 class="card-title">About this recipe:</h4>
+                        <h2 class="card-title">About this recipe:</h2>
                         <p class="recipe-intro card-text">
                             {{ recipe.introduction |safe }}
                         </p>
@@ -105,7 +105,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 card recipe-ingred">
                     <div class="card-body">
-                        <h4 class="card-title">Ingredients</h4>
+                        <h2 class="card-title">Ingredients</h2>
                         <p class="card-text">
                             {{recipe.ingredients|safe|linebreaks}}
                         </p>
@@ -114,11 +114,11 @@
                 <!-- recipe steps -->
                 <div class="col-12 col-md-6 card">
                     <div class="card-body">
-                        <h4 class="card-title">Steps</h4>
+                        <h2 class="card-title">Steps</h2>
                         <p class="card-text">
                             {{recipe.steps|safe|linebreaks}}
                         </p>
-                        <h4 class="card-title">Notes and Tips:</h4>
+                        <h2 class="card-title">Notes:</h2>
                         <p class="card-text">
                         {{recipe.notes | safe}}
                         </p>
@@ -130,7 +130,7 @@
             <!-- recipe reviews -->
             <div class="row card">
                 <div class="col-12 col-md-6 card-body">
-                    <h4 class="review-title">Reviews:</h4>
+                    <h2 class="review-title">Reviews:</h2>
                     <div class="card-text">
                         {% for review in reviews %}
                         <div class="reviews">
@@ -154,7 +154,7 @@
                         </div>
                         {% else %}
                         {% if user.is_authenticated%}
-                        <h4 class="card-title">Leave a review:</h4>
+                        <h2 class="card-title">Leave a review:</h2>
                         <p>Posting as: {{ user.username }}</p>
                         <form method="post">
                             {{ review_form | crispy }}
