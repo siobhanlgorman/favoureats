@@ -12,23 +12,24 @@
     </div>
 
     <div class="row">
-        <div class="col text-center">
+        <div class="col text-center search-bar">
             <form method="GET" action="" class="recipe-search">
-                <input type="search" name="search-area" placeholder="enter ingredient here" value="{{search_input}}" required=true>
-                <input type="submit" value="Search">
+                <input type="text" name="search-area" class="btn btn-outline-dark btn-sm" value="{{search_input}}" required=true>
+                <input type="submit" class="btn btn-outline-dark btn-sm" value="Search">
+                <a href="{% url 'myrecipes' %}" class="btn btn-outline-dark btn-sm" type="submit">&#x2715</a>
             </form>
         </div>
     </div>
 
     <div class="row">
-        <div class="col text-center">
+        <div class="col text-center btn-add">
             <a class="btn btn-lg btn-success" href="{% url 'recipecreate' %}">Add a Recipe</a>
         </div>
     </div>
 
     <div class="row">
         <div class="card">
-            <div class="col card-body">
+            <div class="col">
 
                 <table class="table">
                     <!-- <tr>

@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: white;
    
 }
 
@@ -76,7 +76,7 @@ i {
     }
 
 .card {
-    background-color: white;
+    background-color: whitesmoke;
     margin-bottom: 1rem;  
 }
 
@@ -145,6 +145,18 @@ a.page-link {
     margin: 1rem;
 }
 
+/* search bar */
+/* .reset {
+    padding: 0px 0px 4px 0px;
+} */
+
+.search-bar {
+    padding: 0%;
+}
+
+/* .recipe-search {
+    padding: 1%;
+} */
 /* My Recipes page */
 .my-recipes-list {
     width: 75%;
@@ -152,10 +164,10 @@ a.page-link {
 }
 
 .btn-add {
-    margin-top: 1rem;
-    margin-left: 0;
-    padding: 1rem;
+    padding-bottom: 1rem;
 }
+
+
 
 .btn-add a {
     background-color: green;
@@ -169,14 +181,16 @@ a.page-link {
     color: black;
 }
 
+
 table {
     border: 5px solid grey;
-    width: 100%;
+    /* width: 100%; */
+    /* margin: auto; */
 }
 
-.table-container {
+/* .table-container {
     padding: 2rem;
-}
+} */
 
 .recipe-search {
 
