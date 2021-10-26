@@ -3,6 +3,9 @@ The Agile methodology was used to plan the project. Github was used as the tool 
 
 # UX
 ## Strategy
+
+The time frame for this project was extremely short given the requirements. Hence the outcome is not as perfected as I would like. The functionality is working but with some unexpected results on certain IPhones and time does not permit enough investigation
+
 ### Project Goal
 
 The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from a book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
@@ -74,7 +77,10 @@ The goal of the project is to create a recipe website with tried and tested reci
 
 
 ## Design
+My style is to keep everything minimalist, fresh and clean looking, uncluttered and symmetrical
 ### Colours
+Natural, fresh and clean like a clean kitchen and fresh natural food
+white, green, grey, charcoal font? black?
 ### Typography
 ### Images
 
@@ -100,8 +106,10 @@ The goal of the project is to create a recipe website with tried and tested reci
 ### Unresolved Bugs
 Safari rendering: 
 * search button x appears rounded
-* cannot type into search box
+* text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. Unfortunately the time available does not allow for the detailed investigation required to fix this
+
 * iphone 10R hamburger menu overlapping logo
+
 
 
 ## Gitpod Forking and Cloning

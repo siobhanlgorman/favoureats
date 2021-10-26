@@ -34,11 +34,11 @@ class TestUrls(SimpleTestCase):
         self.assertEqual(resolve(url).func.view_class, RecipeDetail)
 
     def test_recipefavourite_url_is_resolved(self):
-            """
-            Test redirect to recipe detail page
-            """
-            url = reverse('recipe_favourite', args=['slug'])
-            self.assertEqual(resolve(url).func.view_class, RecipeFavourite)
+        """
+        Test redirect to recipe detail page
+        """
+        url = reverse('recipe_favourite', args=['slug'])
+        self.assertEqual(resolve(url).func.view_class, RecipeFavourite)
 
     def test_myrecipelist_url_is_resolved(self):
         """
