@@ -5,20 +5,22 @@
     <div class="row">
         <div class="col text-center search-bar">
             <form method="GET" action="" class="recipe-search">
-                <input type="text" name="search-area" class="btn btn-outline-secondary btn-sm" value="{{search_input}}" required=true>
+                <input type="text" name="search-area" class="btn btn-outline-secondary btn-sm" value="{{search_input}}"
+                    required=true>
                 <input type="submit" class="btn btn-outline-secondary btn-sm" value="Search">
-                <a href="{% url 'recipes' %}" class="btn btn-outline-secondary btn-sm" type="submit">&#x2715</a>
+                <a href="{% url 'recipes' %}" class="btn btn-outline-secondary btn-sm" role="button"
+                    type="submit">&#x2715;</a>
             </form>
         </div>
     </div>
-    
+
     <div class="row">
 
         <!-- Recipes Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                
-                {% for recipe in recipe_list %} 
+
+                {% for recipe in recipe_list %}
                 <!-- what is recipe_list and where's it from? why not recipe? Why recipe in myrecipes line 37 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
@@ -26,7 +28,7 @@
                             <div class="image-container">
                                 {% if 'placeholder' in recipe.recipe_image.url %}
                                 <img class="card-img-top"
-                                src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
+                                    src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
                                     alt="">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
@@ -43,12 +45,12 @@
                             <div>
                                 <p>added by {{ recipe.author }} on
                                     {{ recipe.created_on}}</p>
-                                <i class="far fa-star">{{ recipe.number_of_favourites }}</i>                              
+                                <i class="far fa-star">{{ recipe.number_of_favourites }}</i>
 
                                 {% with reviews.count as total_reviews %}
-                                
+
                                 <i class="far fa-comments" aria-hidden="true"> {{ recipe.reviews.count }} </i>
-                                
+
                                 {% endwith %}
 
                             </div>
@@ -81,8 +83,5 @@
 </nav>
 
 {% endif %}
-</div>
-
-</div>
 
 {% endblock %}
