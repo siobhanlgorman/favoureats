@@ -105,12 +105,20 @@ white, green, grey, charcoal font? black?
 
 ### Unresolved Bugs
 Safari rendering: 
-* search button x appears rounded
+* search button x appears rounded on iPhone8 
+
+
+![Iphone button bug](documentation/screenshots/buttonbug.png)
+
+
 * text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. Unfortunately the time available does not allow for the detailed investigation required to fix this
 
 * iphone 10R hamburger menu overlapping logo
 
+![Iphone hamburger bug](documentation/screenshots/hamburger_bug1.png)
 
+
+![Iphone hamburger bug](documentation/screenshots/hamburger_bug2.png)
 
 ## Gitpod Forking and Cloning
 # Deployment
