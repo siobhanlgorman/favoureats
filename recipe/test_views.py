@@ -35,7 +35,6 @@ class TestViews(TestCase):
         recipe_count = Recipe.objects.all().count()
         self.assertEqual(recipe_count, 1)
 
-
     def test_get_homelist(self):
         """
         Test home page response is 200
@@ -67,6 +66,16 @@ class TestViews(TestCase):
         user = self.user_a
         recipe = self.recipe_1
         response = self.client.get(self.recipe_detail_url)
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(self.recipe_1.slug, 'test-recipe')
+    
+    def test_logged_in_user_can_access_recipe_create_page(self):
+        """
+        Test logged in user can access recipe detail page
+        """
+        user = self.user_a
+        recipe = self.recipe_1
+        response = self.client.get(self.recipe_create_url)
         self.assertEqual(response.status_code, 302)
         self.assertEqual(self.recipe_1.slug, 'test-recipe')
     
