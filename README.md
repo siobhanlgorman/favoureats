@@ -289,6 +289,8 @@ Press enter to create the local clone.
 
 This tutorial was used to auto generate slugs from the front-end: [Kodnito](https://kodnito.com/posts/slugify-urls-django/)
 
+This tutorial was useful for automated testing[Django Testing](https://www.youtube.com/watch?v=GBgRMdjAx_c)
+
 [Stack Overflow](https://stackoverflow.com/) was used for general queries
 
 ## Images
