@@ -119,8 +119,8 @@ class Recipe(models.Model):
             '-created_on']
 
     def __str__(self):
-        # return self.title
-        return str(self.title)
+        return self.title
+        
 
     def number_of_favourites(self):
         """
