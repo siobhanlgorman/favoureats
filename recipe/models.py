@@ -120,7 +120,6 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.title
-        
 
     def number_of_favourites(self):
         """

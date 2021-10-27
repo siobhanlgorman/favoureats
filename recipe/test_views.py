@@ -20,9 +20,10 @@ class TestViews(TestCase):
         self.user_a.set_password('my_password')
         self.client.login(username='testuser', password='my_password')
         self.user_a.save()
-        user_b = User.objects.create_user('user_2', 'email@invalid.com', 'a_password')
+        user_b = User.objects.create_user('user_2',
+                                          'email@invalid.com',
+                                          'a_password')
         self.user_b = user_b
-
 
         # create a test recipe
         self.recipe_1 = Recipe.objects.create(
@@ -76,6 +77,7 @@ class TestViews(TestCase):
         # self.assertTemplateUsed(response, 'recipe_form.html')
 
     # def test_logged_in_user_can_access_recipe_create_page(self):
+
         """
         Test logged in user is redirected to recipe create page
         """
@@ -92,8 +94,6 @@ class TestViews(TestCase):
     #     response = self.client.post('/recipecreate', {'title': 'test recipe3'})
     #     self.assertRedirects(response, 'recipecreate/{recipe.slug}')  # 301!=302
 
-
-    
     def test_logged_in_user_can_edit_recipe_page(self):
         user = self.user_a
         recipe = Recipe.objects.create(title='test recipe 3', author=user)
@@ -101,14 +101,12 @@ class TestViews(TestCase):
         # self.assertEqual(response.status_code, 200)
         # self.assertTemplateUsed(response, 'recipe_form.html')
 
-
-
     # def test_logged_in_user_can_access_recipe_edit_page(self):
     #     """
     #     Test logged in user is redirected to recipe edit page
     #     """
     #     recipe = Recipe.objects.create(title='test recipe 2', author=user_a)
-    #     User.objects.create_user = 
+    #     User.objects.create_user =
     #     response = self.client.get(f'recipeedit/{recipe.slug}')
         # user = self.user_a
         # recipe = self.recipe_1
@@ -116,7 +114,7 @@ class TestViews(TestCase):
         # self.assertEqual(response.status_code, 302)
         # self.assertTemplateUsed(response, 'recipe_form.html')
         # self.assertEqual(self.recipe_1.slug, 'test-recipe')
-    
+
     # def test_logged_in_user_can_access_recipe_delete_page(self):
         """
         Test logged in user is redirected to recipe delete page
@@ -136,8 +134,6 @@ class TestViews(TestCase):
     #     self.client.login(username=self.user_b.username, password='a_password')
     #     self.client.recipe("recipecreate", {"title": "this is a valid test"})
     #     self.assertEqual(response.status_code, 200)
-
-
 
     # def test_user_can_submit_recipe_create_form
 

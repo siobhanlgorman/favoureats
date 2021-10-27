@@ -5,9 +5,13 @@ from .models import Recipe, Review, User
 class TestModels(TestCase):
 
     def setUp(self):
-        user_a = User.objects.create_user('user_1', 'testuser@email.com', 'my_password')
+        user_a = User.objects.create_user('user_1',
+                                          'testuser@email.com',
+                                          'my_password')
         self.user_a = user_a
-        user_b = User.objects.create_user('user_2', 'email@valid.com', 'a_password')
+        user_b = User.objects.create_user('user_2',
+                                          'email@valid.com',
+                                          'a_password')
         self.user_b = user_b
         self.recipe1 = Recipe.objects.create(
             title='Test Recipe 1',
@@ -15,7 +19,7 @@ class TestModels(TestCase):
             category='main',
             type='vegetarian'
         )
-    
+
     def test_recipe_gets_slug_from_title(self):
         """
         Tests that slug is automatically generated from recipe title
