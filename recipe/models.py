@@ -1,3 +1,6 @@
+"""
+Imports
+"""
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
@@ -8,6 +11,9 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Recipe(models.Model):
+    """
+    Model for recipe
+    """
     title = models.CharField(
         max_length=200,
         unique=True)
@@ -113,9 +119,13 @@ class Recipe(models.Model):
             '-created_on']
 
     def __str__(self):
-        return self.title
+        # return self.title
+        return str(self.title)
 
     def number_of_favourites(self):
+        """
+        Returns total number of times users have favourited a recipe
+        """
         return self.favourites.count()
 
     def save(self, *args, **kwargs):
@@ -125,6 +135,9 @@ class Recipe(models.Model):
 
 
 class Review(models.Model):
+    """
+    Model for review. Logged in user can review a recipe
+    """
     recipe = models.ForeignKey(
         Recipe,
         on_delete=models.CASCADE,
