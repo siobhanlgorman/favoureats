@@ -3,9 +3,6 @@ The Agile methodology was used to plan the project. Github was used as the tool 
 
 # UX
 ## Strategy
-
-The time frame for this project was extremely short given the requirements. Hence the outcome is not as perfected as I would like. The functionality is working but with some unexpected results on certain IPhones and time does not permit enough investigation
-
 ### Project Goal
 
 The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from a book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
@@ -77,10 +74,7 @@ The goal of the project is to create a recipe website with tried and tested reci
 
 
 ## Design
-My style is to keep everything minimalist, fresh and clean looking, uncluttered and symmetrical
 ### Colours
-Natural, fresh and clean like a clean kitchen and fresh natural food
-white, green, grey, charcoal font? black?
 ### Typography
 ### Images
 
@@ -100,29 +94,10 @@ white, green, grey, charcoal font? black?
 1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
 2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
 3. User generated ingredients and steps do not appear as lists. Fixed by adding `|linebreaks` to the steps and ingredients sections of the recipe detail template
-4. My recipe_confirm_delete template could not be found when located with the other messages templates and provoked an error on delete file could not be found. As the error message stated that it looked in file path: `recipe/templates`. In order to fix this error speedily I created the folder `recipe` and placed the recipe_confirm_delete.html template there to fix the error. Given more time I would investigate this further.
-5. Number of comments does not appear on recipes page but number of favourites does: I troubleshooted with various print() statements to determine what was being read and fixed by renaming variable to `{{ recipe.reviews.count }}`
 
 ### Unresolved Bugs
-Safari rendering: 
-* search button x appears rounded on iPhone8 
-
-
-![Iphone button bug](documentation/screenshots/buttonbug.png)
-
-
-* text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. Unfortunately the time available does not allow for the detailed investigation required to fix this
-
-* iphone 10R hamburger menu overlapping logo
-
-![Iphone hamburger bug](documentation/screenshots/hamburger_bug1.png)
-
-
-![Iphone hamburger bug](documentation/screenshots/hamburger_bug2.png)
-
-????? check
-role="button"
-
+1. Min and Max validators imported and set for cook_time but although error is raised if value outside these is entered the dropdown indicated all integer values.
+2. Number of comments does not appear on recipes page but number of favourites does 
 ## Gitpod Forking and Cloning
 # Deployment
 ## Local Deployment: Forking and Cloning
@@ -153,90 +128,28 @@ role="button"
 * Scroll down to Add-Ons, search for and select 'Heroku Postgres'
 * In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
 
-4. Set up Environment Variables (Database url and Secret Key)
+4. Set up Environment Variables
 * In Gitpod create a new env.py file in the top level directory
 * Add env.py to the .gitignore file
 * In env.py import the os library
-* In env.py add `os.environ["DATABASE_URL"] = "Paste in the text link copied above from Heroku DATABASE_URL"`
-TIM DO I PASTE IN MY DB URL HERE?
-* In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`
-* In Heroku Settings tab Config Vars enter the same secret key created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
 
-5. Prepare the environment and settings.py file
-* In Gitpod in the 'settings.py' file type:
 
- ```
- from pathlib import Path
- import os
- import dj_database_url
 
- if os.path.isfile("env.py"):
-  import env
- ```
-* Remove the default insecure secret key in settings.py and replace with the link to the secret key variable i Heroku by typing: `SECRET_KEY = os.environ.get(SECRET_KEY)`
-* Comment out the `DATABASES` section in settings.py and replace with:
-```
-DATABASES = {
-  'default': 
-  dj_database_url.parse(os.environ.get("DATABASE_URL"))
-  }`
-```
-6. Make migrations for the database
-* In the terminal type:
-```
-python3 manage.py makemigrations`
-python3 manage.py migrate`
-```
-7. Store the static and media files on Cloudinary
-* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the envy.py file by typing: `os.environ["CLOUDINARY_URL"] = "your link goes here but you must remove the start so it begins with 'cloudinary://"`
-* Add Cloudinary url to 'settings' 'config vars' in Heroku: type CLOUDINARY_URL: your url here e.g. cloudinary://
-* Add DISABLE_COLLECTSTATIC to Heroku 'config vars': type DISABLE_COLLECTSTATIC in the box for 'key' and '1' in the value box (note: this must be removed for final deployment)
-* Add Cloudinary libraries to installed apps section of `settings.py` in this order: 
- ```
- 'cloudinary_storage'
- 'django.contrib.staticfiles''
- 'cloudinary'
- ```
-* Tell Django to use Cloudinary to store media and static files. Type this in Static Files section of `settings.py`:
-```
-STATIC_URL = '/static'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'STATIC')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE =
-'cloudinary_storage.storage.MediaCloudinaryStorage'
-* Link file to the templates directory in Heroku 
-* Place under the BASE_DIR: TEMPLATES_DIR = os.path.join(BASE_DIR,
-'templates')
-```
-* Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array: `'DIRS': [TEMPLATES_DIR]`
-* Add Heroku Hostname to ALLOWED_HOSTS: ```ALLOWED_HOSTS =
-['favoureats.herokuapp.com', 'localhost']```
 
-9. Create `media`, `static` and `templates` folders in top level directory in Gitpod
-10. Create Procfile in top level directory: `workspace/favoureats/Procfile`
-* In Procfile add: `web: gunicorn favoureats .wsgi
-11. In Gitpod terminal add commit and push: 
-```
-git add .
-git commit -m “Deployment Commit”
-git push
-```
-12. Heroku Deployment: 
-* In the top menu bar select 'Deploy'.
-* In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
-* In the 'search' box enter the Github repository name for the project: favoureats: https://github.com/siobhanlgorman/favoureats
-Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
 
-13. Final Deployment
-In Gitpod: 
-* When development is complete in `settings.py` change the debug setting to: `DEBUG = False`
-* In settings.py add: `X_FRAME_OPTIONS = 'SAMEORIGIN'`
-* In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0 or delete if no more development will be undertaken??????????
-* Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
-* To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com/myrecipes/)
+Heroku settings
+* From the horizontal menu bar select 'Settings'.
+* 
 
+
+
+
+Deployment
+In the top menu bar select 'Deploy'.
+In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
+In the 'search' box enter the Github repository name for the project. Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository which in this case is Favoureats.
+Scroll down to select either automatic or manual deployment. For this project automatic deployment was selected. If you wish to choose automatic deployment select the button 'Enable Automatic Deploys'. This will rebuild the app every time a change is pushed to Github. If you wish to manually deploy click the button 'Deploy Branch'. The default 'Master' option in the dropdown menu should be selected in both cases.
+When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen here
 The app starts automatically and can be restarted by pressing the 'Run Program' button.
 Forking the Repository
 If you wish to fork the repository to make changes without affecting the original you can fork the repository
@@ -250,7 +163,7 @@ Above the list of files click the dropdown code menu.
 Select the https option and copy the link.
 Open the terminal.
 Change the current working directory to the desired destination location.
-Type the git clone command with the copied URL: git clone https://github.com/siobhanlgorman/favoureats.git.
+Type the git clone command with the copied URL: git clone https://github.com/siobhanlgorman/After-the-Party.git.
 Press enter to create the local clone.
 
 # Credits
