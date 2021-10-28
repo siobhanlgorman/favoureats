@@ -19,6 +19,7 @@
                     <a href="{% url 'recipes' %}" class="btn btn-outline-secondary btn-sm">&#x2715;</a>
                 </div>
             </form>
+
         </div>
     </div>
 
@@ -67,6 +68,8 @@
             </div>
             <div class="row">
                 {% endif %}
+                {% empty %}
+                <h3>No recipes to view</h3>
                 {% endfor %}
             </div>
         </div>

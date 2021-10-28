@@ -66,6 +66,7 @@ The goal of the project is to create a recipe website with tried and tested reci
 ## Structure
 ### Existing Features
 #### All Pages
+????????? Screenshots here same as for user story testing?????
   * Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes and Sign In/Out pages. The Home, About and Recipes pages can be accessed by any user but a user who is not logged in will be redirected to the Sign In page if they click on the link to My Recipes. The Sign in button changes to Sign Out once a user has logged in.
   ![###](documentation/screenshots/???png)
   * Footer: links to Facebook, Instagram and Twitter
@@ -82,7 +83,7 @@ The goal of the project is to create a recipe website with tried and tested reci
   * Images and titles of all the recipes are visible on the page. Paginated????????
   * The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page
 #### My Recipes Page
-
+  * 
 ### Admin Features
 
 ### Future Features
@@ -95,11 +96,17 @@ The goal of the project is to create a recipe website with tried and tested reci
 ## Skeleton
 ### Wireframes
 
+* [Home Page]
+* [About Page]
+* [Recipes Page]
+* [My Recipes Page]
+* [Recipe Detail Page]
+* Sign in etc???????
+
 ### Data Models
 There are two models for the database: A Recipe model and a Review model
 
 ![Data Models](documentation/screenshots/data-models.png)
-
 
 The pdf of these models' tables can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/documentation/PP4%20Data%20Models.pdf)
 ## Surface

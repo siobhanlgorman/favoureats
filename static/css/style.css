@@ -162,9 +162,15 @@ a.page-link {
     margin: 1rem;
 }
 
+/* button styling */
+
 .grn-btn {
     color: white;
     background-color: green;
+}
+
+.grn-btn i {
+    color: white;
 }
 
 /* search bar */
@@ -194,7 +200,7 @@ a.page-link {
 }
 
 table {
-    border: 5px solid grey;
+    border: 2px solid grey;
 }
 
 .recipe-search {

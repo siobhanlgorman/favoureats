@@ -15,8 +15,8 @@
         <div class="col-lg-6 text-center mt-3  mx-auto search-bar">
             <form method="GET" action="" class="recipe-search" role="search">
                 <div class="input-group mb3">
-                    <input type="text" name="search-area" class="form-control mr-sm-2" placeholder="search here" aria-label="Search the recipes"
-                        value="{{search_input}}" required>
+                    <input type="text" name="search-area" class="form-control mr-sm-2" placeholder="search here"
+                        aria-label="Search the recipes" value="{{search_input}}" required>
                     <button type="submit" class="input-group-text grn-btn mr-sm-2" value="Search"><i
                             class="fa fa-search"></i></button>
                     <a href="{% url 'myrecipes' %}" class="btn btn-outline-secondary btn-sm">&#x2715;</a>
@@ -31,14 +31,14 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="card">
-            <div class="col">
+    <div class="row justify-content-center">
+        <!-- <div class="card"> -->
+            <div class="col-xs-12 col-md-9 col-md-offset-2">
 
                 <table class="table">
-                    <!-- <tr>
-                <th>Recipe</th>
-            </tr> -->
+                    <tr>
+                        <th>Recipe Title</th>
+                    </tr>
                     {% for recipe in recipe %}
                     <tr>
                         <td>{{ recipe.title }}</td>
@@ -52,7 +52,7 @@
                 </table>
 
             </div>
-        </div>
+        <!-- </div> -->
     </div>
     <div class="row button-container">
         <div class="col text-center">
