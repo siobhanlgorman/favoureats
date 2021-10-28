@@ -121,7 +121,34 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 
 
-# Technologies
+# Technologies Used
+## Languages
+* HTML5 semantic markup
+* CSS stylesheets
+* JavaScript??????????
+* Python
+  * Python modules: crispy-forms, summernote, django=allauth, dj-database,
+
+## Frameworks
+* Django
+* ?????? Postgres for the database
+* ?????? SQLLite for the local environment
+
+## Other Technologies
+* Cloudinary was used to host the static files and media
+* Gitpod as the IDE
+* GitHub for version control
+* Heroku was used as the cloud based platform for deployment
+* Fontawesome
+* Google Fonts
+* Balsamiq
+* Google Dev Tools
+* Favicon.cc
+* ??? Am I responsive
+* Google Sheets - for the data models
+* 
+
+
 # Testing
 ## Browser compatibility
 ## Responsiveness
@@ -165,7 +192,7 @@ role="button"
 
 ## Gitpod Forking and Cloning
 # Deployment
-## Local Deployment: Forking and Cloning
+
 ## Heroku
 1. First follow these steps to create your app:
 * Install Django and gunicorn: `pip3 install django gunicorn`
@@ -276,51 +303,31 @@ Click search and then click connect to link the heroku app with the Github repos
 13. Final Deployment
 In Gitpod: 
 * When development is complete in `settings.py` change the debug setting to: `DEBUG = False`
-* In settings.py add: `X_FRAME_OPTIONS = 'SAMEORIGIN'`
+* In settings.py add: `X_FRAME_OPTIONS = 'SAMEORIGIN'` which enables the summernote editor to work in Heroku.
 * In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0 or delete if no more development will be undertaken??????????
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com/myrecipes/)
 
 
 
-Heroku settings
-* From the horizontal menu bar select 'Settings'.
-* 
+## Local Deployment: Forking and Cloning
+### Forking the Repository
+If you wish to fork the repository to make changes without affecting the original you can fork it by navigating to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
+* Above the list of files click the dropdown code menu.
+* Select the https option and copy the link.
+* Open the terminal.
+* Change the current working directory to the desired destination location.
+* Type the git clone command with the copied URL: `git clone https://github.com/siobhanlgorman/favoureats.git`.
+* Click the 'Fork' button at the top right of the page. A forked copy of the repository will appear in your Repositories page.
+### Cloning the Repository
+* On Github navigate to the main page of Favoureats [at](https://github.com/siobhanlgorman/favoureats).
+* Above the list of files click the dropdown code menu.
+* Select the https option and copy the link.
+* Open the terminal.
+* Change the current working directory to the desired destination location.
+* Type the git clone command with the copied URL: `git clone https://github.com/siobhanlgorman/favoureats.git`.
+* Press enter to create the local clone.
 
-
-
-Deployment
-
-In the top menu bar select 'Deploy'.
-In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
-In the 'search' box enter the Github repository name for the project. Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository which in this case is Favoureats.
-Scroll down to select either automatic or manual deployment. For this project automatic deployment was selected. If you wish to choose automatic deployment select the button 'Enable Automatic Deploys'. This will rebuild the app every time a change is pushed to Github. If you wish to manually deploy click the button 'Deploy Branch'. The default 'Master' option in the dropdown menu should be selected in both cases.
-When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen here
-The app starts automatically and can be restarted by pressing the 'Run Program' button.
-
-
-Forking the Repository
-If you wish to fork the repository to make changes without affecting the original you can fork the repository
-@@ -250,7 +163,7 @@ Above the list of files click the dropdown code menu.
-Select the https option and copy the link.
-Open the terminal.
-Change the current working directory to the desired destination location.
-Type the git clone command with the copied URL: git clone https://github.com/siobhanlgorman/favoureats.git.
-The app starts automatically and can be restarted by pressing the 'Run Program' button.
-Forking the Repository
-If you wish to fork the repository to make changes without affecting the original you can fork the repository
-
-Navigate to the Favoureats GitHub repository
-Click the 'Fork' button at the top right of the page.
-A forked copy of the repository will appear in your Repositories page.
-Cloning the Repository
-On Github navigate to the main page of the After the Party.
-Above the list of files click the dropdown code menu.
-Select the https option and copy the link.
-Open the terminal.
-Change the current working directory to the desired destination location.
-Type the git clone command with the copied URL: git clone https://github.com/siobhanlgorman/After-the-Party.git.
-Press enter to create the local clone.
 
 # Credits
 
