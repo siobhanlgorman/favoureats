@@ -22,7 +22,7 @@
 
                 {% for recipe in recipe_list %}
                 <!-- what is recipe_list and where's it from? why not recipe? Why recipe in myrecipes line 37 -->
-                <div class="col-md-4">
+                <div class="col-xl-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -38,12 +38,12 @@
                                 </div>
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="recipe-link">
-                                <h2 class="card-title"> {{ recipe.title }}</h2>
+                                <h3 class="card-title"> {{ recipe.title }}</h3>
 
                             </a>
                             <hr>
                             <div>
-                                <p>added by {{ recipe.author }} on
+                                <p class="recipe-footer">added by {{ recipe.author }} on
                                     {{ recipe.created_on}}</p>
                                 <i class="far fa-star">{{ recipe.number_of_favourites }}</i>
 

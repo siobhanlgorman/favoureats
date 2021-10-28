@@ -78,6 +78,7 @@ i {
 .card {
     background-color: whitesmoke;
     margin-bottom: 1rem;
+    /* height: 99%; */
 }
 
 .card-title {
@@ -88,6 +89,11 @@ i {
 .card-text p {
     text-align: justify;
 
+}
+
+.recipe-footer {
+    font-style: italic;
+    font-size: smaller;
 }
 
 .image-container {

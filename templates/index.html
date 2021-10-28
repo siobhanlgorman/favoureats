@@ -23,7 +23,9 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12"><h2 class="display-1 ldg-header">Latest Recipes</h2></div>
+            <div class="col-12">
+                <h2 class="display-1 ldg-header">Latest Recipes</h2>
+            </div>
         </div>
         <hr>
         <div class="row">
@@ -31,8 +33,7 @@
             <div class="col-12 mt-3 left">
                 <div class="row">
                     {% for recipe in recipe_list %}
-
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="image-container">
@@ -43,8 +44,12 @@
                                     {% else %}
                                     <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
                                     {% endif %}
+                                    <div class="image-banner hm-pg-img">
+                                        <p class="recipe-type"> {{ recipe.type }} / {{ recipe.category}}</p>
+                                    </div>
                                     <div>
-                                        <h2 class="recipe-title card-title"> {{ recipe.title }}</h2>
+                                        <h3 class="recipe-title card-title"> {{ recipe.title }}</h3>
+                                        <p class="recipe-footer">added by {{ recipe.author }} on {{ recipe.created_on}}</p>
                                     </div>
                                 </div>
                             </div>
