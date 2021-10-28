@@ -1,10 +1,8 @@
 body {
     background-color: white;
-
 }
 
 p {
-
     font-family: 'Poppins', sans-serif
 }
 
@@ -37,29 +35,24 @@ i {
 
 .hero-overlay {
     align-content: center;
-
 }
 
 .hero-text {
     margin-top: 1rem;
-
 }
 
 .hero-text h1 {
     color: white;
     text-align: center;
-
 }
 
 .hero-text p {
     color: white;
     text-align: center;
-
 }
 
 .hero-text btn {
     text-align: center;
-
 }
 
 .ldg-header {
@@ -78,7 +71,6 @@ i {
 .card {
     background-color: whitesmoke;
     margin-bottom: 1rem;
-    /* height: 99%; */
 }
 
 .card-title {
@@ -88,7 +80,6 @@ i {
 
 .card-text p {
     text-align: justify;
-
 }
 
 .recipe-footer {
@@ -114,22 +105,16 @@ i {
     min-width: 30%;
     display: flex;
     align-items: flex-start;
-
-
 }
 
 .card-img-overlay p {
     color: white;
     background-color: rgba(0, 128, 0, 0.7);
     box-sizing: border-box;
-    
-    }
 }
-.hm-pg-img-bnr {
-    /* position: relative; */
-    width: 30%;
-    /* bottom: 3rem; */
 
+.hm-pg-img-bnr {
+    width: 30%;
 }
 
 .update {
@@ -140,7 +125,6 @@ i {
 a {
     text-decoration: none;
     color: green;
-
 }
 
 h2.card-title {
@@ -157,8 +141,6 @@ h2.card-title {
 a:hover {
     background-color: #ccc;
     cursor: pointer;
-
-
 }
 
 a.nav-link.active {
@@ -180,19 +162,16 @@ a.page-link {
     margin: 1rem;
 }
 
-/* search bar */
-/* .reset {
-    padding: 0px 0px 4px 0px;
-} */
-
-.search-bar {
-    padding: 0;
-    
+.grn-btn {
+    color: white;
+    background-color: green;
 }
 
-/* .recipe-search {
-    padding: 1%;
-} */
+/* search bar */
+.search-bar {
+    padding: 0;
+}
+
 /* My Recipes page */
 .my-recipes-list {
     width: 75%;
@@ -203,42 +182,26 @@ a.page-link {
     padding-bottom: 1rem;
 }
 
-
-
 .btn-add a {
     background-color: green;
     color: white;
     padding: 0.6rem;
     border-radius: 8px;
-
 }
 
 .btn-add i {
     color: black;
 }
 
-
 table {
     border: 5px solid grey;
-    /* width: 100%; */
-    /* margin: auto; */
 }
 
-/* .table-container {
-    padding: 2rem;
-} */
-
 .recipe-search {
-
     padding: 1rem;
 }
 
 /* About page */
-
-/* .about-image {
-    width: 100%;
-    min-height: 100%;
-} */
 
 .about-text h3 {
     padding-top: 1rem;
@@ -255,21 +218,10 @@ table {
 
 /* Recipe detail page */
 
-/* .recipe h1 {
-    font-family: Roboto;
-    font-size: 3rem;
-} */
-
-/* .icon-list {
-    
-    font-size: 2rem;
-} */
-
 .recipe-title {
     text-align: center;
     padding: 1rem;
     background-color: white;
-
 }
 
 .favourite-icon {
@@ -280,14 +232,9 @@ table {
     position: absolute;
     bottom: 0;
     min-width: 30%;
-
     background-color: white;
-
 }
 
-/* .review-title {
-    color: green;
-} */
 
 .recipe-form {
     width: 75%;

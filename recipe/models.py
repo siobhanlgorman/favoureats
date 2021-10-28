@@ -66,7 +66,7 @@ class Recipe(models.Model):
     BREAKFAST = 'Breakfast'
     STARTER = 'Starter'
     MAIN = 'Main'
-    SIDE = 'Salad'
+    SIDE = 'Side'
     DESSERT = 'Dessert'
     BAKES = 'Bakes'
     SALAD = 'Salad'
