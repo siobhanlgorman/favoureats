@@ -1,14 +1,19 @@
+Favoureats - Tried and Tested Recipes
+
+
 # Agile
 The Agile methodology was used to plan the project. Github was used as the tool to demonstrate this. However Github is not the ideal tool to adequately link Iterations - Epics - User Stories. Although I linked User Stories (Issues) to Epics (Milestones) and placed these in Iterations (Milestones), Epics did not automatically show the % progress to completion once user stories were moved in the kanban board. It also proved difficult with this developer's level of competence and the short time frame allowed, to accurately itemise all tasks in a user story in advance of implementation. As a result some user stories were updated during the course of implementation.
 
 # UX
 ## Strategy
-The time frame for this project was extremely short given the requirements. Hence the outcome is not as perfected as I would like. The functionality is working but with some unexpected results on certain IPhones and time does not permit enough investigation
+
 ### Project Goal
 
-The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from a book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
+The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from my book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
+
 ### Epics and User Stories
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
+#### User Stories:
   * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)
   * As a Site Admin I can CRUD posts so that I can manage my site content (must-have / complete)
   * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)
@@ -17,71 +22,98 @@ The goal of the project is to create a recipe website with tried and tested reci
   * As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts
 
 #### Epic: Enable users to register on the site to access full features
+#### User Stories:
   * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)
 #### Epic: Enable users to login/logout on the site to access full features
+#### User Stories:
   * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)
 #### Epic: Enable registered users to review recipe posts
+#### User Stories:
   * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)
 #### Epic: Create landing page to attract users to the site
+#### User Stories:
   * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is
 #### Epic: Enable registered users to read full recipe posts and reviews
+#### User Stories:
   * As a registered user I can click on a post in the recipe list so that I open the full recipe post
 #### Epic: Enable registered users to CRUD their own recipes
+#### User Stories:
   * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)
 #### Epic: Create recipe list page to showcase content to users
+#### User Stories:
   * As a user I can view a paginated list of recipes so that I can see what I would like to select if registered (must-have / complete)
 #### Epic: Enable registered users to search through their own recipes to enhance UX
+#### User Stories:
   * As a user I can search my own recipe posts by title so that easily find a recipe (should-have / complete)
   * As a user I can search recipes by ingredient so that I can easily find a recipe that I want to use (could-have / future features)
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
+#### User Stories:
   * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)
   * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)
 #### Epic: Enable users to filter recipe posts to enhance UX
+#### User Stories:
   * As a user I can search recipes by ingredient so that I can easily find a recipe that I want to use (could-have / future feature)
   * As a registered user I can filter favourite recipes to a list so that I can find all my favourites easily (should-have / future feature)
 #### Epic: Enable users to sign-in/register with Google/Facebook account
+#### User Stories:
   * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)
 #### Epic: Enable users to CRUD own reviews
+#### User Stories:
   * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (should-have / complete)
 ## Scope
+  * The scope of the project was large at the planning stage and during the course of implementation the scope was narrowed in order to meet the project's hard deadline. 
+
 ## Structure
+### Existing Features
+#### All Pages
+  * Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes and Sign In/Out pages. The Home, About and Recipes pages can be accessed by any user but a user who is not logged in will be redirected to the Sign In page if they click on the link to My Recipes. The Sign in button changes to Sign Out once a user has logged in.
+  ![###](documentation/screenshots/???png)
+  * Footer: links to Facebook, Instagram and Twitter
+  * Social media icons
+#### Home Page
+  * Hero Image with overlay text highlighting the purpose of the site
+  * Call to action register button on hero image to encourage users to register. Button becomes invisible if user is signed in
+  * Snapshot images of three most recent recipe posts with date
+  * Call to action button to 'View recipes' at bottom of page to direct users easily onto view the full recipe list page
+#### About Page
+  * Image with background information about the website
+  * Call to action button to direct users to the recipes page
+#### Recipes Page
+  * Images and titles of all the recipes are visible on the page. Paginated????????
+  * The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page
+#### My Recipes Page
+
+### Admin Features
+
+### Future Features
+* User sign-in with Google/Facebooks
+* Search/Filter on Recipes page
+* Search/Filter by ingredient
+* Filter by favourites
+* Apply full CRUD functionality to user's own reviews
+
 ## Skeleton
 ### Wireframes
+
+### Data Models
+There are two models for the database: A Recipe model and a Review model
+
+![Data Models](documentation/screenshots/data-models.png)
+
+
+The pdf of these models' tables can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/documentation/PP4%20Data%20Models.pdf)
 ## Surface
-# Features
-## Existing Features
-
-### All Pages
-  * Navbar
-  * Footer
-  * Social media icons
-### Home Page
-  * Hero Image with overlay text highlighting the purpose of the site
-  * Register link button on hero image to encourage users to register. Button becomes invisible if user is signed in
-  * Snapshot images of three most recent recipe posts
-  * View recipes link button at bottom of page to direct users easily to view the full recipe list
-### About Page
-### Recipes Page
-### My Recipes Page
-
-
-## Future Features
-### User sign-in with Google/Facebooks
-### Search/Filter on Recipes page
-### Search/Filter by ingredient
-### Filter by favourites
-### Apply full CRUD functionality to user's own reviews
-
-
 ## Design
-My style is to keep everything minimalist, fresh and clean looking, uncluttered and symmetrical
+My style is to keep everything minimalist and uncluttered, fresh and clean looking. 
 ### Colours
-Natural, fresh and clean like a clean kitchen and fresh natural food
-white, green, grey, charcoal font? black?
+The colours are chosen to convey nature, fresh clean and nutritious like a clean kitchen and fresh natural food. Colours used are: white, green, grey, charcoal font? black?
 ### Typography
+Fonts: Poppins for the text and Roboto for the headings
 ### Images
+The hero image was chosen as the food is primarily vegetarian. The image is simple and elegant. Images were selected for the recipes which made the food look appetising.
 
-# Database
+
+
 # Technologies
 # Testing
 ## Browser compatibility
