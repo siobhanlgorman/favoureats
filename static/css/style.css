@@ -110,6 +110,28 @@ i {
     padding: 3px;
 }
 
+.card-img-overlay {
+    min-width: 30%;
+    display: flex;
+    align-items: flex-start;
+
+
+}
+
+.card-img-overlay p {
+    color: white;
+    background-color: rgba(0, 128, 0, 0.7);
+    box-sizing: border-box;
+    
+    }
+}
+.hm-pg-img-bnr {
+    /* position: relative; */
+    width: 30%;
+    /* bottom: 3rem; */
+
+}
+
 .update {
     font-size: small;
 }
