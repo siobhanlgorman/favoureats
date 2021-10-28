@@ -13,10 +13,10 @@
             <form method="GET" action="" class="recipe-search" role="search">
                 <div class="input-group mb3">
                     <input type="text" name="search-area" class="form-control mr-sm-2" placeholder="search here"
-                        aria-label="Search the recipes" value="{{search_input}}" required=true>
+                        aria-label="Search the recipes" value="{{search_input}}" required>
                     <button type="submit" class="input-group-text btn-success mr-sm-2" value="Search"><i
                             class="fa fa-search"></i></button>
-                    <a href="{% url 'recipes' %}" class="btn btn-outline-secondary btn-sm" type="submit">&#x2715;</a>
+                    <a href="{% url 'recipes' %}" class="btn btn-outline-secondary btn-sm">&#x2715;</a>
                 </div>
             </form>
         </div>
