@@ -3,12 +3,17 @@
 {% block content %}
 
 <div class="container-fluid">
+    <div class="row justify-content-md-center">
+        <div class="col text-center">
+            <h3>Recipes</h3>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-6 text-center mt-3  mx-auto search-bar">
             <form method="GET" action="" class="recipe-search" role="search">
                 <div class="input-group mb3">
-                    <input type="text" name="search-area" class="form-control mr-sm-2" placeholder="search here" aria-label="Search the recipes"
-                        value="{{search_input}}" required=true>
+                    <input type="text" name="search-area" class="form-control mr-sm-2" placeholder="search here"
+                        aria-label="Search the recipes" value="{{search_input}}" required=true>
                     <button type="submit" class="input-group-text btn-success mr-sm-2" value="Search"><i
                             class="fa fa-search"></i></button>
                     <a href="{% url 'recipes' %}" class="btn btn-outline-secondary btn-sm" type="submit">&#x2715;</a>
@@ -23,7 +28,7 @@
             <div class="row">
                 {% for recipe in recipe_list %}
 
-                <div class="col-xl-4">
+                <div class="col-lg-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
