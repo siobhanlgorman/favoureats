@@ -168,14 +168,12 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 6. IPhone 11 search bar bug: Text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. I fixed this by change the form type, inputs and button until it worked on IPhone!
 
-### Unresolved Bugs
-
-Safari rendering: 
-
-* search button x appears rounded on iPhone8. After the changes in bug fix 6 the button still appears a little different Fix changed to grn-btn style and removed border???????
-
+7. Safari rendering /Iphone 11/ IPhone SE: 
+* search button x appears rounded on iPhone8. After the changes in bug fix 6 the button still appears a little different Fix changed to grn-btn style and removed border
 
 ![Iphone button bug](documentation/screenshots/buttonbug.png)
+
+### Unresolved Bugs
 
 * iphone 10R hamburger menu overlapping logo
 
@@ -184,8 +182,6 @@ Safari rendering:
 
 ![Iphone hamburger bug](documentation/screenshots/hamburger_bug2.png)
 
-????? check
-role="button"
 
 
 ## Gitpod Forking and Cloning
@@ -310,6 +306,21 @@ In Gitpod:
 
 ## Local Deployment: Forking and Cloning
 ### Forking the Repository
+
+??????
+* For this project to run locally an env.py file must be set up by the user containing the following sensitive information:
+"DATABASE_URL" the postgres database address from Heroku
+"SECRET_KEY"
+"CLOUDINARY_URL"
+
+To create an env.py file??????????????:
+
+* All the necessary requirements must be added by creating a requirements.txt file
+`pip install -r requirements.txt`
+
+* Procfile
+
+
 If you wish to fork the repository to make changes without affecting the original you can fork it by navigating to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
 * Above the list of files click the dropdown code menu.
 * Select the https option and copy the link.
