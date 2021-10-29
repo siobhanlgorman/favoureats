@@ -41,9 +41,9 @@
                                     {% if 'placeholder' in recipe.recipe_image.url %}
                                     <img class="card-img-top"
                                         src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
-                                        alt="">
+                                        alt="Image of open recipe book">
                                     {% else %}
-                                    <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="">
+                                    <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="{{ recipe.title }}">
                                     {% endif %}
                                     <div class="card-img-overlay">
                                         <p class="recipe-type"> {{ recipe.type }} / {{ recipe.category}}</p>

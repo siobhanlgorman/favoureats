@@ -18,8 +18,8 @@
                 {% if "placeholder" in recipe.recipe_image.url %}
                 <img class="card-img-top"
                     src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
-                    alt="">
-                {% else %}<img src="{{ recipe.recipe_image.url }}" alt="">
+                    alt="Image of open recipe book">
+                {% else %}<img src="{{ recipe.recipe_image.url }}" alt="{{ recipe.title }}">
 
                 {% endif %}
                 <p class="recipe-image-banner">Recipe added by: {{ user.username }} on: {{ recipe.created_on }}</p>
