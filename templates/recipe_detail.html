@@ -25,6 +25,7 @@
                 <p class="recipe-image-banner">Recipe added by: {{ user.username }} on: {{ recipe.created_on }}</p>
             </div>
 
+
             <!-- recipe icons list-->
             <div class="col-sm-6 card recipe">
                 <div class="row">
@@ -49,7 +50,6 @@
                         <i class="fas fa-star" aria-hidden="true"></i> {{ recipe.number_of_favourites }}
                         {% endif %}
                     </div>
-
                 </div>
                 <!-- recipe no. of reviews -->
                 <div class="card-text">
@@ -84,9 +84,9 @@
                             <p>{{ recipe.type }}</p>
                         </li>
                     </ul>
-
                 </div>
             </div>
+        </div>
     </section>
 
     <section>
@@ -169,7 +169,7 @@
         </div>
 
     </section>
-    <div class="row button-container">
+    <div class="row button-cntnr">
         <div class="col text-center">
             <a class="btn btn-lg btn-success" href="{% url 'myrecipes' %}">Back to My Recipes</a>
         </div>
