@@ -40,7 +40,7 @@ The goal of the project is to create a recipe website with tried and tested reci
   * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)
 #### Epic: Create recipe list page to showcase content to users
 #### User Stories:
-  * As a user I can view a paginated list of recipes so that I can see what I would like to select if registered (must-have / complete)
+  * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)
 #### Epic: Enable registered users to search through their own recipes to enhance UX
 #### User Stories:
   * As a user I can search my own recipe posts by title so that easily find a recipe (should-have / complete)
@@ -53,12 +53,16 @@ The goal of the project is to create a recipe website with tried and tested reci
 #### User Stories:
   * As a user I can search recipes by ingredient so that I can easily find a recipe that I want to use (could-have / future feature)
   * As a registered user I can filter favourite recipes to a list so that I can find all my favourites easily (should-have / future feature)
+#### Epic: Create recipe list page to showcase content to users
+#### User Stories:
+  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)
 #### Epic: Enable users to sign-in/register with Google/Facebook account
 #### User Stories:
   * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)
 #### Epic: Enable users to CRUD own reviews
 #### User Stories:
   * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (should-have / complete)
+
 ## Scope
   * The scope of the project was large at the planning stage and during the course of implementation the scope was narrowed in order to meet the project's hard deadline. 
 
@@ -107,7 +111,7 @@ There are two models for the database: A Recipe model and a Review model
 
 ![Data Models](documentation/screenshots/data-models.png)
 
-The pdf of these models' tables can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/documentation/PP4%20Data%20Models.pdf)
+The pdf of these models' tables can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/documentation/data_models.pdf)
 ## Surface
 ## Design
 My style is to keep everything minimalist and uncluttered, fresh and clean looking. 

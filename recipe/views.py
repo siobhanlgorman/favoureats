@@ -11,9 +11,6 @@ from .models import Recipe
 from .forms import ReviewForm
 
 
-
-
-
 class HomeList(generic.ListView):
     """
     Displays three most recent recipes on landing page
@@ -48,7 +45,6 @@ class RecipeList(generic.ListView):
             context['recipe_list'] = context['recipe_list'].filter(queries)
             context['search_input'] = search_input
 
-        paginate_by = 6
         return context
 
 
