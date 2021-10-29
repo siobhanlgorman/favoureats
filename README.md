@@ -70,14 +70,15 @@ The goal of the project is to create a recipe website with tried and tested reci
 ### Existing Features
 #### All Pages
 ????????? Screenshots here same as for user story testing?????
-  * Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes and Sign In/Out pages. The Home, About and Recipes pages can be accessed by any user but a user who is not logged in will be redirected to the Sign In page if they click on the link to My Recipes. The Sign in button changes to Sign Out once a user has logged in.
+  * Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages. The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not logged in the Register and Sign in links are visible in the navbar. If the user is signed in the Register and Sign In links are replaced by a Sign Out link.
+
   ![###](documentation/screenshots/???png)
   * Footer: links to Facebook, Instagram and Twitter
   * Social media icons
 #### Home Page
   * Hero Image with overlay text highlighting the purpose of the site
   * Call to action register button on hero image to encourage users to register. Button becomes invisible if user is signed in
-  * Snapshot images of three most recent recipe posts with date
+  * Snapshot images of three most recent recipe posts with title, date added and author. This page will update automatically as new recipes are added which keeps the site fresh and interesting to users.
   * Call to action button to 'View recipes' at bottom of page to direct users easily onto view the full recipe list page
 #### About Page
   * Image with background information about the website
@@ -85,8 +86,26 @@ The goal of the project is to create a recipe website with tried and tested reci
 #### Recipes Page
   * Images and titles of all the recipes are visible on the page. Paginated????????
   * The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page
+  * Back to top button which remains on screen once user has started scrolling. When there are more recipes on the site this will improve the UX by making it easy for the user to return to the top and search for a recipe or navigate to a different page.
+
 #### My Recipes Page
-  * 
+This page is only viewable by a logged in user
+  * A call to action button is clearly visible to the user to 'Add a Recipe'. When a user clicks on this button the recipe form opens where the user can enter all the fields of the recipe.
+  * List of recipes created by this logged in user organised in a table in reverse order of creation and by title. 
+  Three link options are available for the user to view, edit and delete their own recipes
+  * View link: user can click to view the full recipe detail page
+  * Edit: user can click to edit the recipe details
+  * Delete: the user can delete a recipe
+#### Sign-In Form
+
+#### Register
+
+#### Sign-Out
+
+
+#### Recipe Form page
+
+
 ### Admin Features
 
 ### Future Features
@@ -149,7 +168,9 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * Favicon.cc
 * ??? Am I responsive
 * Google Sheets - for the data models
-* 
+* Icon
+* Favicon
+* Summernote
 
 
 # Testing

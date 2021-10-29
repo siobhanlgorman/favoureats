@@ -225,7 +225,7 @@ table {
     padding: 1rem;
 }
 
-/* About page */
+/* About Page */
 
 .about-text h3 {
     padding-top: 1rem;
@@ -234,6 +234,10 @@ table {
 
 .about-text {
     text-align: justify;
+}
+
+.about-image-container {
+    padding-top: 1rem;
 }
 
 .button-cntnr {
