@@ -167,6 +167,7 @@ a.page-link {
 .grn-btn {
     color: white;
     background-color: green;
+    border: none;
 }
 
 .grn-btn i {
@@ -177,6 +178,7 @@ a.page-link {
 .search-bar {
     padding: 0;
 }
+
 
 /* My Recipes page */
 .my-recipes-list {

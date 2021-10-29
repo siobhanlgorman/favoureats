@@ -166,17 +166,16 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 4. My recipe_confirm_delete template could not be found when located with the other messages templates and provoked an error on delete file could not be found. As the error message stated that it looked in file path: `recipe/templates`. In order to fix this error speedily I created the folder `recipe` and placed the recipe_confirm_delete.html template there to fix the error. Given more time I would investigate this further.
 5. Number of comments does not appear on recipes page but number of favourites does: I troubleshooted with various print() statements to determine what was being read and fixed by renaming variable to `{{ recipe.reviews.count }}`
 
+6. IPhone 11 search bar bug: Text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. I fixed this by change the form type, inputs and button until it worked on IPhone!
+
 ### Unresolved Bugs
 
 Safari rendering: 
 
-* search button x appears rounded on iPhone8 
+* search button x appears rounded on iPhone8. After the changes in bug fix 6 the button still appears a little different Fix changed to grn-btn style and removed border???????
 
 
 ![Iphone button bug](documentation/screenshots/buttonbug.png)
-
-
-* text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. Unfortunately the time available does not allow for the detailed investigation required to fix this
 
 * iphone 10R hamburger menu overlapping logo
 
