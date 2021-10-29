@@ -173,14 +173,15 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 ![Iphone button bug](documentation/screenshots/buttonbug.png)
 
-### Unresolved Bugs
-
-* iphone 10R hamburger menu overlapping logo
+* iphone 10R hamburger menu overlapping logo: Fixed by changing navbar layout and search bar as above
 
 ![Iphone hamburger bug](documentation/screenshots/hamburger_bug1.png)
 
 
 ![Iphone hamburger bug](documentation/screenshots/hamburger_bug2.png)
+
+### Unresolved Bugs
+
 
 
 
