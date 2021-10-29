@@ -106,7 +106,9 @@ WSGI_APPLICATION = 'favoureats.wsgi.application'
 
 development = os.environ.get('DEVELOPMENT', False)
 
-if (development == 'True'):
+# Toggle between development and production environments for automated testing
+
+if development == 'True':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
