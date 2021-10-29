@@ -182,26 +182,27 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 ### Unresolved Bugs
 
-
-
-
-## Gitpod Forking and Cloning
-# Deployment
+## Deployment
 
 ## Heroku
-1. First follow these steps to create your app:
+#### Creating the inital Django app
+* First follow these steps to create your app:
+add to local deployment section: here
 * Install Django and gunicorn: `pip3 install django gunicorn`
-* Install supporting database libraries dj_database_url and psycopg2 liibrary: `pip3 install dj_database_url psycopg2`
+* Install supporting database libraries dj_database_url and psycopg2 library: `pip3 install dj_database_url psycopg2`
 * Install Cloudinary libraries to manage photos: in the terminal window type `pip3 install dj-3-cloudinary-storage`
+to here
+
 * Create file for requirements: in the terminal window type `pip freeze --local > requirements.txt`
-* Create project: in the terminal window type `django-admiin startproject project_name .`
+* Create project: in the terminal window type `django-admin startproject project_name .`
 * Create app: in the terminal window type `python3 manage.py startapp app_name`
 * Add app to list of `installed apps` in settings.py file: `'app_name'`
 * Migrate changes: in the terminal window type `python3 manage.py migrate`
 * Run the server to test if the app is installed: in the terminal window type `python3 manage.py runserver`
 * If the app has been installed correctly the window will display `The install worked successfully! Congratulations!`
 
-2. Create your Heroku app
+
+#### Create your Heroku app
 * Navigate to the Heroku website
 * In the Heroku browser window, create an account by entering your email address and a password
 * Activate the account through the authentication email sent to your email account
@@ -210,7 +211,7 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * Select a region, in this case Europe
 * Click create app
 
-3. Connect the Database in Heroku to Gitpod
+3. Create the Database
 * In the Heroku dashboard click on the Resources tab
 * Scroll down to Add-Ons, search for and select 'Heroku Postgres'
 * In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
@@ -219,17 +220,14 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * In Gitpod create a new env.py file in the top level directory
 * Add env.py to the .gitignore file
 * In env.py import the os library
-4. Set up Environment Variables
-* In Gitpod create a new env.py file in the top level directory
-* Add env.py to the .gitignore file
-* In env.py import the os library
-* In env.py add `os.environ["DATABASE_URL"] = "Paste in the text link copied above from Heroku DATABASE_URL"`
-TIM DO I PASTE IN MY DB URL HERE?
+* In env.py add `os.environ["DATABASE_URL"]` = "Paste in the text link copied above from Heroku DATABASE_URL" from step 3
+Insert yours here
 * In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`
 * In Heroku Settings tab Config Vars enter the same secret key created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
 
-5. Prepare the environment and settings.py file
-* In Gitpod in the 'settings.py' file type:
+5. Connect the environment variables to Django
+
+* In your Django 'settings.py' file type:
 
  ```
  from pathlib import Path
@@ -247,23 +245,23 @@ DATABASES = {
   dj_database_url.parse(os.environ.get("DATABASE_URL"))
   }`
 ```
-6. Make migrations for the database
+6. Make migrations
 * In the terminal type:
 ```
 python3 manage.py makemigrations`
 python3 manage.py migrate`
 ```
-7. Store the static and media files on Cloudinary
-* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the envy.py file by typing: `os.environ["CLOUDINARY_URL"] = "your link goes here but you must remove the start so it begins with 'cloudinary://"`
-* Add Cloudinary url to 'settings' 'config vars' in Heroku: type CLOUDINARY_URL: your url here e.g. cloudinary://
-* Add DISABLE_COLLECTSTATIC to Heroku 'config vars': type DISABLE_COLLECTSTATIC in the box for 'key' and '1' in the value box (note: this must be removed for final deployment)
+7. Set up Cloudinary for static and media files storage
+* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "your link goes here but you must remove the start so it begins with 'cloudinary://"`
+* In Heroku  add cloudinary url to 'config vars' add in Heroku: type CLOUDINARY_URL: your url here e.g. cloudinary:// fix here??????
+* In Heroku condfig vars add DISABLE_COLLECTSTATIC with value of '1' (note: this must be removed for final deployment)
 * Add Cloudinary libraries to installed apps section of `settings.py` in this order: 
  ```
  'cloudinary_storage'
  'django.contrib.staticfiles''
  'cloudinary'
  ```
-* Tell Django to use Cloudinary to store media and static files. Type this in Static Files section of `settings.py`:
+* Connect Cloudinary to the Django app in `settings.py`:
 ```
 STATIC_URL = '/static'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
@@ -280,30 +278,29 @@ DEFAULT_FILE_STORAGE =
 * Add Heroku Hostname to ALLOWED_HOSTS: ```ALLOWED_HOSTS =
 ['favoureats.herokuapp.com', 'localhost']```
 
-9. Create `media`, `static` and `templates` folders in top level directory in Gitpod
-10. Create Procfile in top level directory: `workspace/favoureats/Procfile`
-* In Procfile add: `web: gunicorn favoureats .wsgi
-11. In Gitpod terminal add commit and push: 
+9. Create `media`, `static` and `templates` folders in top level directory
+10. Create Procfile in top level directory: 
+* In Procfile add: `web: gunicorn favoureats .wsgi`
+11. In terminal add, commit, and push: 
 ```
-git add .
+git add <filename>
 git commit -m “Deployment Commit”
 git push
 ```
 12. Heroku Deployment: 
-* In the top menu bar select 'Deploy'.
-* In the 'Deployment method' section select 'Github' and click the connect to Github button to confirm.
+* Click Deploy tab in Heroku
+* In the 'Deployment method' section select 'Github' and click the 'connect to Github' button to confirm.
 * In the 'search' box enter the Github repository name for the project: favoureats: https://github.com/siobhanlgorman/favoureats
-Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
+
+* Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
 
 13. Final Deployment
-In Gitpod: 
+In the IDE: 
 * When development is complete in `settings.py` change the debug setting to: `DEBUG = False`
 * In settings.py add: `X_FRAME_OPTIONS = 'SAMEORIGIN'` which enables the summernote editor to work in Heroku.
-* In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0 or delete if no more development will be undertaken??????????
+* In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
-* To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com/myrecipes/)
-
-
+* To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com)
 
 ## Local Deployment: Forking and Cloning
 ### Forking the Repository
@@ -320,7 +317,6 @@ To create an env.py file??????????????:
 `pip install -r requirements.txt`
 
 * Procfile
-
 
 If you wish to fork the repository to make changes without affecting the original you can fork it by navigating to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
 * Above the list of files click the dropdown code menu.
