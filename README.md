@@ -15,7 +15,7 @@ The goal of the project is to create a recipe website with tried and tested reci
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
 #### User Stories:
   * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)
-  * As a Site Admin I can CRUD posts so that I can manage my site content (must-have / complete)
+  * As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)
   * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)
   * As an admin I can view the number of likes on a recipe post so that I can know which are the most popular
   * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe
@@ -331,13 +331,17 @@ If you wish to fork the repository to make changes without affecting the origina
 
 # Credits
 
-[Dennis Ivy 'Django To Do List App With User Registration & Login'](https://www.youtube.com/watch?v=llbtoQTt4qw&t=68s) was useful for full CRUD functionality application.
+* [Dennis Ivy 'Django To Do List App With User Registration & Login'](https://www.youtube.com/watch?v=llbtoQTt4qw&t=68s) was useful for full CRUD functionality application.
 
-This tutorial was used to auto generate slugs from the front-end: [Kodnito](https://kodnito.com/posts/slugify-urls-django/)
+* This tutorial was used to auto generate slugs from the front-end: [Kodnito](https://kodnito.com/posts/slugify-urls-django/)
 
-This tutorial was useful for automated testing[Django Testing](https://www.youtube.com/watch?v=GBgRMdjAx_c)
+* The following tutorials were useful for automated testing:
+  * [Django Testing](https://www.youtube.com/watch?v=GBgRMdjAx_c)
+  * [Automated Tests - Day 6 - Django Bootcamp](https://www.youtube.com/watch?v=5E_xLmQXOZg)
+  * This series: [Django Testing Tutorial - What Is Testing? #1](https://www.youtube.com/watch?v=qwypH3YvMKc)
 
-[Stack Overflow](https://stackoverflow.com/) was used for general queries
+
+* [Stack Overflow](https://stackoverflow.com/) was used for general queries
 
 ## Images
 Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
