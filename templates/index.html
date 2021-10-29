@@ -31,7 +31,7 @@
         <div class="row">
             <!-- Recipe Snapshot Column -->
             <div class="col-12 mt-3 left">
-                <div class="row card-deck">
+                <div class="row">
                     {% for recipe in recipe_list %}
                     <div class="col-lg-4">
                         <div class="card mb-4">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     {% if forloop.counter|divisibleby:3 %}
-                </div>
+                <!-- </div> -->
                 <div class="row">
                     {% endif %}
                     {% endfor %}
