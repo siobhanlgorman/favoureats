@@ -10,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col-lg-6 text-center mt-3  mx-auto search-bar">
-            <form method="GET" action="" class="recipe-search" role="search">
+            <form method="GET" class="recipe-search" role="search">
                 <div class="input-group mb3">
                     <input type="text" name="search-area" class="form-control mr-sm-2" placeholder="search here"
                         aria-label="Search the recipes" value="{{search_input}}" required>
@@ -38,7 +38,8 @@
                                     src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
                                     alt="Image of open recipe book">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="{{ recipe.title }}">
+                                <img class="card-img-top" src=" {{ recipe.recipe_image.url }} "
+                                    alt="{{ recipe.title }}">
                                 {% endif %}
                                 <div class="image-banner">
                                     <p class="recipe-type"> {{ recipe.type }} / {{ recipe.category}}</p>
@@ -76,6 +77,38 @@
     </div>
 </div>
 
-{% endif %}
+<!-- Back to top button -->
+<button type="button" class="btn grn-btn btn-floating btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script>
+    //Get the button
+    let mybutton = document.getElementById("btn-back-to-top");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+        ) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
 
 {% endblock %}

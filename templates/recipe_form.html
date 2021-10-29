@@ -18,7 +18,7 @@
     <div class="card-body">
         <div class="container-fluid">
             <div class="row">
-                <form method="POST" enctype='multipart/form-data' action="">
+                <form method="POST" enctype='multipart/form-data'>
                     {% csrf_token %}
                     {{ form | crispy }}
 
