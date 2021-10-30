@@ -168,12 +168,20 @@ Accessed only by logged in users
 
 #### Sign-In Form
 * User signs in by entering username and password
+
+
+
 * Choice of two action buttons: Sign In or Home which redirects to the home page
 
 
 
+
 #### Register
+
 * Users can register for an account by entering a username, an optional email and a password
+
+
+
 * Choice of two action buttons: Sign Up or Home which redirects to the home page
 
 
@@ -181,11 +189,23 @@ Accessed only by logged in users
 
 * Sign Out button which redirects to home page after signing out
 
+
+
 #### Recipe Form page
-* A form with fields to complete to add a recipe to the public recipes page and to the user's list in the My Recipes page for CRUD functionality
+* A form to submit with fields to complete to add a recipe to the public recipes page and to the user's list in the My Recipes page for CRUD functionality
+
+
+
 * Users can add text, paste text into fields. Images can be uploaded and a placeholder image is available if no image is supplied.
+
+
+
 * A Go Back button at the top to redirect users to the My Recipes page
+
+
+
 * A Submit Recipe button at the bottom to submit the completed form
+
 
 
 ### Future Features
@@ -287,7 +307,7 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 ![Iphone hamburger bug](documentation/screenshots/hamburger_bug2.png)
 
 ### Unresolved Bugs
-confirm delete custom template location
+confirm delete custom template location????
 
 ## Deployment
 

@@ -49,12 +49,16 @@
                         {% else %}
                         <i class="fas fa-star" aria-hidden="true"></i> 
                         {% endif %}
-                        {{ recipe.number_of_favourites }}
+                        <p>{{ recipe.number_of_favourites }} favourites</p>
+                       
                     </div>
                 </div>
                 <!-- recipe no. of reviews -->
                 <div class="card-text">
                     <ul class="icon-list fa-ul">
+                        <li>
+                            
+                        </li>
                         <li>
                             {% with reviews.count as total_reviews %}
                             <i class="fa-li fas fa-comments" aria-hidden="true"></i>
