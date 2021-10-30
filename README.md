@@ -62,7 +62,7 @@ There are 11 Epics and 20 User Stories. The User Stories are numbered so can be 
   * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)(#30)
 #### Epic: Enable users to CRUD own reviews
 #### User Stories:
-  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (should-have / complete)(#17)
+  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (could-have / complete)(#17)
 
 ### Scope
   * The scope of the project was large at the planning stage and during the course of implementation the scope was narrowed in order to meet the project's hard deadline. 
