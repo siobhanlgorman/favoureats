@@ -173,11 +173,11 @@ Expected result 4: Three most recent images displaying
 Expected result 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
 
 
-Expected result 1: Text visible on hero image explaining site
-Expected result 2: Call to action 'Register' button on hero image
-Expected result 3: Text indicating users must sign in to view full recipes and create recipes
-Expected result 4: Three most recent images displaying
-Expected result 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
+Actual result 1: Text visible on hero image explaining site
+Actual result 2: Call to action 'Register' button on hero image
+Actual result 3: Text indicating users must sign in to view full recipes and create recipes
+Actual result 4: Three most recent images displaying
+Actual result 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
 
 Pass/Fail: Pass
 
@@ -193,21 +193,118 @@ Testing Steps:
 5. Click on edit beside a recipe in the list to view the recipe form, edit the content and click on 'Submit Recipe' to save changes
 6. Click on delete beside a recipe in the list to delete a recipe. 
 
+Expected result 1: Full recipe detail page opens when view is clicked
+Expected result 2: Recipe is updated on website when edits are submitted.
+Expected result 3: Success message displays when updated recipe is submitted.
+Expected result 4: Confirm delete page displays when user clicks on delete
+Expected result 5: Success message displays when user successfully deletes recipe.
+
+Actual result 1: Full recipe detail page opens when view is clicked
+Actual result 2: Recipe is updated on website when edits are submitted.
+Actual result 3: Success message displays when updated recipe is submitted.
+Actual result 4: Confirm delete page displays when user clicks on delete
+Actual result 5: Success message displays when user successfully deletes recipe.
+
+Pass/Fail: Pass
 
 #### Epic: Create recipe list page to showcase content to users
 #### User Stories:
   * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
+
+Testing Steps:
+1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
+2. Click on the 'recipes' link in the navigation menu or the 'view recipes' button at the bottom of the page
+3. Scroll down to view a summary list of recipes posted
+
+Expected result 1: User is redirected to Recipes page
+
+Actual result 1: User is redirected to Recipes page
+
+Pass/Fail: Pass
+
 #### Epic: Enable registered users to search through the recipes to enhance UX
 #### User Stories:
   * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
+
+Testing Steps:
+1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
+2. Login to the website
+3. Click on the 'myrecipes' link in the navigation menu
+4. Enter text in the search box and click the search icon
+5. Click the 'x' to clear the search and return to full list of recipes
+
+Expected result: List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
+
+Actual result: List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
+
+
+Pass/Fail: Pass
+
+
   * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
+
+Testing Steps:
+1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
+2. Click on the 'recipes' link in the navigation menu
+3. Enter text in the search box and click the search icon
+4. Click the 'x' to clear the search and return to full list of recipes
+
+Expected result: List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
+
+Actual result: List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
+
+Pass/Fail: Pass
+
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
 #### User Stories:
   * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
+
+Testing Steps:
+1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
+2. Login to the website
+3. Click on the 'recipes' link in the navigation menu
+4. Click on the title of a recipe
+5. Repeat test for user not logged in
+
+
+Expected result: User is redirected to full recipe detail page. User not logged in is directed to 'sign in' page.
+
+Actual result: User is redirected to full recipe detail page. User not logged in is directed to 'sign in' page.
+
+Pass/Fail: Pass
+
   * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
+
+Testing Steps:
+1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
+2. Login to the website
+3. Click on the 'recipes' link in the navigation menu
+4. Click on the title of a recipe
+5. Click on the star icon to toggle 'favourite' on and off
+
+Expected result 1: When user clicks on star, star becomes full colour to favourite and outline only if not favourite.
+Expected result 2: Number beside favourites star is updated
+
+Actual result 1: When user clicks on star, star becomes full colour to favourite and outline only if not favourite.
+Actual result 2: Number beside favourites star is updated
+
+Pass/Fail: Pass
+
+
   * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
 
+Testing Steps:
+1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
+2. Login to the website
+3. Click on the 'recipes' link in the navigation menu
+4. Click on the title of a recipe to open the full recipe detail page with review form
+5. Enter content in the review box and click 'submit'
 
+Expected result: Thankyou message displays thanking user for submitting a review. 'Your review is pending approval'. Review appears as draft in admin panel list of reviews.
+
+Actual result: Thankyou message displays thanking user for submitting a review. 'Your review is pending approval'. Review appears as draft in admin panel list of reviews.
+
+Pass/Fail: Pass
 
 ## Testing Features
 ## Code Validation
