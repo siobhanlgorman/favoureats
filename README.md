@@ -18,50 +18,50 @@ The target user is someone:
 * who wants to store their own favourite recipes in one place
 * who wants to share their favourite recipes
 
-### Epics and User Stories
+#### Epics and User Stories
 There are 11 Epics and 20 User Stories. The User Stories are numbered so can be easily tracked. However during the planning stage as the stories were being amended their id numbers(#) are no longer in sequence.
-#### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
-#### User Stories:
+1. Epic: Set up admin page for admin to manage recipe posts, reviews and site users
+* User Stories:
   * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)(#8)
-  * As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
+  * As a site admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
   * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
-  * As an admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
-  * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
-  * As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
+  * As a site admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
+  * As a site admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
+  * As a site admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
 
-#### Epic: Enable users to register on the site to access full features
-#### User Stories:
+2. Epic: Enable users to register on the site to access full features
+* User Stories:
   * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
   * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
-#### Epic: Create landing page to attract users to the site
-#### User Stories:
+3. Epic: Create landing page to attract users to the site
+* User Stories:
   * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)(#24)
-#### Epic: Enable registered users to CRUD their own recipes
-#### User Stories:
+4. Epic: Enable registered users to CRUD their own recipes
+* User Stories:
   * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)(#12)
-#### Epic: Create recipe list page to showcase content to users
-#### User Stories:
+5. Epic: Create recipe list page to showcase content to users
+* User Stories:
   * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
-#### Epic: Enable registered users to search through the recipes to enhance UX
-#### User Stories:
+6. Epic: Enable registered users to search through the recipes to enhance UX
+* User Stories:
   * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
   * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
-#### Epic: Enable registered users to interact with recipe posts to enhance UX
-#### User Stories:
+7. Epic: Enable registered users to interact with recipe posts to enhance UX
+* User Stories:
   * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
   * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
   * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
-#### Epic: Enable users to filter recipe posts to enhance UX
-#### User Stories:
+8. Epic: Enable users to filter recipe posts to enhance UX
+* User Stories:
   * As a user I can filter all recipes by ingredient/favourite so that I can easily sort the recipes (could-have / future feature)(#22)
-#### Epic: Create recipe list page to showcase content to users
-#### User Stories:
+9. Epic: Create recipe list page to showcase content to users
+* User Stories:
   * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)(#33)
-#### Epic: Enable users to sign-in/register with Google/Facebook account
-#### User Stories:
+10. Epic: Enable users to sign-in/register with Google/Facebook account
+* User Stories:
   * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)(#30)
-#### Epic: Enable users to CRUD own reviews
-#### User Stories:
+11. Epic: Enable users to CRUD own reviews
+* User Stories:
   * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (could-have / complete)(#17)
 
 ### Scope
@@ -69,53 +69,124 @@ There are 11 Epics and 20 User Stories. The User Stories are numbered so can be 
 
 ### Structure
 The website consists of six pages: Home, About, Recipes, My Recipes, Register and Sign In/Sign Out pages. Home, About and Recipes can be viewed by all users. My Recipes is limited to logged in users. 
+
 ### Existing Features
 #### All Pages
-????????? Screenshots here same as for user story testing?????
-  * Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages. The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not logged in the Register and Sign in links are visible in the navbar. If the user is signed in the Register and Sign In links are replaced by a Sign Out link.
+
+  * Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages. The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not logged in the Register and Sign in links are visible in the navbar. If the user is signed in the Register and Sign In links are replaced by a Sign Out link and the My Recipes page link is visible.
+
+  This allows users to inuitively navigate their way around the site.
 
   ![###](documentation/screenshots/???png)
-  * Footer: links to Facebook, Instagram and Twitter
-  * Social media icons
+  * Footer: with clearly visible links to direct the user to the Facebook, Instagram and Twitter pages
+  
 #### Home Page
   * Hero Image with overlay text highlighting the purpose of the site
-  * Call to action register button on hero image to encourage users to register. Button becomes invisible if user is signed in
+
+
+
+  * Call to action register button on hero image is visible to users who are not logged in to encourage registration to access the features highlighted on this page. The button becomes invisible if the user is signed in.
+
+
+
+  * Text with links directing users to the features available to logged in users
+
+
+
   * Snapshot images of three most recent recipe posts with title, date added and author. This page will update automatically as new recipes are added which keeps the site fresh and interesting to users.
+
+
+
   * Call to action button to 'View recipes' at bottom of page to direct users easily onto view the full recipe list page
+
+
+
 #### About Page
   * Image with background information about the website
+
+
+
   * Call to action button to direct users to the recipes page
+
+
+
 #### Recipes Page
-  * Images and titles of all the recipes are visible on the page. Paginated????????
+  * Images and titles of all the recipes are visible on the page.
+
+
+
+  * A search bar to enable users to easily locate a particular recipe by a keywork in the title or ingredients list. Clickable icons to search and to clear search back to full list
+
+
+
   * The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page
-  * Back to top button which remains on screen once user has started scrolling. When there are more recipes on the site this will improve the UX by making it easy for the user to return to the top and search for a recipe or navigate to a different page.
-  * call to action button to 'add a recipe' which will direct logged in users to my recipes page and non-logged in users to the sign in page
+
+
+
+  * A Back to top button which remains on screen once user has started scrolling. When there are more recipes on the site this will improve the UX by making it easy for the user to return to the top and search for a recipe or navigate to a different page.
+
+
+
+  * A call to action button to 'add a recipe' which will direct logged in users to my recipes page and non-logged in users to the sign in page
+
+
+
 
 #### My Recipes Page
 This page is only viewable by a logged in user
+
+  * A search bar to enable users to easily locate a particular recipe by a keywork in the title or ingredients list. Clickable icons to search and to clear search back to full list
+
+
+
   * A call to action button is clearly visible to the user to 'Add a Recipe'. When a user clicks on this button the recipe form opens where the user can enter all the fields of the recipe.
-  * List of recipes created by this logged in user organised in a table in reverse order of creation and by title. 
-  Three link options are available for the user to view, edit and delete their own recipes
-  * View link: user can click to view the full recipe detail page
-  * Edit: user can click to edit the recipe details
-  * Delete: the user can delete a recipe
-  * Back to top button for if list gets long
+
+
+
+  * List of recipes created by this logged in user organised in a table in reverse order of creation and by title with three link options available for the user to view, edit and delete their own recipes:
+     - View: user can click to view the full recipe detail page
+     - Edit: user can click to edit the recipe details
+     - Delete: the user can delete a recipe
+
   
+  * Back to top button for if list gets long?????? scroll
+
+#### Recipe Detail Page
+
+Accessed only by logged in users
+* the star icon can be clicked to favourite/unfavourite an item
+
+
+
+* the number of favourite stars given to the recipe is beside the star
+
+
+
+* form to submit a recipe review
+
+
+
 #### Sign-In Form
-* Username passwrod
-remember me
-sign in / go back (redirect to home page)
+* User signs in by entering username and password
+* Choice of two action buttons: Sign In or Home which redirects to the home page
+
 
 
 #### Register
+* Users can register for an account by entering a username, an optional email and a password
+* Choice of two action buttons: Sign Up or Home which redirects to the home page
+
 
 #### Sign-Out
 
+* Sign Out button which redirects to home page after signing out
 
 #### Recipe Form page
+* A form with fields to complete to add a recipe to the public recipes page and to the user's list in the My Recipes page for CRUD functionality
+* Users can add text, paste text into fields. Images can be uploaded and a placeholder image is available if no image is supplied.
+* A Go Back button at the top to redirect users to the My Recipes page
+* A Submit Recipe button at the bottom to submit the completed form
 
-
-### Admin Features
 
 ### Future Features
 * User sign-in with Google/Facebooks
@@ -123,6 +194,7 @@ sign in / go back (redirect to home page)
 * Search/Filter by ingredient
 * Filter by favourites
 * Apply full CRUD functionality to user's own reviews
+* Currently images can be uploaded to the recipe form from the user's own computer or via a url. This could be further restricted by size and type to ensure consistency.
 
 ### Skeleton
 ### Wireframes
