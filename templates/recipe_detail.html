@@ -22,7 +22,7 @@
                 {% else %}<img src="{{ recipe.recipe_image.url }}" alt="{{ recipe.title }}">
 
                 {% endif %}
-                <p class="recipe-image-banner">Recipe added by: {{ user.username }} on: {{ recipe.created_on }}</p>
+                <p class="recipe-image-banner info">Recipe added by {{ user.username }} on: {{ recipe.created_on }}</p>
             </div>
 
 
@@ -97,7 +97,7 @@
                     <p class="recipe-intro card-text">
                         {{ recipe.introduction |safe }}
                     </p>
-                    <p class="update">Recipe last updated on: {{ recipe.updated_on}}</p>
+                    <p class="info">Recipe last updated on: {{ recipe.updated_on}}</p>
                 </div>
             </div>
         </div>
@@ -134,7 +134,7 @@
                 <div class="card-text">
                     {% for review in reviews %}
                     <div class="reviews">
-                        <p class="card-text">
+                        <p class="card-text info">
                             <span>{{ review.created_on }}</span>
                             <span> {{ review.name }} wrote: </span>
                         </p>

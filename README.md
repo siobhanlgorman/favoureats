@@ -1,12 +1,12 @@
-Favoureats - Tried and Tested Recipes
+# Favoureats - Tried and Tested Recipes
 
 
-# UX
-## Strategy
-### Agile
+## UX
+### Strategy
+#### Agile
 The Agile methodology was used to plan the project. Github was used as the tool to demonstrate this. However Github is not the ideal tool to adequately link Iterations - Epics - User Stories. Although I linked User Stories (Issues) to Epics (Milestones) and placed these in Iterations (Milestones), Epics did not automatically show the % progress to completion once user stories were moved in the kanban board. It also proved difficult with this developer's level of competence and the short time frame allowed, to accurately itemise all tasks in a user story in advance of implementation. As a result some user stories were updated during the course of implementation.
 
-### Project Goal
+#### Project Goal
 
 The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from my book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
 
@@ -206,6 +206,7 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 ![Iphone hamburger bug](documentation/screenshots/hamburger_bug2.png)
 
 ### Unresolved Bugs
+confirm delete custom template location
 
 ## Deployment
 
@@ -216,8 +217,6 @@ add to local deployment section: here
 * Install Django and gunicorn: `pip3 install django gunicorn`
 * Install supporting database libraries dj_database_url and psycopg2 library: `pip3 install dj_database_url psycopg2`
 * Install Cloudinary libraries to manage photos: in the terminal window type `pip3 install dj-3-cloudinary-storage`
-to here
-
 * Create file for requirements: in the terminal window type `pip freeze --local > requirements.txt`
 * Create project: in the terminal window type `django-admin startproject project_name .`
 * Create app: in the terminal window type `python3 manage.py startapp app_name`
@@ -225,7 +224,6 @@ to here
 * Migrate changes: in the terminal window type `python3 manage.py migrate`
 * Run the server to test if the app is installed: in the terminal window type `python3 manage.py runserver`
 * If the app has been installed correctly the window will display `The install worked successfully! Congratulations!`
-
 
 #### Create your Heroku app
 * Navigate to the Heroku website
@@ -376,3 +374,8 @@ If you wish to fork the repository to make changes without affecting the origina
 
 ## Images
 Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
+
+[Lasagne by Daniele Sgura from Pexels](https://www.pexels.com/photo/close-up-photo-of-lasagna-on-ceramic-plate-4162496/)
+
+## Recipes
+[Lasagne](https://www.theguardian.com/food/2020/feb/24/thomasina-miers-recipe-for-cheats-lasagne-with-ricotta-and-greens)

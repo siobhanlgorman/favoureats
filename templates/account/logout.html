@@ -11,19 +11,19 @@
     <p class="card-body">{% trans 'Are you sure you want to sign out?' %}</p>
   </div>
 
-<div class="row">
-  <div class="col text-center">
-    
-    <form method="post" action="{% url 'account_logout' %}">
-      {% csrf_token %}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
-      <button class="btn btn-lg btn-danger" type="submit">{% trans 'Sign Out' %}</button>
-      <a href="{% url 'recipes' %}" class="btn btn-lg grn-btn">Back to Recipes</a>
-    </form>
+  <div class="row">
+    <div class="col text-center">
+
+      <form method="post" action="{% url 'account_logout' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn btn-lg btn-danger" type="submit">{% trans 'Sign Out' %}</button>
+        <a href="{% url 'recipes' %}" class="btn btn-lg grn-btn">Back to Recipes</a>
+      </form>
+    </div>
   </div>
-</div>
 </div>
 
 {% endblock %}

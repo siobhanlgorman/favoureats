@@ -21,42 +21,44 @@
 </header>
 
 
-    <div class="container-fluid">
-        <hr>
-        <div class="row">
-            <div class="col-12">
-                <h2 class="display-1 ldg-header">Latest Recipes</h2>
-                <p>to view the full recipe please log in and go to the recipes page</p>
-            </div>
+<div class="container-fluid">
+    <hr>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="display-1 ldg-header">Latest Recipes</h2>
+            <p>to view the full recipe please log in and go to the recipes page</p>
         </div>
-        <div class="row">
-            <!-- Recipe Snapshot Column -->
-            <div class="col-12 mt-3 left">
-                <div class="row">
-                    {% for recipe in recipe_list %}
-                    <div class="col-lg-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="image-container">
-                                    {% if 'placeholder' in recipe.recipe_image.url %}
-                                    <img class="card-img-top"
-                                        src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
-                                        alt="Image of open recipe book">
-                                    {% else %}
-                                    <img class="card-img-top" src=" {{ recipe.recipe_image.url }} " alt="{{ recipe.title }}">
-                                    {% endif %}
-                                    <div class="card-img-overlay">
-                                        <p class="recipe-type"> {{ recipe.type }} / {{ recipe.category}}</p>
-                                    </div>
-                                    <div>
-                                        <h3 class="recipe-title home-cd"> {{ recipe.title }}</h3>
-                                        <p class="recipe-footer card-footer">added by {{ recipe.author }} on {{ recipe.created_on}}</p>
-                                    </div>
+    </div>
+    <div class="row">
+        <!-- Recipe Snapshot Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for recipe in recipe_list %}
+                <div class="col-lg-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if 'placeholder' in recipe.recipe_image.url %}
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/ddaqqsr3r/image/upload/v1634930037/Food/rsz_1cook-gb536340c8_1920_rtayn0.jpg"
+                                    alt="Image of open recipe book">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ recipe.recipe_image.url }} "
+                                    alt="{{ recipe.title }}">
+                                {% endif %}
+                                <div class="card-img-overlay">
+                                    <p class="recipe-type"> {{ recipe.type }} / {{ recipe.category}}</p>
+                                </div>
+                                <div>
+                                    <h3 class="recipe-title home-cd"> {{ recipe.title }}</h3>
+                                    <p class="recipe-footer card-footer">added by {{ recipe.author }} on
+                                        {{ recipe.created_on}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
                 <!-- </div> -->
                 <div class="row">
                     {% endif %}
@@ -72,4 +74,4 @@
         </div>
     </div>
 
-{% endblock %}
+    {% endblock %}

@@ -1,3 +1,7 @@
+html {
+    font-size: 100%;
+}
+
 body {
     background-color: white;
 }
@@ -6,14 +10,18 @@ p {
     font-family: 'Poppins', sans-serif
 }
 
-h1 h2,
+h1,
+h2,
 h3,
 h4,
 h5 {
     font-family: 'Roboto', sans-serif;
 }
 
-
+#logo {
+    width: 150px;
+    height: 40px;
+}
 
 /* Icons */
 
@@ -38,7 +46,7 @@ i {
 }
 
 .hero-text {
-    margin-top: 1rem;
+    margin-top: 10px;
 }
 
 .hero-text h1 {
@@ -56,15 +64,15 @@ i {
 }
 
 .ldg-header {
+    padding-top: 10px;
     font-size: 2rem;
-    padding-top: 1rem;
 }
 
 /* Recipe images styling */
 
 .home-cd {
-    padding: 0.5rem;
-    border: 0.5rem;
+    padding: 5px;
+    border: 5px;
 }
 
 .card-img-top {
@@ -75,12 +83,12 @@ i {
 
 .card {
     background-color: whitesmoke;
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
 
 .card-title {
     text-align: center;
-    margin: 1rem;
+    margin: 10px;
 }
 
 .card-text p {
@@ -116,7 +124,7 @@ i {
     color: white;
     background-color: rgba(0, 128, 0, 0.7);
     box-sizing: border-box;
-    padding: 0.5rem;
+    padding: 3px;
 }
 
 .hm-pg-img-bnr {
@@ -143,7 +151,7 @@ h2.card-title {
     margin: auto
 }
 
-/* cursor */
+/* Cursor */
 a:hover {
     background-color: #ccc;
     cursor: pointer;
@@ -165,7 +173,7 @@ a.page-link {
 .btn-fave {
     border: none;
     font-size: 1.5rem;
-    margin: 1rem;
+    margin: 10px;
 }
 
 /* button styling */
@@ -193,18 +201,18 @@ a.page-link {
 }
 
 .btn-add {
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
 }
 
 .btn-add a {
     background-color: green;
     color: white;
-    padding: 0.6rem;
+    padding: 5px;
     border-radius: 8px;
 }
 
 .vw-btn {
-    padding: 0.6rem;
+    padding: 5px;
 }
 .btn-add i {
     color: black;
@@ -228,7 +236,7 @@ table {
 /* About Page */
 
 .about-text h3 {
-    padding-top: 1rem;
+    padding-top: 10px;
     text-align: center;
 }
 
@@ -237,7 +245,7 @@ table {
 }
 
 .about-image-container {
-    padding-top: 1rem;
+    padding-top: 10px;
 }
 
 .button-cntnr {
@@ -248,7 +256,7 @@ table {
 
 .recipe-title {
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
     background-color: white;
 }
 
@@ -263,8 +271,12 @@ table {
     background-color: white;
 }
 
-
 .recipe-form {
     width: 75%;
     margin: auto;
+}
+
+.info {
+    font-style: italic;
+    font-size: smaller;
 }
