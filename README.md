@@ -1,72 +1,73 @@
 # Favoureats - Tried and Tested Recipes
-
-
 ## UX
 ### Strategy
 #### Agile
-The Agile methodology was used to plan the project. Github was used as the tool to demonstrate this. However Github is not the ideal tool to adequately link Iterations - Epics - User Stories. Although I linked User Stories (Issues) to Epics (Milestones) and placed these in Iterations (Milestones), Epics did not automatically show the % progress to completion once user stories were moved in the kanban board. It also proved difficult with this developer's level of competence and the short time frame allowed, to accurately itemise all tasks in a user story in advance of implementation. As a result some user stories were updated during the course of implementation.
+The Agile methodology was used to plan the project. Github was used as the tool to demonstrate this.
+1. Projects were used to divide the project into three iterations with a simple Kanban board.
+2. Milestones were used to create Epics with a custom template
+3. Issues were used to create User Stories with a custom template. Eash user story is clearly described with a title, statement, acceptance criteria and tasks
+
+Each user story was linked to an Epic and placed within one of three Iterations. The user stories were labelled 'must do' 'could do' and 'should do' in order to prioritise the work. As work on a user story was begun the story was moved from the 'to do' column of the board to the 'In progress' column. When work on the story was complete the user story was moved into the 'done' column.
+
+However Github is not the ideal tool to adequately link Iterations - Epics - User Stories. Although I linked User Stories (Issues) to Epics (Milestones) and placed these in Iterations (Milestones), Epics did not automatically show the % progress to completion once user stories were moved in the kanban board. It was also difficult given the tight time frame and developer's level of knowledge to accurately plan out the content of each user story in advance. As a result some user stories were updated during the course of implementation. 
 
 #### Project Goal
-
-The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from my book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. This idea was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
+The goal of the project is to create a recipe website with tried and tested recipes for both family meals and dinner parties. Inspiration for the site came from the developer's book club group who requested a place to store the recipes for the lovely dinners provided at their regular meetings. The developer's family also wanted a means to access family favourite recipes so the project was expanded to appeal more broadly to general users looking for good recipes and a means to store, edit and delete their own favourite recipes.
+The target user is someone:
+* who wants to find recipes to use to cook for the family or friends
+* who wants to store their own favourite recipes in one place
+* who wants to share their favourite recipes
 
 ### Epics and User Stories
+There are 11 Epics and 20 User Stories. The User Stories are numbered so can be easily tracked. However during the planning stage as the stories were being amended their id numbers(#) are no longer in sequence.
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
 #### User Stories:
-  * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)
-  * As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)
-  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)
-  * As an admin I can view the number of likes on a recipe post so that I can know which are the most popular
-  * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe
-  * As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts
+  * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)(#8)
+  * As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
+  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
+  * As an admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
+  * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
+  * As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
 
 #### Epic: Enable users to register on the site to access full features
 #### User Stories:
-  * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)
-#### Epic: Enable users to login/logout on the site to access full features
-#### User Stories:
-  * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)
-#### Epic: Enable registered users to review recipe posts
-#### User Stories:
-  * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)
+  * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
+  * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
 #### Epic: Create landing page to attract users to the site
 #### User Stories:
-  * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is
-#### Epic: Enable registered users to read full recipe posts and reviews
-#### User Stories:
-  * As a registered user I can click on a post in the recipe list so that I open the full recipe post
+  * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)(#24)
 #### Epic: Enable registered users to CRUD their own recipes
 #### User Stories:
-  * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)
+  * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)(#12)
 #### Epic: Create recipe list page to showcase content to users
 #### User Stories:
-  * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)
-#### Epic: Enable registered users to search through their own recipes to enhance UX
+  * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
+#### Epic: Enable registered users to search through the recipes to enhance UX
 #### User Stories:
-  * As a user I can search my own recipe posts by title so that easily find a recipe (should-have / complete)
-  * As a user I can search recipes by ingredient so that I can easily find a recipe that I want to use (could-have / future features)
+  * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
+  * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
 #### User Stories:
-  * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)
-  * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)
+  * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
+  * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
+  * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
 #### Epic: Enable users to filter recipe posts to enhance UX
 #### User Stories:
-  * As a user I can search recipes by ingredient so that I can easily find a recipe that I want to use (could-have / future feature)
-  * As a registered user I can filter favourite recipes to a list so that I can find all my favourites easily (should-have / future feature)
+  * As a user I can filter all recipes by ingredient/favourite so that I can easily sort the recipes (could-have / future feature)(#22)
 #### Epic: Create recipe list page to showcase content to users
 #### User Stories:
-  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)
+  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)(#33)
 #### Epic: Enable users to sign-in/register with Google/Facebook account
 #### User Stories:
-  * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)
+  * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)(#30)
 #### Epic: Enable users to CRUD own reviews
 #### User Stories:
-  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (should-have / complete)
+  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (should-have / complete)(#17)
 
-## Scope
+### Scope
   * The scope of the project was large at the planning stage and during the course of implementation the scope was narrowed in order to meet the project's hard deadline. 
 
-## Structure
+### Structure
 ### Existing Features
 #### All Pages
 ????????? Screenshots here same as for user story testing?????
@@ -115,7 +116,7 @@ This page is only viewable by a logged in user
 * Filter by favourites
 * Apply full CRUD functionality to user's own reviews
 
-## Skeleton
+### Skeleton
 ### Wireframes
 
 * [Home Page]
@@ -131,7 +132,7 @@ There are two models for the database: A Recipe model and a Review model
 ![Data Models](documentation/screenshots/data-models.png)
 
 The pdf of these models' tables can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/documentation/data_models.pdf)
-## Surface
+### Surface
 ## Design
 My style is to keep everything minimalist and uncluttered, fresh and clean looking. 
 ### Colours
@@ -275,7 +276,7 @@ python3 manage.py makemigrations`
 python3 manage.py migrate`
 ```
 7. Set up Cloudinary for static and media files storage
-* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "your link goes here but you must remove the start so it begins with 'cloudinary://"`
+* Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
 * In Heroku  add cloudinary url to 'config vars' add in Heroku: type CLOUDINARY_URL: your url here e.g. cloudinary:// fix here??????
 * In Heroku condfig vars add DISABLE_COLLECTSTATIC with value of '1' (note: this must be removed for final deployment)
 * Add Cloudinary libraries to installed apps section of `settings.py` in this order: 
@@ -378,5 +379,8 @@ Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_sou
 [Lasagne by Daniele Sgura from Pexels](https://www.pexels.com/photo/close-up-photo-of-lasagna-on-ceramic-plate-4162496/)
 
 [Cookbook Image by <a href="https://pixabay.com/users/bru-no-1161770/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1375788">Bruno /Germany</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1375788">Pixabay</a>](https://pixabay.com/photos/cook-cookbook-side-enjoyment-meal-1375788/)
+
+[Tofu Photo by Ella Olsson from Pexels](https://www.pexels.com/photo/vegetable-salad-3026808/)
+
 ## Recipes
 [Lasagne](https://www.theguardian.com/food/2020/feb/24/thomasina-miers-recipe-for-cheats-lasagne-with-ricotta-and-greens)
