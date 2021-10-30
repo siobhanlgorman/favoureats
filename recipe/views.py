@@ -134,7 +134,8 @@ class RecipeFavourite(LoginRequiredMixin, View):
         recipe = get_object_or_404(Recipe, slug=slug)
         if recipe.favourites.filter(id=request.user.id).exists():
             recipe.favourites.remove(request.user)
-            messages.info(request, 'You took the favourite star away from this recipe!')
+            messages.info(
+                request, 'You took the favourite star away from this recipe!')
         else:
             recipe.favourites.add(request.user)
             messages.success(request, 'You gave this recipe a favourite star!')

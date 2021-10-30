@@ -65,9 +65,10 @@ There are 11 Epics and 20 User Stories. The User Stories are numbered so can be 
   * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (could-have / complete)(#17)
 
 ### Scope
-  * The scope of the project was large at the planning stage and during the course of implementation the scope was narrowed in order to meet the project's hard deadline. 
+  * The scope of the project was large at the planning stage. While the ultimate goal was to allow logged in users to have full CRUD functionality for all their own content, time constraints meant this was limited to CRUD functionality only for their own recipes as this was deemed a must-have. More functionality for logged in users will be added in the future. In addition further front-end admin functionality will be added in the future but for this project full management is limited to backend Django admin panel and front-end CRUD over the recipes created by the admin.
 
 ### Structure
+The website consists of six pages: Home, About, Recipes, My Recipes, Register and Sign In/Sign Out pages. Home, About and Recipes can be viewed by all users. My Recipes is limited to logged in users. 
 ### Existing Features
 #### All Pages
 ????????? Screenshots here same as for user story testing?????
@@ -88,6 +89,7 @@ There are 11 Epics and 20 User Stories. The User Stories are numbered so can be 
   * Images and titles of all the recipes are visible on the page. Paginated????????
   * The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page
   * Back to top button which remains on screen once user has started scrolling. When there are more recipes on the site this will improve the UX by making it easy for the user to return to the top and search for a recipe or navigate to a different page.
+  * call to action button to 'add a recipe' which will direct logged in users to my recipes page and non-logged in users to the sign in page
 
 #### My Recipes Page
 This page is only viewable by a logged in user
@@ -97,7 +99,13 @@ This page is only viewable by a logged in user
   * View link: user can click to view the full recipe detail page
   * Edit: user can click to edit the recipe details
   * Delete: the user can delete a recipe
+  * Back to top button for if list gets long
+  
 #### Sign-In Form
+* Username passwrod
+remember me
+sign in / go back (redirect to home page)
+
 
 #### Register
 
