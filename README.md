@@ -73,140 +73,181 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 ### Existing Features
 #### All Pages
 
-* Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages. The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not logged in the Register and Sign in links are visible in the navbar. If the user is signed in the Register and Sign In links are replaced by a Sign Out link and the My Recipes page link is visible.
+* Navbar: 
+  - logo linking back to the home page:
 
-This allows users to inuitively navigate their way around the site.
+  ![Logo](documentation/screenshots/logo.png)
 
-![###](documentation/screenshots/???png)
+  - Links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages: 
+  The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and REgister links are replaced by a Sign Out link and the My Recipes page link is visible.
+
+![Navigation for not signed in user](documentation/screenshots/nav1.png)
+
+![Navigation for signed in user](documentation/screenshots/nav2.png)
+
+- The active page is highlighted for good UX:
+
+![My Recipes page highlighted](documentation/screenshots/nav3.png)
+
+- The navbar sticks to the top of the page so remains in view for the user to easily navigate around the site
+
+![Sticky navbar](documentation/screenshots/sticky_nav.png)
+
+- The navbar collapses for mobile and portrait tablets:
+
+![Navbar collapsed](documentation/screenshots/nav_coll.png)
+
+
 * Footer: with clearly visible links to direct the user to the Facebook, Instagram and Twitter pages
+
+![Footer](documentation/screenshots/footer.png)
   
 #### Home Page
 * Hero Image with overlay text highlighting the purpose of the site
 
+![Hero Image](documentation/screenshots/hero_image.png)
 
+* Call to action register button on hero image is visible to users who are not logged in to encourage registration to access the features highlighted on this page. The button becomes invisible if the user is signed in. 
 
-* Call to action register button on hero image is visible to users who are not logged in to encourage registration to access the features highlighted on this page. The button becomes invisible if the user is signed in.
+![View to not signed in user](documentation/screenshots/navbar_no_log.png)
 
-
+![View to signed in user](documentation/screenshots/navbar_log.png)
 
 * Text with links directing users to the features available to logged in users
 
-
+![Latest recipe information](documentation/screenshots/latest.png)
 
 * Snapshot images of three most recent recipe posts with title, date added and author. This page updates automatically as new recipes are added which keeps the site fresh and interesting to users.
 
-
+![Three latest recipes](documentation/screenshots/snapshot.png)
 
 * Call to action button to 'View the Recipes' at bottom of page to direct users easily onto view the full recipe list page
 
-
+![View the Recipes button](documentation/screenshots/view_btnpng)
 
 #### About Page
 * Image with background text information about the website
 
-
+![###](documentation/screenshots/???png)
 
 * Call to action button 'View the Recipes' to direct users onwards to the main recipes page
 
-
+![###](documentation/screenshots/???png)
 
 #### Recipes Page
-  * Images with summary description of all the recipes are visible on the page. Recipe title is a link to the full recipe detail page for logged in users. Stars representing favourites and comment icons representing reviews have total number beside them. 
+  * Images with summary description of all the recipes are visible on the page. Recipe title is a link to the full recipe detail page for logged in users. Stars representing favourites and comment icons representing reviews have total number beside them:
 
+![Recipes Page](documentation/screenshots/recipes_page.png)
 
+  * A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes:
 
-  * A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes
+![Search bar](documentation/screenshots/search.png)
 
+  * The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page:
 
+![Sample recipe](documentation/screenshots/recipe_snap.png)
 
-  * The recipe titles link to the full recipe detail page which can only be accessed by logged in users. Users who are not logged in are redirected to the sign-in page
+  * A back to top arrow on bottom right which remains on screen once user has started scrolling to impove UX by making it easy for the user to return to the top of the page to search or navigate to a different page:
 
+![Back to top arrow](documentation/screenshots/scroll.png)
 
+  * A call to action 'Add a Recipe' button which will direct logged in users to my recipes page and non-logged in users to the sign in page. This allows users to intuitive navigate their journey on the website:
 
-  * A back to top arrow on bottom right which remains on screen once user has started scrolling to impove UX by making it easy for the user to return to the top of the page to search or navigate to a different page.
-
-
-
-  * A call to action 'Add a Recipe' button which will direct logged in users to my recipes page and non-logged in users to the sign in page. This allows users to intuitive navigate their journey on the website
-
-
+![Add a Recipe Button](documentation/screenshots/add_btn.png)
 
 
 #### My Recipes Page
 This page can only be accessed by a logged in user. The navigation link only appears when a user is logged in. The page displays a table list of recipes which have been added by the logged in user.
 
-  * A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes
+  * A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes:
 
+![Search bar](documentation/screenshots/search2.png)
 
+  * A call to action button is clearly visible to the user to 'Add a Recipe'. When a user clicks on this button the recipe form opens where the user can enter all the fields of the recipe:
 
-  * A call to action button is clearly visible to the user to 'Add a Recipe'. When a user clicks on this button the recipe form opens where the user can enter all the fields of the recipe.
+![Add a Recipe Button](documentation/screenshots/add_btn.png)
 
-
+![Add a Recipe Form](documentation/screenshots/recipe_add.png)
 
   * The list of recipes created by the logged in user is organised in a table in reverse order of creation and by title with three link options available for the user to view, edit and delete their own recipes:
+
+![Recipes table](documentation/screenshots/recipe_tblpng)
+
      - View: user can click to open the full recipe detail page
      - Edit: user can click to open the completed recipe form and edit the details to resubmit with changes
-     - Delete: the user can delete a recipe. A warning is displayed to allow for change of mind before deletion
 
-  
+![Recipe Form](documentation/screenshots/recipe_edit.png)
+
+     - Delete: the user can delete a recipe. A warning is displayed to allow for change of mind before deletion and a button with option to return to My Recipes page:
+
+![Delete recipe confirmation](documentation/screenshots/recipe_delete.png)
 
 
 #### Recipe Detail Page
 
 Accessed only by logged in users
-* The star icon which can be clicked to favourite/unfavourite a recipe features prominently.
+* The star icon which can be clicked to favourite/unfavourite a recipe features prominently:
+* The number of favourite stars given to the recipe is underneath the star and updates when the user clicks the star
+* Messages are displayed to confirm user's actions:
 
+![Star Icon when user has not favourite with message](documentation/screenshots/star_un_fv.png)
 
+![Star Icon when user has favourited with message](documentation/screenshots/star_un_fv.png)
 
-* the number of favourite stars given to the recipe is underneath the star and updates when the user clicks the star
+* the about section of the recipe includes the 'updated on' field which will display the date of any changes made to the recipe details:
 
-* the about section of the recipe includes the 'updated on' field which will display the date of any changes made to the recipe details
+![Date last updated](documentation/screenshots/update.png)
 
-* the bottom of the page displays a form to submit a recipe review. After submission a success message displays and in the review box a note 'Your review is pending approval' is shown until the admin approves the review for publication.
+* the bottom of the page displays a form to submit a recipe review. After submission a success message displays and in the review box a note 'Your review is pending approval' is shown until the admin approves the review for publication:
 
+![Review form](documentation/screenshots/review.png)
 
+![Pending approval](documentation/screenshots/review_pend.png)
+
+![Success message](documentation/screenshots/review_msg.png)
 
 #### Sign-In Form
 * User signs in by entering username and password
 
+![Sign In Form](documentation/screenshots/sign_in_form.png)
 
+![Success message](documentation/screenshots/sign_in_msg.png)
 
 * Choice of two action buttons: Sign In or Home which redirects to the home page
-
-
+![Success message](documentation/screenshots/reviw_msg.png)
 
 
 #### Register
 
 * Users can register for an account by entering a username, an optional email and a password
+![Success message](documentation/screenshots/reviw_msg.png)
 
-
-
+![Success message](documentation/screenshots/reviw_msg.png)
 * Choice of two action buttons: Sign Up or Home which redirects to the home page
 
-
+![Success message](documentation/screenshots/reviw_msg.png)
 #### Sign-Out
 
 * Sign Out button which redirects to home page after signing out
-
+![Success message](documentation/screenshots/reviw_msg.png)
 
 
 #### Recipe Form page
 * A form to submit with fields to complete to add a recipe to the public recipes page and to the user's list in the My Recipes page for CRUD functionality
-
-
-
 * Users can add text, paste text into fields. Images can be uploaded and a placeholder image is available if no image is supplied.
+![Success message](documentation/screenshots/reviw_msg.png)
+
+
 
 
 
 * A Go Back button at the top to redirect users to the My Recipes page
 
-
+![Success message](documentation/screenshots/reviw_msg.png)
 
 * A Submit Recipe button at the bottom to submit the completed form
 
-
+![Success message](documentation/screenshots/reviw_msg.png)
 
 ### Future Features
 * Improvement could be made to the search feature. During implementation with a clear function inside the search box it was found that this only cleared the search but left the search findings list. It was decided that better UX would be to clear back to the full list so the form was changed and an 'x' was added outside the box to reload the page. Given further time I would look for a neater solution.

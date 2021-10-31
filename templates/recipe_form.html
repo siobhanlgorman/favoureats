@@ -3,14 +3,12 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
 <div class="card recipe-form">
     <div class="row">
         <div class="col text-center">
             <a class="btn btn-lg btn-success add-recipe-btn" href="{% url 'myrecipes' %}">Go Back</a>
         </div>
     </div>
-
 
     <div class="card-title">
         <h3>Add Your Recipe</h3>
@@ -22,17 +20,12 @@
                     {% csrf_token %}
                     {{ form | crispy }}
 
-                    <input type="submit" value="Submit Recipe" class="btn btn-lg btn-success">
-
+                    <input type="submit" value="Submit" class="btn btn-lg btn-success">
 
                 </form>
-
             </div>
-
         </div>
     </div>
 </div>
-
-<!-- <script src="../static/js/slugify.js"></script> -->
 
 {% endblock %}

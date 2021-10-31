@@ -39,7 +39,8 @@ class RecipeList(generic.ListView):
         context['recipe_list'] = context['recipe_list'].all()
         search_input = self.request.GET.get('search-area') or ''
         print(search_input)
-        queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
+        queries = Q(ingredients__icontains=search_input) | Q(
+            title__icontains=search_input)
 
         if search_input:
             context['recipe_list'] = context['recipe_list'].filter(queries)
@@ -63,7 +64,8 @@ class RecipeDetail(LoginRequiredMixin, View):
 
     def get(self, request, slug, *args, **kwargs):
         """
-        Gets full published recipe with approved comments and checks if recipe has been favourited by current user
+        Gets full published recipe with approved comments
+        Checks if recipe has been favourited by current user
         User can favourite/unfavourite recipe
         """
 
@@ -89,7 +91,8 @@ class RecipeDetail(LoginRequiredMixin, View):
 
     def post(self, request, slug, *args, **kwargs):
         """
-        Gets full published recipe with approved comments and checks if recipe has been favourited by current user
+        Gets full published recipe with approved comments
+        Checks if recipe has been favourited by current user
         User can submit a review form for approval by admin
         """
 
@@ -162,7 +165,8 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
 
         search_input = self.request.GET.get('search-area') or ''
 
-        queries = Q(ingredients__icontains=search_input) | Q(title__icontains=search_input)
+        queries = Q(ingredients__icontains=search_input) | Q(
+            title__icontains=search_input)
         if search_input:
             context['recipe'] = context['recipe'].filter(queries)
             context['search_input'] = search_input
@@ -170,12 +174,15 @@ class MyRecipeList(LoginRequiredMixin, generic.ListView):
         return context
 
 
-class RecipeCreate(SuccessMessageMixin, LoginRequiredMixin, generic.CreateView):
+class RecipeCreate(
+                  SuccessMessageMixin, LoginRequiredMixin, generic.CreateView):
     """
     Logged in user can create a recipe and add to my recipes list
     """
     model = Recipe
-    fields = ['recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
+    fields = ['recipe_image', 'title', 'introduction', 'ingredients',
+              'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type',
+              'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
     success_message = "You have added a recipe to your list!"
@@ -195,13 +202,16 @@ class RecipeEdit(SuccessMessageMixin, LoginRequiredMixin, generic.UpdateView):
     Logged in user can edit a recipe from their my recipes list
     """
     model = Recipe
-    fields = ['author', 'slug', 'recipe_image', 'title', 'introduction', 'ingredients', 'steps', 'servings', 'cooktime_hours', 'cooktime_mins', 'type', 'category', 'notes', ]
+    fields = ['author', 'slug', 'recipe_image', 'title', 'introduction',
+              'ingredients', 'steps', 'servings', 'cooktime_hours',
+              'cooktime_mins', 'type', 'category', 'notes', ]
     template_name = 'recipe_form.html'
     success_url = reverse_lazy('myrecipes')
     success_message = "You have updated your recipe!"
 
 
-class RecipeDelete(SuccessMessageMixin, LoginRequiredMixin, generic.DeleteView):
+class RecipeDelete(SuccessMessageMixin, LoginRequiredMixin,
+                   generic.DeleteView):
     """
     Logged in user can delete a recipe from their my recipes list
     """

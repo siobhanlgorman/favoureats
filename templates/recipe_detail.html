@@ -47,17 +47,17 @@
                             {% endif %}
                         </form>
                         {% else %}
-                        <i class="fas fa-star" aria-hidden="true"></i> 
+                        <i class="fas fa-star" aria-hidden="true"></i>
                         {% endif %}
                         <p>{{ recipe.number_of_favourites }} favourites</p>
-                       
+
                     </div>
                 </div>
                 <!-- recipe no. of reviews -->
                 <div class="card-text">
                     <ul class="icon-list fa-ul">
                         <li>
-                            
+
                         </li>
                         <li>
                             {% with reviews.count as total_reviews %}
@@ -98,7 +98,7 @@
         <div class="row">
             <div class="col-12 card">
                 <div class="card-body">
-                    <h2 class="card-title">About this recipe:</h2>
+                    <h2 class="card-title">About this recipe</h2>
                     <p class="recipe-intro card-text">
                         {{ recipe.introduction |safe }}
                     </p>
@@ -164,7 +164,7 @@
                     <form method="post">
                         {{ review_form | crispy }}
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                        <button type="submit" class="btn grn-btn btn-lg">Submit</button>
                     </form>
                     {% endif %}
                     {% endif %}
