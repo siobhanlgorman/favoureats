@@ -855,10 +855,19 @@ Pass/Fail: Pass
 ![Success message](documentation/screenshots/add_msg.png)
 
 #### 404 Page
-A 404 page was created to handle users' navigational errors and to direct them back to the website. The navigation menu and logo are visible on the page
+* Check that the 404 page displays when the user enters a url which does not exist. 
 
 Testing Steps
-1. Navigate to [favoureats](https://favoureats.herokuapp.com/) 
+1. Navigate to [favoureats](https://favoureats.herokuapp.com/)
+2. Type in an incorrect url
+
+Expected result
+1. 404 page displays
+
+Actual result
+1. 404 page displays
+
+Pass/Fail: Pass
 
 #### 500 Page
 A 500 server error page was created to handle internal server errors
