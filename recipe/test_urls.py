@@ -1,10 +1,20 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from recipe.views import HomeList, AboutPage, RecipeList, RecipeDetail, RecipeFavourite, MyRecipeList, RecipeCreate, RecipeEdit, RecipeDelete
+from recipe.views import (HomeList,
+                          AboutPage,
+                          RecipeList,
+                          RecipeDetail,
+                          RecipeFavourite,
+                          MyRecipeList,
+                          RecipeCreate,
+                          RecipeEdit,
+                          RecipeDelete)
 
 
 class TestUrls(SimpleTestCase):
-
+    """
+    Test urls redirect
+    """
     def test_homelist_url_is_resolved(self):
         """
         Test redirect to homepage

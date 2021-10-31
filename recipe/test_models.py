@@ -1,9 +1,11 @@
 from django.test import TestCase
-from .models import Recipe, Review, User
+from .models import Recipe, User
 
 
 class TestModels(TestCase):
-
+    """
+    Set up test user and test recipe
+    """
     def setUp(self):
         user_a = User.objects.create_user('user_1',
                                           'testuser@email.com',

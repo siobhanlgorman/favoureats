@@ -867,6 +867,8 @@ Expected result
 Actual result
 1. 404 page displays
 
+![](documentation/screenshots/404.png)
+
 Pass/Fail: Pass
 
 #### 500 Page
@@ -876,8 +878,68 @@ Testing Steps
 1. Create incorrect file path for image
 2. Navigate to [favoureats](https://favoureats.herokuapp.com/)
 
+Expected result
+1. 500 page displays
 
+Actual result
+1. 500 page displays
 
+Pass/Fail: Pass
+
+## Browser compatibility
+The project was developed on Google Chrome and no issues were detected
+Additional tests were conducted on Mozilla Firefox and Microsoft Edge with no issues detected
+
+![](documentation/screenshots/edge.png)
+
+![](documentation/screenshots/firefox.png)
+
+## Responsiveness
+
+The website was developed on a 15" laptop and a 24" monitor and no issues were found.
+Chrome Developer tools were used to check responsiveness on all sized devices throughout the process and adjustments were made
+Additional tests were conducted in the later stages on various mobile devices: A Moto g8+, an IPhone 11, an Iphone SE2 and an IPhone XR. Some problems were found in rendering the search bar on the IPhone 11 and SE2 (see bug reports) which were addressed. However an issue remains with the XR (see unresolved bug report) which warrants further investigation.
+
+![](documentation/screenshots/mob_view.png)
+![](documentation/screenshots/ipad_view.png)
+
+## Code Validation
+## User Story Testing
+## Manual Testing
+## Automated Testing
+  * test files in testing md?
+
+## Bugs
+### Resolved Bugs
+1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
+2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
+3. User generated ingredients and steps do not appear as lists. Fixed by adding `|linebreaks` to the steps and ingredients sections of the recipe detail template
+
+4. My recipe_confirm_delete template could not be found when located with the other messages templates and provoked an error on delete file could not be found. As the error message stated that it looked in file path: `recipe/templates`. In order to fix this error speedily I created the folder `recipe` and placed the recipe_confirm_delete.html template there to fix the error. Given more time I would investigate this further.
+5. Number of comments does not appear on recipes page but number of favourites does: I troubleshooted with various print() statements to determine what was being read and fixed by renaming variable to `{{ recipe.reviews.count }}`
+
+6. IPhone 11 search bar bug: Text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. I fixed this by change the form type, inputs and button until it worked on IPhone!
+
+7. Safari rendering /Iphone 11/ IPhone SE: 
+* search button x appears rounded on iPhone8. After the changes in bug fix 6 the button still appears a little different Fix changed to grn-btn style and removed border
+
+![](documentation/screenshots/buttonbug.png)
+*Iphone button bug*
+
+* IPhone 10R hamburger menu overlapping logo: Fixed by changing navbar layout and search bar as above
+
+![](documentation/screenshots/hamburger_bug1.png)
+*IPhone hamburger bug*
+
+![](documentation/screenshots/hamburger_bug2.png)
+*Iphone hamburger bug*
+
+### Unresolved Bugs
+confirm delete custom template location????
+IPhone XR menu collapse button issue: I thought this was resolved as above but unfortunately persisted shortly before submission and needs further investigation. It only affects the XR model however and the particular phone is thought to be 'buggy' 
+
+![](documentation/screenshots/iphone_menu_bug.png)
+*IphoneXR menu bug*
 
 
 
