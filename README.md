@@ -323,11 +323,36 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 ### Wireframes
 
 * [Home Page]
+
+![](documentation/wireframes/home.png)
+
 * [About Page]
+
+![](documentation/wireframes/about.png)
+
 * [Recipes Page]
+
+![](documentation/wireframes/recipes.png)
+
 * [My Recipes Page]
+
+![](documentation/wireframes/myrecipes.png)
+
 * [Recipe Detail Page]
-* Sign in etc???????
+
+![](documentation/wireframes/recipe_detail.png)
+
+* Sign In Page:
+
+![](documentation/wireframes/login_page.png)
+
+Register Page:
+
+![](documentation/screenshots/register_page.png)
+
+Recipe Form Page:
+
+![](documentation/screenshots/recipe_form.png)
 
 ### Data Models
 There are two models for the database: A Recipe model and a Review model
