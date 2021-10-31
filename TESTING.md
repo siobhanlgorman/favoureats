@@ -870,7 +870,14 @@ Actual result
 Pass/Fail: Pass
 
 #### 500 Page
-A 500 server error page was created to handle internal server errors
+* Check that a 500 server error page displays to handle internal server errors
+
+Testing Steps
+1. Create incorrect file path for image
+2. Navigate to [favoureats](https://favoureats.herokuapp.com/)
+
+
+
 
 
 
