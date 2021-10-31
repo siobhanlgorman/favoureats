@@ -73,49 +73,49 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 ### Existing Features
 #### All Pages
 
-  * Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages. The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not logged in the Register and Sign in links are visible in the navbar. If the user is signed in the Register and Sign In links are replaced by a Sign Out link and the My Recipes page link is visible.
+* Navbar: with logo linking back to the home page, links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages. The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not logged in the Register and Sign in links are visible in the navbar. If the user is signed in the Register and Sign In links are replaced by a Sign Out link and the My Recipes page link is visible.
 
-  This allows users to inuitively navigate their way around the site.
+This allows users to inuitively navigate their way around the site.
 
-  ![###](documentation/screenshots/???png)
-  * Footer: with clearly visible links to direct the user to the Facebook, Instagram and Twitter pages
+![###](documentation/screenshots/???png)
+* Footer: with clearly visible links to direct the user to the Facebook, Instagram and Twitter pages
   
 #### Home Page
-  * Hero Image with overlay text highlighting the purpose of the site
+* Hero Image with overlay text highlighting the purpose of the site
 
 
 
-  * Call to action register button on hero image is visible to users who are not logged in to encourage registration to access the features highlighted on this page. The button becomes invisible if the user is signed in.
+* Call to action register button on hero image is visible to users who are not logged in to encourage registration to access the features highlighted on this page. The button becomes invisible if the user is signed in.
 
 
 
-  * Text with links directing users to the features available to logged in users
+* Text with links directing users to the features available to logged in users
 
 
 
-  * Snapshot images of three most recent recipe posts with title, date added and author. This page will update automatically as new recipes are added which keeps the site fresh and interesting to users.
+* Snapshot images of three most recent recipe posts with title, date added and author. This page updates automatically as new recipes are added which keeps the site fresh and interesting to users.
 
 
 
-  * Call to action button to 'View recipes' at bottom of page to direct users easily onto view the full recipe list page
+* Call to action button to 'View the Recipes' at bottom of page to direct users easily onto view the full recipe list page
 
 
 
 #### About Page
-  * Image with background information about the website
+* Image with background text information about the website
 
 
 
-  * Call to action button to direct users to the recipes page
+* Call to action button 'View the Recipes' to direct users onwards to the main recipes page
 
 
 
 #### Recipes Page
-  * Images and titles of all the recipes are visible on the page.
+  * Images with summary description of all the recipes are visible on the page. Recipe title is a link to the full recipe detail page for logged in users. Stars representing favourites and comment icons representing reviews have total number beside them. 
 
 
 
-  * A search bar to enable users to easily locate a particular recipe by a keywork in the title or ingredients list. Clickable icons to search and to clear search back to full list
+  * A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes
 
 
 
@@ -123,19 +123,19 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 
 
 
-  * A Back to top button which remains on screen once user has started scrolling. When there are more recipes on the site this will improve the UX by making it easy for the user to return to the top and search for a recipe or navigate to a different page.
+  * A back to top arrow on bottom right which remains on screen once user has started scrolling to impove UX by making it easy for the user to return to the top of the page to search or navigate to a different page.
 
 
 
-  * A call to action button to 'add a recipe' which will direct logged in users to my recipes page and non-logged in users to the sign in page
+  * A call to action 'Add a Recipe' button which will direct logged in users to my recipes page and non-logged in users to the sign in page. This allows users to intuitive navigate their journey on the website
 
 
 
 
 #### My Recipes Page
-This page is only viewable by a logged in user
+This page can only be accessed by a logged in user. The navigation link only appears when a user is logged in. The page displays a table list of recipes which have been added by the logged in user.
 
-  * A search bar to enable users to easily locate a particular recipe by a keywork in the title or ingredients list. Clickable icons to search and to clear search back to full list
+  * A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes
 
 
 
@@ -143,26 +143,26 @@ This page is only viewable by a logged in user
 
 
 
-  * List of recipes created by this logged in user organised in a table in reverse order of creation and by title with three link options available for the user to view, edit and delete their own recipes:
-     - View: user can click to view the full recipe detail page
-     - Edit: user can click to edit the recipe details
-     - Delete: the user can delete a recipe
+  * The list of recipes created by the logged in user is organised in a table in reverse order of creation and by title with three link options available for the user to view, edit and delete their own recipes:
+     - View: user can click to open the full recipe detail page
+     - Edit: user can click to open the completed recipe form and edit the details to resubmit with changes
+     - Delete: the user can delete a recipe. A warning is displayed to allow for change of mind before deletion
 
   
-  * Back to top button for if list gets long?????? scroll
+
 
 #### Recipe Detail Page
 
 Accessed only by logged in users
-* the star icon can be clicked to favourite/unfavourite an item
+* The star icon which can be clicked to favourite/unfavourite a recipe features prominently.
 
 
 
-* the number of favourite stars given to the recipe is beside the star
+* the number of favourite stars given to the recipe is underneath the star and updates when the user clicks the star
 
+* the about section of the recipe includes the 'updated on' field which will display the date of any changes made to the recipe details
 
-
-* form to submit a recipe review
+* the bottom of the page displays a form to submit a recipe review. After submission a success message displays and in the review box a note 'Your review is pending approval' is shown until the admin approves the review for publication.
 
 
 
@@ -209,12 +209,13 @@ Accessed only by logged in users
 
 
 ### Future Features
+* Improvement could be made to the search feature. During implementation with a clear function inside the search box it was found that this only cleared the search but left the search findings list. It was decided that better UX would be to clear back to the full list so the form was changed and an 'x' was added outside the box to reload the page. Given further time I would look for a neater solution.
+* The search function on the Recipes and My Recipes pages could be further refined to include filtering by category and organising the list in various orders e.g. alphabetised
+* A useful future feature would be to filter by the user's favourites
 * User sign-in with Google/Facebooks
-* Search/Filter on Recipes page
-* Search/Filter by ingredient
-* Filter by favourites
 * Apply full CRUD functionality to user's own reviews
 * Currently images can be uploaded to the recipe form from the user's own computer or via a url. This could be further restricted by size and type to ensure consistency.
+* In future it would be a good idea change the default setting to draft for users recipes to require approval before publication so the admin can check the content is suitable and consistent with the site ethos and style. 
 
 ### Skeleton
 ### Wireframes
