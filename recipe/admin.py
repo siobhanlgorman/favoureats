@@ -1,11 +1,13 @@
 from django.contrib import admin
-from .models import Recipe, Review
 from django_summernote.admin import SummernoteModelAdmin
+from .models import Recipe, Review
 
 
 @admin.register(Recipe)
 class RecipeAdmin(SummernoteModelAdmin):
-
+    """
+    Add fields which will use summernote editor in admin panel
+    """
     list_filter = (
         'status', 'created_on', 'type', 'author', 'category')
     list_display = (
@@ -20,6 +22,9 @@ class RecipeAdmin(SummernoteModelAdmin):
 
 @admin.register(Review)
 class ReviewAdmin(admin.ModelAdmin):
+    """
+    Add fields for additional display in admin panel
+    """
     list_display = ('name', 'body', 'recipe', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
     search_fields = ('name', 'email', 'body')
