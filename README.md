@@ -90,8 +90,8 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 ![](documentation/screenshots/nav1.png)
 *Navigation for not signed in user*
 
-![](documentation/screenshots/nav2.png)
-*Navigation for signed in user*
+  ![](documentation/screenshots/nav2.png)
+  *Navigation for signed in user*
 
 - The active page is highlighted for good UX:
 
@@ -233,23 +233,30 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 * Messages are displayed to confirm user's actions:
 
 ![](documentation/screenshots/star_fv.png)
-*Star Icon when user has not favourite with message*
+*Star icon when user has favourited the recipe with success message*
 
 ![](documentation/screenshots/star_un_fv.png)
-*Star Icon when user has favourited with message*
+*Star Icon when user has not favourited with message and total updated*
 
 * the about section of the recipe includes the 'updated on' field which will display the date of any changes made to the recipe details:
 
 ![](documentation/screenshots/update.png)
 *Date last updated*
 
-* the bottom of the page displays a form to submit a recipe review. After submission a success message displays and in the review box a note 'Your review is pending approval' is shown until the admin approves the review for publication:
+* Reviews: 
+- At the bottom of the page is the Review section to display published reviews in descending order by date:
+
+![](documentation/screenshots/reviews.png)
+*Reviews*
+
+- below the published reviews is a form to submit a recipe review. 
+- After submission a success message displays and in the review box a note 'Your review is pending approval' is shown until the admin approves the review for publication:
 
 ![](documentation/screenshots/review.png)
 *Review form*
 
 ![](documentation/screenshots/review_pend.png)
-*Pending approval*
+*Pending approval below published reviews*
 
 ![](documentation/screenshots/review_msg.png)
 *Review thanks message*
@@ -393,19 +400,23 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 7. Safari rendering /Iphone 11/ IPhone SE: 
 * search button x appears rounded on iPhone8. After the changes in bug fix 6 the button still appears a little different Fix changed to grn-btn style and removed border
 
-![Iphone button bug](documentation/screenshots/buttonbug.png)
+![](documentation/screenshots/buttonbug.png)
+*Iphone button bug*
 
-* iphone 10R hamburger menu overlapping logo: Fixed by changing navbar layout and search bar as above
+* IPhone 10R hamburger menu overlapping logo: Fixed by changing navbar layout and search bar as above
 
-![Iphone hamburger bug](documentation/screenshots/hamburger_bug1.png)
+![](documentation/screenshots/hamburger_bug1.png)
+*IPhone hamburger bug*
 
-
-![Iphone hamburger bug](documentation/screenshots/hamburger_bug2.png)
+![](documentation/screenshots/hamburger_bug2.png)
+*Iphone hamburger bug*
 
 ### Unresolved Bugs
 confirm delete custom template location????
-IPhone XR menu collapse button issue
+IPhone XR menu collapse button issue: I thought this was resolved as above but unfortunately persisted shortly before submission and needs further investigation. It only affects the XR model however and the particular phone is thought to be 'buggy' 
 
+![](documentation/screenshots/iphone_menu_bug.png)
+*IphoneXR menu bug*
 
 ## Deployment
 
