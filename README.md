@@ -322,23 +322,25 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 ### Skeleton
 ### Wireframes
 
-* [Home Page]
+The pdf files can be seen [here](https://github.com/siobhanlgorman/favoureats/tree/main/documentation/wireframes)
+
+* Home Page
 
 ![](documentation/wireframes/home.png)
 
-* [About Page]
+* About Page
 
 ![](documentation/wireframes/about.png)
 
-* [Recipes Page]
+* Recipes Page
 
 ![](documentation/wireframes/recipes.png)
 
-* [My Recipes Page]
+* My Recipes Page
 
 ![](documentation/wireframes/myrecipes.png)
 
-* [Recipe Detail Page]
+* Recipe Detail Page
 
 ![](documentation/wireframes/recipe_detail.png)
 
@@ -346,11 +348,11 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 
 ![](documentation/wireframes/login_page.png)
 
-Register Page:
+* Register Page:
 
 ![](documentation/screenshots/register_page.png)
 
-Recipe Form Page:
+* Recipe Form Page:
 
 ![](documentation/screenshots/recipe_form.png)
 
