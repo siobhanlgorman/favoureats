@@ -940,11 +940,6 @@ Additional tests were conducted in the later stages on various mobile devices: A
 ![](documentation/screenshots/mob_view.png)
 ![](documentation/screenshots/ipad_view.png)
 
-## Code Validation
-## User Story Testing
-## Manual Testing
-## Automated Testing
-  * test files in testing md?
 
 ## Bugs
 ### Resolved Bugs
@@ -979,56 +974,42 @@ IPhone XR menu collapse button issue: I thought this was resolved as above but u
 *IphoneXR menu bug*
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- The navbar collapses for mobile and portrait tablets:
-
-![](documentation/screenshots/nav_coll.png)
-*Navbar collapsed*
-
 ## Code Validation
-## HTML Validation
+### HTML Validation
 HTML was validated by [The WEC Markup Validation Service](https://validator.w3.org/)
 No errors or warnings were found:
 
-[Home Page](https://validator.w3.org/nu/?doc=https://favoureats.herokuapp.com/)
+Home Page: 
 
-[About Page](https://validator.w3.org/nu/?doc=https://favoureats.herokuapp.com/about/)
+![](documentation/screenshots/home_valid.png)
 
-[Recipes Page](https://validator.w3.org/nu/?doc=https://favoureats.herokuapp.com/recipes/)
+About Page:
 
-[My Recipes Page](https://validator.w3.org/nu/?doc=https://favoureats.herokuapp.com/myrecipes/)
+![](documentation/screenshots/home_valid.png)
 
-[Register Page]()
-https://validator.w3.org/nu/?doc=https://favoureats.herokuapp.com/accounts/signup/
+Recipes Page
 
-[Login Page](https://validator.w3.org/nu/?doc=https://favoureats.herokuapp.com/accounts/login/)
+![](documentation/screenshots/about.png)
+
+My Recipes Page
+
+![](documentation/screenshots/my_recipes_valid.png)
+
+Register Page
+
+![](documentation/screenshots/register_valid.png)
 
 
-[Logout Page](https://validator.w3.org/nu/?doc=https://favoureats.herokuapp.com/accounts/logout/)
+Sign In Page
+
+![](documentation/screenshots/signin_valid.png)
+
+Sign Out Page
+
+![](documentation/screenshots/signout_valid.png)
 
 
+### CSS Validation
 
+![](documentation/screenshots/css_valid.png)
 
-## CSS Validation
-
-## Browser compatibility
-## Responsiveness
-
-## Bugs here ????
