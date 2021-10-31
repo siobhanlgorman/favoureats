@@ -1,7 +1,44 @@
 # Automated Testing
 ## Set-up for testing in local environment
+After setting up the project according to the method recommended in course materials, there were errors in connecting to Postgres database for testing. In order to use the SQlite database instead the following code was added:
+In settings.py:
+```
+if development:
+     DATABASES = {
+         'default': {
+             'ENGINE': 'django.db.backends.sqlite3',
+             'NAME': BASE_DIR / 'db.sqlite3',
+         }
+     }
+ else:
+     DATABASES = {
+         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+     }
+
+ development = os.environ.get('DEVELOPMENT', False)
+
+ if development:
+     ALLOWED_HOSTS = ['localhost']
+ else:
+     ALLOWED_HOSTS = ['blog.herokuapp.com']
+```
+In env.py (to toggle between the databases False for Postgres, True for Sqlite):
+```
+os.environ["DEVELOPMENT"] = "True"
+```
+Then run the migrations to update the database
+```
+python3 manage.py makemigrations
+python3 manage.py migrate
+```
+
 ## Unittest
-Unittest was used to test the correct template was rendered
+
+Unittest was used for the automated testing. Urls, Models and Views were tested. 85% coverage was achieved.
+The coverage report: 
+
+![###](documentation/screenshots/coverage_rep.png)
+
 # Manual Testing
 ## Testing User Stories
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
@@ -410,7 +447,7 @@ Testing Steps
 2. Click on links after logging in
 
 Expected results
-1. Both users ar directed to Recipes Page
+1. Both users are directed to Recipes Page
 2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
 
 Acctual results
@@ -964,8 +1001,6 @@ IPhone XR menu collapse button issue: I thought this was resolved as above but u
 
 ![](documentation/screenshots/nav_coll.png)
 *Navbar collapsed*
-
-
 
 ## Code Validation
 ## HTML Validation
