@@ -6,7 +6,7 @@
 <div class="card recipe-form">
     <div class="row">
         <div class="col text-center">
-            <a class="btn btn-lg btn-success add-recipe-btn" href="{% url 'myrecipes' %}">Go Back</a>
+            <a class="btn btn-lg grn-btn add-recipe-btn" href="{% url 'myrecipes' %}">Go Back</a>
         </div>
     </div>
 
@@ -20,7 +20,7 @@
                     {% csrf_token %}
                     {{ form | crispy }}
 
-                    <input type="submit" value="Submit" class="btn btn-lg btn-success">
+                    <input type="submit" value="Submit" class="btn btn-lg grn-btn">
 
                 </form>
             </div>

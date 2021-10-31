@@ -458,6 +458,410 @@ Pass/Fail: Pass
 *View the Recipes button*
 
 
+#### About Page
+
+* Check that 'View the Recipes' button redirects users the Recipes page
+
+Testing Steps
+1. Click on the View the Recipes button
+
+Expected Result
+1. When button is clicked the user is redirected to the Recipes page
+
+Pass/Fail: Pass
+
+
+#### Recipes Page
+#### Image Link
+* Check that images with summary description of all the recipes are visible on the page and that title link redirects logged in users to full recipe detail page. Logged in users are redirected to the Sign In page. 
+
+Testing Steps
+1. Make sure to be signed out and click on recipe title link in selected recipe
+2. Sign in and repeat step 1
+
+Expected Results
+1. Not logged in user is redirected to Sign In page
+2. Logged in user is redirected to full recipe detail page
+
+Actual Results
+1. Not logged in user is redirected to Sign In page
+2. Logged in user is redirected to full recipe detail page
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/recipes_page.png)
+*Recipes Page*
+#### Search Bar
+
+* Check that search bar locates a recipe when a keyword is entered into the box. Check that the search icons startes the search and that the full recipe list page is returned after the 'x' is clicked. 
+
+Testing Steps
+1. Enter a word in the search box.
+2. Click the search icon
+3. Click the 'x'
+
+Expected Results
+1. The search icon starts the search function
+2. The search result displays one or more recipes.
+2. 'No recipes to view' is displayed if none are found
+3. The 'x' when clicked returns the full list of recipes
+
+Actual Results
+1. The search icon starts the search function
+2. The search result displays one or more recipes.
+2. 'No recipes to view' is displayed if none are found
+3. The 'x' when clicked returns the full list of recipes
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/search_result.png)
+*Search results for flour*
+
+### Back to Top Arrow
+- check that back to top arrow remains on screen once user has started scrolling
+
+Testing Steps
+1. Start scrolling on the Recipes page
+
+Expected Result
+1. Back to Top arrow appears
+2. Arrow remains on screen as user scrolls
+
+Actual Result
+1. Back to Top arrow appears
+2. Arrow remains on screen as user scrolls
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/scroll.png)
+*Back to top arrow*
+
+#### Recipe Detail Page
+#### Star Icon
+* Check the star icon which can be clicked to favourite/unfavourite a recipe:
+* Check the number of favourite stars given to the recipe updates when the star is clicked and unclicked
+* Check that confirmation of the favourite/unfavourite actions are displayed
+
+Testing Steps
+1. Click on the star
+2. Click again on the star
+
+Expected results
+1. When the star is clicked if the recipe is not currently a favourite of the user the star is an outline and will change to full (green) colour star and the number underneath increases by one
+2. When the star is clicked if the recipe is currently a favourite of the user the star is a full green colour and will change to outline only. The number underneath decreases by one
+
+Actual results
+1. When the star is clicked if the recipe is not currently a favourite of the user the star is an outline and will change to full (green) colour star and the number underneath increases by one
+2. When the star is clicked if the recipe is currently a favourite of the user the star is a full green colour and will change to outline only. The number underneath decreases by one
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/star_fv.png)
+*Star icon when user has favourited the recipe with success message*
+
+![](documentation/screenshots/star_un_fv.png)
+*Star Icon when user has not favourited with message and total updated*
+
+#### Review Form
+- Check that the form submits when a user completes the body field and clicks submit
+- Check that a success message appears and disappears shortly after
+- Check that 'Your review is pending approval' is shown until the admin approves the review for publication:
+
+Testing Steps
+1. Enter text into the body of the review
+2. Click submit
+3. Log into the admin panel
+4. Check the box beside the review just added and select approve in th dropdown menu
+5. Navigate back to the same recipe
+
+Expected results
+1. Review is submitted and can be viewed in the admin panel
+2. Message of success appears on submission and disappears automatically
+3. WHen review is approved it appears in the review section of the recipe
+
+Actual results
+1. Review is submitted and can be viewed in the admin panel
+2. Message of success appears on submission and disappears automatically
+3. WHen review is approved it appears in the review section of the recipe
+
+![](documentation/screenshots/review_pend.png)
+*Pending approval below published reviews*
+
+![](documentation/screenshots/review_msg.png)
+*Review thanks message*
+
+![](documentation/screenshots/reviews.png)
+*Reviews published*
+
+### 'Add a Recipe' button 
+- check that the Add a Recipe button redirects logged in users to the My Recipes page and non-logged in users to the sign in page.
+
+Testing Steps
+1. As a not logged in user click on the button
+2. Repeat after logging in
+
+Expected Results
+1. Not logged in user is redirected to Sign In page
+2. Logged in user is redirected to the My Recipes page
+
+Actual Results
+1. Not logged in user is redirected to Sign In page
+2. Logged in user is redirected to the My Recipes page
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/add_btn.png)
+*Add a Recipe Button*
+
+#### My Recipes Page
+####
+
+#### Search Bar
+
+* Check that search bar locates a recipe when a keyword is entered into the box. Check that the search icons startes the search and that the full recipe list page is returned after the 'x' is clicked. 
+
+Testing Steps
+1. Enter a word in the search box.
+2. Click the search icon
+3. Click the 'x'
+
+Expected Results
+1. The search icon starts the search function
+2. The search result displays one or more recipes.
+2. 'No recipes to view' is displayed if none are found
+3. The 'x' when clicked returns the full list of recipes
+
+Actual Results
+1. The search icon starts the search function
+2. The search result displays one or more recipes.
+2. 'No recipes to view' is displayed if none are found
+3. The 'x' when clicked returns the full list of recipes
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/search2.png)
+*Search bar*
+
+#### 'Add a Recipe' button. 
+- check that when a user clicks on this button the recipe form opens where the user can enter all the fields of the recipe:
+
+Testing Steps
+1. Click on the Add a Recipe button
+
+Expected Result
+1. Recipe form opens
+
+Actual Result
+1. Recipe form opens
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/add_btn.png)
+*Add a Recipe Button*
+
+![](documentation/screenshots/recipe_add.png)
+*Add a Recipe Form*
+
+#### Recipe list table with CRUD features 
+- Check that the the view, edit and delete links open the corresonding pages and that the list of recipes corresponds to recipes added by the current user. 
+- Check that the success and warning messages appear for each function
+- Check that the recipe is updated and deleted as appropriate for each function
+
+Testing Steps
+1. In the My Recipes list click on the view link for a recipe
+2. Check in the recipe detail that the recipe was added by the current user
+3. In the My Recipes list click on the edit link
+4. Change some of the content
+5. Submit the changed recipe
+6. In the My Recipes list click view to view the changed recipe
+7. In the My Recipes list click the delete button for a recipe
+8. In the warning message select Go Back
+9. Select delete again
+7. In the warning message click confirm delete
+
+Expected results
+1. When view is clicked the full recipe detail page opens
+2. The user who added the recipe corresponds with the current user
+3. When edit is clicked the completed recipe form opens
+4. When changes are made and submitted a success message is displayed that the user has updated the recipe
+5. The recipe detail view reflects the changes made
+6. When delete is clicked a warning appears asking the user to confirm delete
+7. When delete is clicked in the warning message the recipe is removed from the list
+8. A message appears to the user confirming that the recipe has been deleted
+9. If the user selects Go Back in the warning message, the user is redirected to the My Recipes page
+
+Actual results
+1. When view is clicked the full recipe detail page opens
+2. The user who added the recipe corresponds with the current user
+3. When edit is clicked the completed recipe form opens
+4. When changes are made and submitted a success message is displayed
+5. The recipe detail view reflects the changes made
+6. When delete is clicked a warning appears asking the user to confirm delete
+7. When delete is clicked in the warning message the recipe is removed from the list
+8. A message appears to the user confirming that the recipe has been deleted
+9. If the user selects Go Back in the warning message, the user is redirected to the My Recipes page
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/recipe_tbl.png)
+*Recipes table*
+
+![](documentation/screenshots/recipe_edit.png)
+*Recipe Edit Form*
+
+![](documentation/screenshots/edit_recipe_msg.png)
+*Successful update message*
+
+![](documentation/screenshots/recipe_delete.png)
+*Delete recipe confirmation*
+
+![](documentation/screenshots/delete_msg.png)
+*Successful delete message*
+
+#### Register Page
+
+* Check that users can register for an account by entering a username, an optional email and a password
+* Check that the button Sign Up registers the user
+* Check that the Home button redirects to the home page
+
+Testing Steps
+1. Click Register
+2. Click the Home button
+3. Click on the Register button again
+4. Enter a username and password without email
+5. Click Sign Up
+6. Navigate to admin panel to see user listed
+
+Expected Results
+1. Home button redirects to Home page
+2. User receives error message if password does not conform to requrements of length, difference to username
+3. User registers successfully and success message displays
+4. User is listed as User in admin panel
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/register_form.png)
+*Register form*
+
+![](documentation/screenshots/reg_msg.png)
+*Successful registration message*
+
+#### Sign-In Form
+* Check that User signs in by entering username and password
+* Check that Sign In button submits the form
+* Check that Home button redirects to the home page
+
+Testing Steps
+1. Enter a username without password
+2. Enter a username with password
+3. Click Home
+4. Repeat steps 1 and 2 and click sign in
+
+Expected results
+1. Error message displays if usere does not enter a username and password
+2. User signs in successfully with username and password
+3. Success message is displayed and disappears automatically
+4. User is redirected to Home page if Home is clicked
+
+Actual results
+1. Error message displays if usere does not enter a username and password
+2. User signs in successfully with username and password
+3. Success message is displayed and disappears automatically
+4. User is redirected to Home page if Home is clicked
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/sign_in_form.png)
+*Sign In Form*
+
+![](documentation/screenshots/sign_in_msg.png)
+*Sign in success message*
+
+#### Sign-Out Page
+
+* Check that Sign Out button signs user out. 
+* Check that Home button redirects user to Home page
+* Check that user is redirected to home page after signing out:
+
+Testing Steps
+1. Click Sign Out in the navigation menu
+2. Click Home button
+3. Repeat step 1
+2. Click Sign Out in the Sign Out page
+
+Expected Results
+1. Home button redirects user to Home page
+2. Sign out button signs user out and message displays to tell user they have signed out
+3. User is redirected to Home page aftere signing out
+
+Actual Results
+1. Home button redirects user to Home page
+2. Sign out button signs user out and message displays to tell user they have signed out
+3. User is redirected to Home page aftere signing out
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/sign_out_pg.png)
+*Sign out page*
+
+![](documentation/screenshots/sign_out_msg.png)
+
+#### Recipe Form page
+
+* Check that user can submit a recipe to the database for display on the website and is then redirected to the My Recipes page
+
+Testing Steps
+1. Click Add a Recipe in the My Recipes page
+2. Click Go Back button
+3. Repeat step 1
+4. Click Submit with blank fields
+5. Complete all required fields (not image) and click Submit
+6. Click Add a Recipe and complete all fields and upload an image.
+7. Click Submit
+8. Navigate to the Home, Recipes and My Recipes pages to check the recipes are displaying, one with placeholder image and one with user's own
+
+Expected Results
+* Go Back button at the top redirects users to the My Recipes page
+* Messages appear to indicate if required fields have not been filled in before submission.
+* User can enter text in fields
+* Dropdown menus function correctly
+* User cannot enter incorrect values or out of range values in fields
+* User can upload an image in the image field.
+* If no image is uploaded a placeholder image is used.
+* When submit button is clicked the recipe is uploaded to the database and appears on the Home page, Recipes page and My Recipes page
+* The user is redirected to My Recipes page after submitting a recipe
+
+Actual Results
+* Go Back button at the top redirects users to the My Recipes page
+* Messages appear to indicate if required fields have not been filled in before submission.
+* User can enter text in fields
+* Dropdown menus function correctly
+* User cannot enter incorrect values or out of range values in fields
+* User can upload an image in the image field.
+* If no image is uploaded a placeholder image is used.
+* When submit button is clicked the recipe is uploaded to the database and appears on the Home page, Recipes page and My Recipes page
+* The user is redirected to My Recipes page after submitting a recipe
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/recipe_add.png)
+*Recipe form*
+
+* A Submit Recipe button at the bottom to submit the completed form
+
+![](documentation/screenshots/submit_recipe.png)
+*Submit button*
+
+![Success message](documentation/screenshots/add_msg.png)
+
+#### 404 Page
+A 404 page was created to handle users' navigational errors and to direct them back to the website. The navigation menu and logo are visible on the page
+
+Testing Steps
+1. Navigate to [favoureats](https://favoureats.herokuapp.com/) 
+
+#### 500 Page
+A 500 server error page was created to handle internal server errors
 
 
 

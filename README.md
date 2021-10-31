@@ -159,7 +159,7 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 ![](documentation/screenshots/recipes_page.png)
 *Recipes Page*
 
-* A search bar above the list of recipes to enable users to easily locate a particular recipe by a keywork from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes:
+* A search bar above the list of recipes to enable users to easily locate a particular recipe by a keyword from the title or ingredients fields. Clickable icons to search and an 'x' to clear search back to full list of recipes:
 
 ![](documentation/screenshots/search.png)
 *Search bar*
@@ -168,8 +168,6 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 
 ![](documentation/screenshots/recipe_snap.png)
 *Sample recipe*
-
-
 
 * A back to top arrow on bottom right which remains on screen once user has started scrolling to impove UX by making it easy for the user to return to the top of the page to search or navigate to a different page:
 
@@ -288,7 +286,7 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 
 #### Sign-Out Page
 
-* Sign Out page with button. User is redirected to home page after signing out:
+* Sign Out page with two buttons: sign out or redirect to the Home page. User is redirected to home page after signing out:
 
 ![](documentation/screenshots/sign_out_pg.png)
 *Sign out page*
