@@ -145,12 +145,12 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 #### About Page
 * Image with background text information about the website
 
-![](documentation/screenshots/about1.png)
+![](documentation/screenshots/about_pg.png)
 *About Page*
 
 * Call to action button 'View the Recipes' to direct users onwards to the main recipes page
 
-![###](documentation/screenshots/about2.png)
+![](documentation/screenshots/about_btn.png)
 *View the Recipes button on About Page*
 
 #### Recipes Page
@@ -169,12 +169,14 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 ![](documentation/screenshots/recipe_snap.png)
 *Sample recipe*
 
+
+
 * A back to top arrow on bottom right which remains on screen once user has started scrolling to impove UX by making it easy for the user to return to the top of the page to search or navigate to a different page:
 
 ![](documentation/screenshots/scroll.png)
 *Back to top arrow*
 
-  * A call to action 'Add a Recipe' button which will direct logged in users to my recipes page and non-logged in users to the sign in page. This allows users to intuitive navigate their journey on the website:
+  * A call to action 'Add a Recipe' button which will direct logged in users to my recipes page and non-logged in users to the sign in page. This allows users to intuitively navigate their journey on the website:
 
 ![](documentation/screenshots/add_btn.png)
 *Add a Recipe Button*
@@ -207,14 +209,25 @@ This page can only be accessed by a logged in user. The navigation link only app
 ![](documentation/screenshots/recipe_edit.png)
 *Recipe Edit Form*
 
+* a message is displayed to show successful update of recipe
+
+![](documentation/screenshots/edit_recipe_msg.png)
+*Successful update message*
+
 - Delete: the user can delete a recipe. A warning is displayed to allow for change of mind before deletion and a button with option to return to My Recipes page:
 
 ![](documentation/screenshots/recipe_delete.png)
 *Delete recipe confirmation*
 
+![](documentation/screenshots/delete_msg.png)
+*Successful delete message*
+
 #### Recipe Detail Page
 
-Accessed only by logged in users
+Accessed only by logged in users by clicking the 'view' tab on the My Recipes table or the title of a recipe in the Recipes page.
+
+![](documentation/screenshots/full_recipe.png)
+
 * The star icon which can be clicked to favourite/unfavourite a recipe features prominently:
 * The number of favourite stars given to the recipe is underneath the star and updates when the user clicks the star
 * Messages are displayed to confirm user's actions:
@@ -258,22 +271,22 @@ Accessed only by logged in users
 * Users can register for an account by entering a username, an optional email and a password
 * Choice of two action buttons: Sign Up or Home which redirects to the home page
 
-![##](documentation/screenshots/register_form.png)
+![](documentation/screenshots/register_form.png)
 *Register form*
 
 * A success message informs users of their action
 
-![###](documentation/screenshots/reg_msg.png)
+![](documentation/screenshots/reg_msg.png)
 *Successful registration message*
 
 #### Sign-Out
 
 * Sign Out page with button. User is redirected to home page after signing out:
 
-![#](documentation/screenshots/sign_out_pg.png)
+![](documentation/screenshots/sign_out_pg.png)
 *Sign out page*
 
-![###](documentation/screenshots/sign_out_msg.png)
+![](documentation/screenshots/sign_out_msg.png)
 
 #### Recipe Form page
 * A form to submit with fields to complete to add a recipe to the public recipes page and to the user's list in the My Recipes page for CRUD functionality
@@ -391,6 +404,8 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 ### Unresolved Bugs
 confirm delete custom template location????
+IPhone XR menu collapse button issue
+
 
 ## Deployment
 
