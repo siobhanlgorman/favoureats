@@ -273,7 +273,7 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 ![##](documentation/screenshots/sign_in_msg.png)
 *Sign in success message*
 
-#### Register
+#### Register Page
 
 * Users can register for an account by entering a username, an optional email and a password
 * Choice of two action buttons: Sign Up or Home which redirects to the home page
@@ -286,7 +286,7 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 ![](documentation/screenshots/reg_msg.png)
 *Successful registration message*
 
-#### Sign-Out
+#### Sign-Out Page
 
 * Sign Out page with button. User is redirected to home page after signing out:
 
@@ -296,6 +296,7 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 ![](documentation/screenshots/sign_out_msg.png)
 
 #### Recipe Form page
+
 * A form to submit with fields to complete to add a recipe to the public recipes page and to the user's list in the My Recipes page for CRUD functionality
 * Users can add text, paste text into fields. Images can be uploaded and a placeholder image is available if no image is supplied.
 * A Go Back button at the top to redirect users to the My Recipes page
@@ -309,6 +310,13 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 *Submit button*
 
 ![Success message](documentation/screenshots/add_msg.png)
+
+#### 404 Page
+A 404 page was created to handle users' navigational errors and to direct them back to the website. The navigation menu and logo are visible on the page
+
+#### 500 Page
+A 500 server error page was created to handle internal server errors
+
 
 ### Future Features
 * Improvement could be made to the search feature. During implementation with a clear function inside the search box it was found that this only cleared the search but left the search findings list. It was decided that better UX would be to clear back to the full list so the form was changed and an 'x' was added outside the box to reload the page. Given further time I would look for a neater solution.
@@ -350,11 +358,11 @@ The pdf files can be seen [here](https://github.com/siobhanlgorman/favoureats/tr
 
 * Register Page:
 
-![](documentation/screenshots/register_page.png)
+![](documentation/wireframes/register_page.png)
 
 * Recipe Form Page:
 
-![](documentation/screenshots/recipe_form.png)
+![](documentation/wireframes/recipe_form.png)
 
 ### Data Models
 There are two models for the database: A Recipe model and a Review model
@@ -362,17 +370,24 @@ There are two models for the database: A Recipe model and a Review model
 ![Data Models](documentation/screenshots/data-models.png)
 
 The pdf of these models' tables can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/documentation/data_models.pdf)
+
 ### Surface
+
 ## Design
-My style is to keep everything minimalist and uncluttered, fresh and clean looking. 
+
+The design style of the website is minimalist, fresh and clean looking. 
+
 ### Colours
-The colours are chosen to convey nature, fresh clean and nutritious like a clean kitchen and fresh natural food. Colours used are: white, green, grey, charcoal font? black?
+
+The colours are chosen to convey nature, fresh clean and nutritious. Colours are kept very minimal and limited to: white, green, grey, charcoal font? black?
+
 ### Typography
-Fonts: Poppins for the text and Roboto for the headings
+
+The fonts selected were: Poppins for the text and Roboto for the headings. These were selected for their simple and elegant style.
+
 ### Images
-The hero image was chosen as the food is primarily vegetarian. The image is simple and elegant. Images were selected for the recipes which made the food look appetising.
 
-
+The hero image was chosen as the food is primarily vegetarian. The image is simple and elegant and evokes natural, vegetarian cuisine. Images were selected for the recipes which made the food look appetising.
 
 # Technologies Used
 ## Languages
@@ -397,7 +412,7 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * Balsamiq
 * Google Dev Tools
 * Favicon.cc
-* ??? Am I responsive
+* [Techsini](https://techsini.com/multi-mockup/index.php) was used for the site mockups
 * Google Sheets - for the data models
 * Icon
 * Favicon
@@ -405,6 +420,8 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 
 # Testing
+The full testing documentation can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/TESTING.md)
+
 ## Browser compatibility
 ## Responsiveness
 ## Code Validation

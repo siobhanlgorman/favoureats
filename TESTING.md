@@ -237,9 +237,7 @@ Expected result: List of recipes corresponding to search query is displayed or '
 
 Actual result: List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
 
-
 Pass/Fail: Pass
-
 
   * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
 
@@ -266,14 +264,13 @@ Testing Steps:
 4. Click on the title of a recipe
 5. Repeat test for user not logged in
 
-
 Expected result: User is redirected to full recipe detail page. User not logged in is directed to 'sign in' page.
 
 Actual result: User is redirected to full recipe detail page. User not logged in is directed to 'sign in' page.
 
 Pass/Fail: Pass
 
-  * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
+* As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
 
 Testing Steps:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -289,7 +286,6 @@ Actual result 1: When user clicks on star, star becomes full colour to favourite
 Actual result 2: Number beside favourites star is updated
 
 Pass/Fail: Pass
-
 
   * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
 
@@ -307,6 +303,188 @@ Actual result: Thankyou message displays thanking user for submitting a review. 
 Pass/Fail: Pass
 
 ## Testing Features
+
+### Navigation
+- check that all navigation links work as expected
+
+Testing Steps:
+1. Navigate to [favoureats](https://favoureats.herokuapp.com/)
+2. Without logging in click on the links in the navbar
+3. Login and click the links in the navbar
+4. Scroll down the page
+
+Expected Results
+1. Not logged in user can view links to Home, About, Recipes, Register and Sign In
+2. Each of these links opens the expected page
+3. Logged in user can view links to Home, About, Recipes, My Recipes and Sign Out
+4. Each of these links opens the expected page
+5. Active page is highlighted in each case
+6. Navbar remains in view when scrolling
+
+Actual Result
+1. Not logged in user can view links to Home, About, Recipes, Register and Sign In
+2. Each of these links opens the expected page
+3. Logged in user can view links to Home, About, Recipes, My Recipes and Sign Out
+4. Each of these links opens the expected page
+5. Active page is highlighted in each case
+6. Navbar remains in view when scrolling
+
+![](documentation/screenshots/nav1.png)
+
+  ![](documentation/screenshots/nav2.png)
+
+![](documentation/screenshots/nav3.png)
+
+![](documentation/screenshots/sticky_nav.png)
+
+Pass/Fail: Pass
+
+### Logo
+
+- check that logo links back to the home page:
+
+Testing Steps:
+1. Open each page and click on logo
+
+Expected Result
+- logo links back to home page from each page
+
+Actual result
+- logo links back to home page from each page
+
+Pass/Fail: Pass
+
+![Logo](documentation/screenshots/logo_screenshot.png)
+
+
+### Footer
+- check that social media links direct the user to the correct website of Facebook, Instagram and Twitter pages
+
+Testing Steps
+
+1. Click on each icon
+
+
+Expected result
+1. Each icon opens on a separate tab to its corresponding social media website
+
+Actual Result
+1. Each icon opens on a separate tab to its corresponding social media website
+
+Pass/Fail: Pass
+
+### Home Page
+### Register Button
+
+* Check that hero register button on hero image is not visible when user is signed in and that the register link navigates to the sign up page
+
+Testing Steps
+1. Navigate to [favoureats](https://favoureats.herokuapp.com/)
+2. Without logging in look at the hero image
+3. Click on the register button
+4. Login and view the hero image
+
+Expected Results
+1. Register button is visible to not logged in users
+2. Register button is not visible when user is loged in
+3. Register button links to sign up page
+
+Actual Results
+1. Register button is visible to not logged in users
+2. Register button is not visible when user is loged in
+3. Register button links to sign up page
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/navbar_no_log.png)
+*View to not signed in user*
+
+![](documentation/screenshots/navbar_log.png)
+*View to signed in user*
+
+### Recipes/My Recipes text links
+* Check that links in Latest Recipes text direct users to correct page. Recipes page link goes to Recipes page and My Recipes link takes not logged in users to Sign In page and logged in users to My Recipes page
+
+Testing Steps
+1. Click on links without logging in
+2. Click on links after logging in
+
+Expected results
+1. Both users ar directed to Recipes Page
+2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
+
+Acctual results
+1. Both users ar directed to Recipes Page
+2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/latest.png)
+*Latest recipe information*
+
+
+### Snapshot images
+- check that images are of three most recent recipe posts with title, date added and author. 
+
+Testing Steps
+1. Log in to admin panel
+2. Check list of recipes
+3. Check that the three images correspond to the most recent recipe additions
+
+Expected Result:
+1. The three recipes are the most recent additions and the most recent is first
+
+Actual Result:
+1. The three recipes are the most recent additions and the most recent is first
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/snapshot.png)
+*Three latest recipes*
+
+
+### View the Recipes button
+* Check that the 'View the Recipes' button links to Recipes page
+
+Testing Steps
+1. Click on the View the Recipes button
+
+Expected Result
+1. When button is clicked the user is redirected to the Recipes page
+
+Pass/Fail: Pass
+
+![](documentation/screenshots/view_btn.png)
+*View the Recipes button*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- The navbar collapses for mobile and portrait tablets:
+
+![](documentation/screenshots/nav_coll.png)
+*Navbar collapsed*
+
+
+
 ## Code Validation
 ## HTML Validation
 HTML was validated by [The WEC Markup Validation Service](https://validator.w3.org/)
