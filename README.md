@@ -91,7 +91,7 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 ![](documentation/screenshots/nav1.png)
 *Navigation for not signed in user*
 
-  ![](documentation/screenshots/nav2.png)
+![](documentation/screenshots/nav2.png)
   *Navigation for signed in user*
 
 - The active page is highlighted for good UX:
@@ -585,7 +585,7 @@ If you wish to fork the repository to make changes without affecting the origina
 * Press enter to create the local clone.
 
 
-# Credits
+## Credits
 
 * [Dennis Ivy 'Django To Do List App With User Registration & Login'](https://www.youtube.com/watch?v=llbtoQTt4qw&t=68s) was useful for full CRUD functionality application.
 
@@ -599,7 +599,8 @@ If you wish to fork the repository to make changes without affecting the origina
 
 * [Stack Overflow](https://stackoverflow.com/) was used for general queries
 
-## Images
+### Images
+
 Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
 
 [Lasagne by Daniele Sgura from Pexels](https://www.pexels.com/photo/close-up-photo-of-lasagna-on-ceramic-plate-4162496/)
@@ -608,5 +609,14 @@ Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_sou
 
 [Tofu Photo by Ella Olsson from Pexels](https://www.pexels.com/photo/vegetable-salad-3026808/)
 
-## Recipes
+### Recipes
 [Lasagne](https://www.theguardian.com/food/2020/feb/24/thomasina-miers-recipe-for-cheats-lasagne-with-ricotta-and-greens)
+
+## Acknowledgements
+There would have been no submission without the following people:
+* My colleagues on the course: in particular:
+  - Elaine Roche for help with setting up local environment for automated testing
+  - Catriona McDonnell for endless support
+  - Moira Hartigan, Laura Hartnett, Miwa Mullane, Kavitha Santhanesh for resources, tips and support
+* Our Course Facilitator Kasia Bogucka: for always being there advising, encouraging and supporting
+* My mentor Tim Nelson: for his endless knowledge, patience and advice

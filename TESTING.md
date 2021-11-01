@@ -40,6 +40,9 @@ The coverage report:
 ![###](documentation/screenshots/coverage_rep.png)
 
 # Manual Testing
+
+Thorough testing was conducted by the developer and multiple users among friends and family. Steps and results are as follows.
+
 ## Testing User Stories
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
 To test the admin user stories begin with the following steps:
@@ -60,11 +63,10 @@ Testing Steps:
 3. Click save to save the created recipe
  
 
-![](documentation/screenshots/admin_creat
+![](documentation/screenshots/admin_create.png)
   
 ![](documentation/screenshots/admin_draft2.png)
 
-![](documentation/screenshots/admin_draft3png)
 
 
 Expected result: A draft recipe is saved by default to the list of recipes in the admin panel
@@ -143,13 +145,13 @@ Pass/Fail: Pass
 3. On the website navigate to the recipe list page where the number of favourites awarded is shown under the recipe 
 4. On the website click on a recipe to open the full detail to see the number of favourites beside the recipe
 
-Expected results
+Expected results:
 1: The names of users who have favourited a recipe are highlighted in the admin panel recipe view
 2: The number of favourites appears beside the star on the recipes page
 3: The number of favourites appears beside the star on the recipe detail page
 
 
-Actual results
+Actual results:
 1: The names of users who have favourited a recipe are highlighted in the admin panel recipe view
 2: The number of favourites appears beside the star on the recipes page
 3: The number of favourites appears beside the star on the recipe detail page
@@ -166,13 +168,12 @@ This is tested in #10 above with a PASS result.
 3. Complete the content fields and the checkbox 'approved' to publish or leave blank to create a draft
 4. Click save
 
-Expected results
+Expected results:
 1: The review appears in the list of reviews in the admin panel
 2: The approved review is published on the website
 
-Actual results
+Actual results:
 1: The review appears in the list of reviews in the admin panel
-Actual result 
 2: The approved review is published on the website
 
 Pass/Fail: Pass
@@ -195,7 +196,6 @@ Actual results
 2: Sign In link in navigation changes to Sign Out
 
 Pass/Fail: Pass
-
   * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
 
 Testing Steps:
@@ -204,12 +204,12 @@ Testing Steps:
 3. Click on the 'Sign Out' link to sign out.
 
 
-Expected results
+Expected results:
 1: Message displays 'You have successfully signed in'
 2: Message displays 'You have successfully signed out'
 3: Sign In link in navigation changes to Sign Out and vice versa
 
-Actual results
+Actual results:
 1: Message displays 'You have successfully signed in'
 2: Message displays 'You have successfully signed out'
 3: Sign In link in navigation changes to Sign Out and vice versa
@@ -217,9 +217,16 @@ Actual results
 Pass/Fail: Pass
 
 
+![](documentation/screenshots/sign_in_msg.png)
+*Sign in success message*
+
+
+![](documentation/screenshots/navbar_log.png)
+*View to signed in user*
+
 #### Epic: Create landing page to attract users to the site
 #### User Stories:
-  * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)(#24)
+* As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)(#24)
 
 Testing Steps:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -227,7 +234,7 @@ Testing Steps:
 3. Scroll down to view most recent recipes posted
 4. Scroll down to see button to 'view recipes'
 
-Expected results
+Expected results:
 1: Text visible on hero image explaining site
 2: Call to action 'Register' button on hero image
 3: Text indicating users must sign in to view full recipes and create recipes
@@ -235,7 +242,7 @@ Expected results
 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
 
 
-Actual results
+Actual results:
 1: Text visible on hero image explaining site
 2: Call to action 'Register' button on hero image
 3: Text indicating users must sign in to view full recipes and create recipes
@@ -243,6 +250,8 @@ Actual results
 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
 
 Pass/Fail: Pass
+
+![](documentation/screenshots/home.png)
 
 #### Epic: Enable registered users to CRUD their own recipes
 #### User Stories:
@@ -251,7 +260,7 @@ Pass/Fail: Pass
 Testing Steps:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Click on the 'Sign In' link in the navigation menu and sign in with username and password
-3. Navigate to the page of [favoureats](https://favoureats.herokuapp.com/myrecipes) to view a list of the logged in users recipes
+3. Navigate to the page of [favoureats](https://favoureats.herokuapp.com/myrecipes) to view a list of the logged in user's recipes
 4. Click on view beside a recipe in the list to view the full recipe detail page
 5. Click on edit beside a recipe in the list to view the recipe form, edit the content and click on 'Submit Recipe' to save changes
 6. Click on delete beside a recipe in the list to delete a recipe. 
@@ -271,6 +280,8 @@ Actual results
 5: Success message displays when user successfully deletes recipe.
 
 Pass/Fail: Pass
+
+![](documentation/screenshots/my_recipe_page.png)
 
 #### Epic: Create recipe list page to showcase content to users
 #### User Stories:
@@ -1092,6 +1103,7 @@ The test returned the following line too long errors
 This refers to the following lines which must be left to protect the integrity of the application.
 
 ![](documentation/screenshots/pep8_settings.png)
+
 ![](documentation/screenshots/pep8_settings.png)
 
 
