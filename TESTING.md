@@ -102,11 +102,14 @@ Expected result: The viewed/updated recipe is deleted from the list of recipes a
 Actual result: The viewed/updated recipe is deleted from the list of recipes and is not visible on the website
 Pass/Fail: Pass
   
-  ![###](documentation/screenshots/admin_create.png)
-   ![###](documentation/screenshots/default_draft.png)
-  ![###](documentation/screenshots/admin_draft2.png)
-    ![###](documentation/screenshots/admin_draft3png)
-  ![###](documentation/screenshots/???png)
+![](documentation/screenshots/admin_create.png)
+
+![](documentation/screenshots/default_draft.png)
+   
+![](documentation/screenshots/admin_draft2.png)
+
+![](documentation/screenshots/admin_draft3png)
+
 
 * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
 
@@ -368,7 +371,7 @@ Actual Result
 
 ![](documentation/screenshots/nav1.png)
 
-  ![](documentation/screenshots/nav2.png)
+![](documentation/screenshots/nav2.png)
 
 ![](documentation/screenshots/nav3.png)
 
@@ -494,7 +497,6 @@ Pass/Fail: Pass
 ![](documentation/screenshots/view_btn.png)
 *View the Recipes button*
 
-
 #### About Page
 
 * Check that 'View the Recipes' button redirects users the Recipes page
@@ -506,7 +508,6 @@ Expected Result
 1. When button is clicked the user is redirected to the Recipes page
 
 Pass/Fail: Pass
-
 
 #### Recipes Page
 #### Image Link
@@ -651,8 +652,6 @@ Pass/Fail: Pass
 *Add a Recipe Button*
 
 #### My Recipes Page
-####
-
 #### Search Bar
 
 * Check that search bar locates a recipe when a keyword is entered into the box. Check that the search icons startes the search and that the full recipe list page is returned after the 'x' is clicked. 
@@ -934,8 +933,16 @@ Additional tests were conducted on Mozilla Firefox and Microsoft Edge with no is
 ## Responsiveness
 
 The website was developed on a 15" laptop and a 24" monitor and no issues were found.
-Chrome Developer tools were used to check responsiveness on all sized devices throughout the process and adjustments were made
-Additional tests were conducted in the later stages on various mobile devices: A Moto g8+, an IPhone 11, an Iphone SE2 and an IPhone XR. Some problems were found in rendering the search bar on the IPhone 11 and SE2 (see bug reports) which were addressed. However an issue remains with the XR (see unresolved bug report) which warrants further investigation.
+
+Chrome Developer tools were used to check responsiveness on all sized devices throughout the process and adjustments were made.
+
+Additional tests were conducted in the later stages on various mobile devices: 
+* Moto g8+
+* IPhone 11
+* Iphone SE2 
+* IPhone XR. 
+
+Results: Some problems were found in rendering the search bar on the IPhone 11 and SE2 (see bug reports) which were addressed. However an issue remains with the XR (see unresolved bug report) which warrants further investigation.
 
 ![](documentation/screenshots/mob_view.png)
 ![](documentation/screenshots/ipad_view.png)
@@ -944,10 +951,13 @@ Additional tests were conducted in the later stages on various mobile devices: A
 ## Bugs
 ### Resolved Bugs
 1. Image uploads from front end to home page and recipes page but is not visible in recipe detail page. Solved by changing src from `recipe_image` to `recipe.recipe_image.url`
+
 2. When I added success messages to the create, edit and delete recipe functions the delete message would not appear. To fix this I had to override the delete method in the DeleteView with a delete function. I found the solution in [here](https://stackoverflow.com/questions/47636968/django-messages-for-a-successfully-delete-add-or-edit-item)
+
 3. User generated ingredients and steps do not appear as lists. Fixed by adding `|linebreaks` to the steps and ingredients sections of the recipe detail template
 
 4. My recipe_confirm_delete template could not be found when located with the other messages templates and provoked an error on delete file could not be found. As the error message stated that it looked in file path: `recipe/templates`. In order to fix this error speedily I created the folder `recipe` and placed the recipe_confirm_delete.html template there to fix the error. Given more time I would investigate this further.
+
 5. Number of comments does not appear on recipes page but number of favourites does: I troubleshooted with various print() statements to determine what was being read and fixed by renaming variable to `{{ recipe.reviews.count }}`
 
 6. IPhone 11 search bar bug: Text does not enter into search box the first time but does the second time. The search function works but currently the UX is not good. I fixed this by change the form type, inputs and button until it worked on IPhone!
@@ -967,12 +977,11 @@ Additional tests were conducted in the later stages on various mobile devices: A
 *Iphone hamburger bug*
 
 ### Unresolved Bugs
-confirm delete custom template location????
+
 IPhone XR menu collapse button issue: I thought this was resolved as above but unfortunately persisted shortly before submission and needs further investigation. It only affects the XR model however and the particular phone is thought to be 'buggy' 
 
 ![](documentation/screenshots/iphone_menu_bug.png)
 *IphoneXR menu bug*
-
 
 ## Code Validation
 ### HTML Validation
@@ -999,17 +1008,33 @@ Register Page
 
 ![](documentation/screenshots/register_valid.png)
 
-
 Sign In Page
 
 ![](documentation/screenshots/signin_valid.png)
 
 Sign Out Page
 
-![](documentation/screenshots/signout_valid.png)
+![](documentation/screenshots/lighthouse3.png)
 
 
 ### CSS Validation
 
+![](documentation/screenshots/css_valid.png)
+
+### PEP 8 Validation
+
+The following files were checked:
+favoureats/views.py
+recipe/views.py
+models.py
+forms.py
+urls.py
+admin.py
+
+
+
+### Lighthouse
+
+All pages were checked on lighthouse with the results between 80% and 100%
 ![](documentation/screenshots/css_valid.png)
 
