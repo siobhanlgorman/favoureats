@@ -997,6 +997,8 @@ The three recipes are the most recent additions and the most recent is first
 
 **Pass/Fail: Pass**
 
+![](documentation/screenshots/500_error.png)
+
 ## Browser compatibility
 The project was developed on Google Chrome and no issues were detected
 Additional tests were conducted on Mozilla Firefox and Microsoft Edge with no issues detected
