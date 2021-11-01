@@ -1,5 +1,5 @@
-# Automated Testing
-## Set-up for testing in local environment
+## Automated Testing
+### Set-up for testing in local environment
 After setting up the project according to the method recommended in course materials, there were errors in connecting to Postgres database for testing. In order to use the SQlite database instead the following code was added:
 In settings.py:
 ```
@@ -32,18 +32,18 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-## Unittest
+### Unittest
 
 Unittest was used for the automated testing. Urls, Models and Views were tested. 85% coverage was achieved.
 The coverage report: 
 
 ![###](documentation/screenshots/coverage_rep.png)
 
-# Manual Testing
+## Manual Testing
 
 Thorough testing was conducted by the developer and multiple users among friends and family. Steps and results are as follows.
 
-## Testing User Stories
+### Testing User Stories
 #### Epic: Set up admin page for admin to manage recipe posts, reviews and site users
 To test the admin user stories begin with the following steps:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -51,7 +51,7 @@ To test the admin user stories begin with the following steps:
 3. Sign in with admin's name and password
 4. Navigate to [admin page](https://favoureats.herokuapp.com/admin/)
 
-#### User Story:
+#### *User Story*:
 * As a site admin I can create draft recipe posts so that I can complete the recipes later (must-have / complete)(#8)
 
 Description: The site administrator is able to create draft recipes.
@@ -73,7 +73,7 @@ Description: The site administrator is able to create draft recipes.
 
 **Pass/Fail: Pass**
 
-#### User Story:
+#### *User Story*:
 * As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
 
 Description: The site administrator is able to create, read, update and delete recipes.
@@ -82,6 +82,10 @@ Description: The site administrator is able to create, read, update and delete r
 To create a recipe:
   
 1. In the admin panel menu beside recipes click the add button
+
+![](documentation/screenshots/admin_create.png)
+*admin add recipe page*
+
 2. In the recipe form enter content in the fields
 3. Change the status to published from the status dropdown menu
 4. Click save to save the created recipe
@@ -111,13 +115,10 @@ To delete a recipe:
 
 **Pass/Fail: Pass**
   
-![](documentation/screenshots/admin_create.png)
-*admin add recipe page*
-
 ![](documentation/screenshots/default_draft.png)
 *draft recipe created*
 
-#### User Story:
+#### *User Story*:
 * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
 
 **Testing Steps**:
@@ -135,7 +136,7 @@ To delete a recipe:
 2: The deleted review is removed from the list of reviews
 **Pass/Fail: Pass**
 
-#### User Story:
+#### *User Story*:
 * As an admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
 
 1. In the admin panel select a recipe
@@ -160,7 +161,7 @@ To delete a recipe:
 * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
 This is tested in #10 above with a PASS result.
 
-#### User Story:
+#### *User Story*:
 * As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
 
 1. In the admin panel select the 'add' button beside 'Reviews'
@@ -179,7 +180,7 @@ This is tested in #10 above with a PASS result.
 **Pass/Fail: Pass**
 
 #### Epic: Enable users to register on the site to access full features
-#### User Story:
+#### *User Story*:
 * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
 
 **Testing Steps**:
@@ -197,7 +198,15 @@ This is tested in #10 above with a PASS result.
 
 **Pass/Fail: Pass**
 
-#### User Story:
+![](documentation/screenshots/sign_in_form.png)
+*Sign In Form*
+
+
+![](documentation/screenshots/sign_in_msg.png)
+*Sign in success message*
+
+
+#### *User Story*:
 * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
 
 **Testing Steps**:
@@ -256,7 +265,7 @@ This is tested in #10 above with a PASS result.
 ![](documentation/screenshots/home.png)
 
 #### Epic: Enable registered users to CRUD their own recipes
-#### User Story:
+#### *User Story*:
 * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)(#12)
 
 **Testing Steps**:
@@ -286,7 +295,7 @@ This is tested in #10 above with a PASS result.
 ![](documentation/screenshots/my_recipe_page.png)
 
 #### Epic: Create recipe list page to showcase content to users
-#### User Story:
+#### *User Story*:
 * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
 
 **Testing Steps**:
@@ -300,8 +309,10 @@ This is tested in #10 above with a PASS result.
 
 **Pass/Fail: Pass**
 
+![](documentation/screenshots/recipes_page.png)
+
 #### Epic: Enable registered users to search through the recipes to enhance UX
-#### User Story:
+#### *User Story*:
 * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
 
 **Testing Steps**:
@@ -315,11 +326,13 @@ This is tested in #10 above with a PASS result.
 List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
 
 **Actual Result**: 
-List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
+List of recipes corresponding to search query is displayed or 'no recipes to view' if there is no match
 
 **Pass/Fail: Pass**
 
-#### User Story:
+![](documentation/screenshots/search2.png)
+
+#### *User Story*:
 * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
 
 **Testing Steps**:
@@ -327,6 +340,7 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 2. Click on the 'recipes' link in the navigation menu
 3. Enter text in the search box and click the search icon
 4. Click the 'x' to clear the search and return to full list of recipes
+
 
 **Expected Result**: 
 List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
@@ -336,8 +350,11 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 **Pass/Fail: Pass**
 
+![](documentation/screenshots/search_result.png)
+
+
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
-#### User Story:
+#### *User Story*:
 * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
 
 **Testing Steps**:
@@ -353,7 +370,7 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 **Pass/Fail: Pass**
 
-#### User Story:
+#### *User Story*:
 * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
 
 **Testing Steps**:
@@ -373,7 +390,10 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 **Pass/Fail: Pass**
 
-#### User Story:
+![](documentation/screenshots/full_recipe.png)
+
+
+#### *User Story*:
 * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
 
 **Testing Steps**:
@@ -390,6 +410,12 @@ Thankyou message displays thanking user for submitting a review. 'Your review is
 Thankyou message displays thanking user for submitting a review. 'Your review is pending approval'. Review appears as draft in admin panel list of reviews.
 
 **Pass/Fail: Pass**
+
+![](documentation/screenshots/reviews.png)
+
+
+![](documentation/screenshots/review_pend.png)
+
 
 ## Testing Features
 

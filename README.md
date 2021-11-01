@@ -269,7 +269,7 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 
 * A success message informs user of their action
 
-![##](documentation/screenshots/sign_in_msg.png)
+![](documentation/screenshots/sign_in_msg.png)
 *Sign in success message*
 
 #### Register Page
