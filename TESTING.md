@@ -79,7 +79,7 @@ Description: The site administrator is able to create draft recipes.
 Description: The site administrator is able to create, read, update and delete recipes.
 
 **Testing Steps**:
-To create a recipe:
+* To create a recipe:
   
 1. In the admin panel menu beside recipes click the add button
 
@@ -95,7 +95,7 @@ To create a recipe:
 **Actual Result**: The recipe is saved as 'published' to the list of recipes in the admin panel. The recipe is viewable on the website
 **Pass/Fail: Pass**
 
-To read/update a recipe:
+* To read/update a recipe:
 
 1. In the admin panel list select a recipe title to read the full recipe
 2. To update the recipe update the necessary fields and click save
@@ -105,7 +105,7 @@ To read/update a recipe:
 **Actual Result**: The viewed/updated recipe is saved to the list of recipes
 **Pass/Fail: Pass**
 
-To delete a recipe:
+* To delete a recipe:
 1. From the list of recipes in the admin panel select the recipe to be deleted in the checkbox beside the title
 2. In the action dropdown menu above the list select 'delete' and 'go' to delete the recipe
 
@@ -868,13 +868,13 @@ The three recipes are the most recent additions and the most recent is first
 4. Repeat steps 1 and 2 and click sign in
 
 **Expected Results**
-1. Error message displays if usere does not enter a username and password
+1. Error message displays if user does not enter a username and password
 2. User signs in successfully with username and password
 3. Success message is displayed and disappears automatically
 4. User is redirected to Home page if Home is clicked
 
 **Actual Results**
-1. Error message displays if usere does not enter a username and password
+1. Error message displays if user does not enter a username and password
 2. User signs in successfully with username and password
 3. Success message is displayed and disappears automatically
 4. User is redirected to Home page if Home is clicked
@@ -1099,34 +1099,34 @@ Sign Out Page
 
 The following files were checked:
 
-favoureats/views.py
+* favoureats/views.py
 ![](documentation/screenshots/pep8_views2.png)
 
-recipe/views.py
-![](documentation/screenshots/views.png)
+* recipe/views.py
+![](documentation/screenshots/pep8_views.png)
 
-models.py
+* models.py
 ![](documentation/screenshots/pep8_models.png)
 
-forms.py
+* forms.py
 ![](documentation/screenshots/pep8_forms.png)
 
-urls.py
+* urls.py
 ![](documentation/screenshots/pep8_urls.png)
 
-admin.py
+* admin.py
 ![](documentation/screenshots/pep8_admin.png)
 
-test_models.py
+* test_models.py
 ![](documentation/screenshots/pep8_test_models.png)
 
-test_views.py
+* test_views.py
 ![](documentation/screenshots/pep8_test_views.png)
 
-test_urls.py
+* test_urls.py
 ![](documentation/screenshots/pep8_test_urls.png)
 
-settings.py
+* settings.py
 
 The test returned the following line too long errors
 ![](documentation/screenshots/pep8_settings.png)
