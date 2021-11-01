@@ -6,7 +6,7 @@
     <div class="row justify-content-md-center">
         <div class="col text-center">
             {% if request.user.is_authenticated %}
-            <h3>{{ request.user }}'s recipes</h3>
+            <h3>{{ request.user | title }}'s Recipes</h3>
             {% endif %}
         </div>
     </div>
