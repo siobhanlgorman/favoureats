@@ -24,7 +24,7 @@ The target user is someone:
 * who wants to share their favourite recipes
 
 #### Epics and User Stories
-There are 11 Epics and 20 User Stories. The User Stories are numbered so can be easily tracked. However during the planning stage as the stories were being amended their id numbers(#) are no longer in sequence.
+There are 10 Epics and 20 User Stories. The User Stories are numbered so can be easily tracked. However during the planning stage as the stories were being amended their id numbers(#) are no longer in sequence.
 1. Epic: Set up admin page for admin to manage recipe posts, reviews and site users
 * User Stories:
   * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)(#8)
@@ -34,7 +34,7 @@ There are 11 Epics and 20 User Stories. The User Stories are numbered so can be 
   * As a site admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
   * As a site admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
 
-2. Epic: Enable users to register on the site to access full features
+2. Epic: Enable users to set up an account on the website to access the full features
 * User Stories:
   * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
   * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
@@ -47,6 +47,7 @@ There are 11 Epics and 20 User Stories. The User Stories are numbered so can be 
 5. Epic: Create recipe list page to showcase content to users
 * User Stories:
   * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
+  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)(#33)
 6. Epic: Enable registered users to search through the recipes to enhance UX
 * User Stories:
   * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
@@ -59,13 +60,10 @@ There are 11 Epics and 20 User Stories. The User Stories are numbered so can be 
 8. Epic: Enable users to filter recipe posts to enhance UX
 * User Stories:
   * As a user I can filter all recipes by ingredient/favourite so that I can easily sort the recipes (could-have / future feature)(#22)
-9. Epic: Create recipe list page to showcase content to users
-* User Stories:
-  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)(#33)
-10. Epic: Enable users to sign-in/register with Google/Facebook account
+9. Epic: Enable users to sign-in/register with Google/Facebook account
 * User Stories:
   * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)(#30)
-11. Epic: Enable users to CRUD own reviews
+10. Epic: Enable users to CRUD own reviews
 * User Stories:
   * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (could-have / complete)(#17)
 
@@ -86,7 +84,7 @@ The website consists of six pages: Home, About, Recipes, My Recipes, Register an
 *Logo*
 
 - Links to Home, About, Recipes, My Recipes, Register and Sign In/Out pages: 
-  The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and REgister links are replaced by a Sign Out link and the My Recipes page link is visible:
+  The Home, About and Recipes page links are visible to and can be accessed by any user. If the user is not signed in the Sign in and Register links are visible in the navbar. If the user is signed in the Sign In and Register links are replaced by a Sign Out link and the My Recipes page link is visible:
 
 ![](documentation/screenshots/nav1.png)
 *Navigation for not signed in user*
@@ -432,13 +430,13 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * [Summernote](https://summernote.org/) - a WYSIWYG editor
 * [Crispy forms](https://django-crispy-forms.readthedocs.io/) - to format the front-end forms
 
-# Testing
+## Testing
 The full testing documentation can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/TESTING.md)
 
 ## Deployment
 
-## Heroku
-#### Creating the inital Django app
+### Heroku
+#### 1. Creating the inital Django app
 * First follow these steps to create your app:
 add to local deployment section: here
 * Install Django and gunicorn: `pip3 install django gunicorn`
@@ -452,7 +450,7 @@ add to local deployment section: here
 * Run the server to test if the app is installed: in the terminal window type `python3 manage.py runserver`
 * If the app has been installed correctly the window will display `The install worked successfully! Congratulations!`
 
-#### Create your Heroku app
+#### 2. Create your Heroku app
 * Navigate to the Heroku website
 * In the Heroku browser window, create an account by entering your email address and a password
 * Activate the account through the authentication email sent to your email account
@@ -461,12 +459,12 @@ add to local deployment section: here
 * Select a region, in this case Europe
 * Click create app
 
-3. Create the Database
+#### 3. Create the Database
 * In the Heroku dashboard click on the Resources tab
 * Scroll down to Add-Ons, search for and select 'Heroku Postgres'
 * In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
 
-4. Set up Environment Variables
+#### 4. Set up Environment Variables
 * In Gitpod create a new env.py file in the top level directory
 * Add env.py to the .gitignore file
 * In env.py import the os library
@@ -475,7 +473,7 @@ Insert yours here
 * In env.py add `os.environ["SECRET_KEY"] = "Make up your own random secret key"`
 * In Heroku Settings tab Config Vars enter the same secret key created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
 
-5. Connect the environment variables to Django
+#### 5. Connect the environment variables to Django
 
 * In your Django 'settings.py' file type:
 
@@ -495,13 +493,14 @@ DATABASES = {
   dj_database_url.parse(os.environ.get("DATABASE_URL"))
   }`
 ```
-6. Make migrations
+#### 6. Make migrations
 * In the terminal type:
 ```
 python3 manage.py makemigrations`
 python3 manage.py migrate`
 ```
-7. Set up Cloudinary for static and media files storage
+
+#### 7. Set up Cloudinary for static and media files storage
 * Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
 * In Heroku  add cloudinary url to 'config vars'
 * In Heroku config vars add DISABLE_COLLECTSTATIC with value of '1' (note: this must be removed for final deployment)
@@ -528,23 +527,23 @@ DEFAULT_FILE_STORAGE =
 * Add Heroku Hostname to ALLOWED_HOSTS: ```ALLOWED_HOSTS =
 ['favoureats.herokuapp.com', 'localhost']```
 
-9. Create `media`, `static` and `templates` folders in top level directory
-10. Create Procfile in top level directory: 
+#### 8. Create `media`, `static` and `templates` folders in top level directory
+#### 9. Create Procfile in top level directory: 
 * In Procfile add: `web: gunicorn favoureats .wsgi`
-11. In terminal add, commit, and push: 
+#### 10. In terminal add, commit, and push: 
 ```
 git add <filename>
 git commit -m “Deployment Commit”
 git push
 ```
-12. Heroku Deployment: 
+#### 11. Heroku Deployment: 
 * Click Deploy tab in Heroku
 * In the 'Deployment method' section select 'Github' and click the 'connect to Github' button to confirm.
 * In the 'search' box enter the Github repository name for the project: favoureats: https://github.com/siobhanlgorman/favoureats
 
 * Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
 
-13. Final Deployment
+#### 12. Final Deployment
 In the IDE: 
 * When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
 * In this project the [summernote](https://summernote.org/) editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = 'SAMEORIGIN'` to settings.py.
@@ -552,8 +551,8 @@ In the IDE:
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com)
 
-## Local Deployment: Forking and Cloning
-### Forking the Repository
+### Local Deployment: Forking and Cloning
+#### Forking the Repository
 
 * To fork the project navigate to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
 * Above the list of files click the dropdown code menu.
@@ -563,7 +562,7 @@ In the IDE:
 * Click the 'Fork' button at the top right of the page. A forked copy of the repository will appear in your Repositories page.
 
 
-### Cloning the Repository
+#### Cloning the Repository
 * On Github navigate to the main page of Favoureats [at](https://github.com/siobhanlgorman/favoureats).
 * Above the list of files click the dropdown code menu.
 * Select the https option and copy the link.
