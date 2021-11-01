@@ -570,7 +570,7 @@ In the IDE:
 * Change the current working directory to the desired destination location.
 * Type the git clone command with the copied URL: `git clone https://github.com/siobhanlgorman/favoureats.git`.
 * Press enter to create the local clone.
-* For the project to run an env.py file must be created as in step 4 of 'creating your Heroku app' above
+* For the project to run an env.py file must be created as in step 4 of 'creating your Heroku app' above. As this is not stored in Github it will not be cloned with the rest of the files.
 
 ## Credits
 
@@ -598,9 +598,17 @@ Chickpea Curry Image by <a href="https://pixabay.com/users/marekonline-1095186/?
 
 [Tofu Photo by Ella Olsson from Pexels](https://www.pexels.com/photo/vegetable-salad-3026808/)
 
-Chili image by <a href="https://pixabay.com/users/ritae-19628/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">RitaE</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">Pixabay</a>#
+Chili image by <a href="https://pixabay.com/users/ritae-19628/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">RitaE</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">Pixabay</a>
 
 Sweet Potato Soup image by <a href="https://pixabay.com/users/einladung_zum_essen-3625323/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Bernadette Wurzinger</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Pixabay</a>
+
+[Brown Bread](https://pixabay.com/images/id-1508064/) by <a href="https://pixabay.com/users/madmoissele-2895357/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1508064">madmoissele</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1508064">Pixabay</a>
+
+Sourdough Bread Image by <a href="https://pixabay.com/users/markcraemers-9384631/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">markcraemers</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">Pixabay</a>
+
+Muesli Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pixabay</a>
+
+Sicilian Stew Image by <a href="https://pixabay.com/users/ion68-2001618/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Ion68</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Pixabay</a>
 
 ### Recipes
 [Chili](https://www.theguardian.com/food/2020/oct/03/meera-sodha-recipe-vegan-oven-baked-chilli-butternut-squash-recipe)
