@@ -61,20 +61,19 @@ Description: The site administrator is able to create draft recipes.
 1. In the admin panel menu beside recipes click the add button
 2. In the recipe form enter content in the fields
 3. Click save to save the created recipe
- 
 
 ![](documentation/screenshots/admin_create.png)
-  
-
-![](documentation/screenshots/admin_draft2.png)
-
 
 **Expected Result**: A draft recipe is saved by default to the list of recipes in the admin panel
 
 **Actual Result**: A draft recipe is saved to the list of recipes in the admin panel
 
+![](documentation/screenshots/admin_draft2.png)
+
+
 **Pass/Fail: Pass**
 
+#### User Story:
 * As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
 
 Description: The site administrator is able to create, read, update and delete recipes.
@@ -118,7 +117,7 @@ To delete a recipe:
 ![](documentation/screenshots/default_draft.png)
 *draft recipe created*
 
-
+#### User Story:
 * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
 
 **Testing Steps**:
@@ -127,15 +126,16 @@ To delete a recipe:
 2. In the list select a review in the checkbox
 3. In the action dropdown menu above the list select 'approve selected review' or 'delete selected review' and then 'go'
 
-****Expected Result**s**
+**Expected Results**
 1: The approved review is published on the website
 2: The deleted review is removed from the list of reviews
 
-****Actual Result**s**
+**Actual Results**
 1: The approved review is published on the website
 2: The deleted review is removed from the list of reviews
 **Pass/Fail: Pass**
 
+#### User Story:
 * As an admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
 
 1. In the admin panel select a recipe
@@ -143,22 +143,24 @@ To delete a recipe:
 3. On the website navigate to the recipe list page where the number of favourites awarded is shown under the recipe 
 4. On the website click on a recipe to open the full detail to see the number of favourites beside the recipe
 
-****Expected Result**s**:
+**Expected Results**:
 1: The names of users who have favourited a recipe are highlighted in the admin panel recipe view
 2: The number of favourites appears beside the star on the recipes page
 3: The number of favourites appears beside the star on the recipe detail page
 
 
-****Actual Result**s**:
+**Actual Results**:
 1: The names of users who have favourited a recipe are highlighted in the admin panel recipe view
 2: The number of favourites appears beside the star on the recipes page
 3: The number of favourites appears beside the star on the recipe detail page
 
 **Pass/Fail: Pass**
 
+#### User Story:
 * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
 This is tested in #10 above with a PASS result.
 
+#### User Story:
 * As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
 
 1. In the admin panel select the 'add' button beside 'Reviews'
@@ -166,11 +168,11 @@ This is tested in #10 above with a PASS result.
 3. Complete the content fields and the checkbox 'approved' to publish or leave blank to create a draft
 4. Click save
 
-****Expected Result**s**:
+**Expected Results**:
 1: The review appears in the list of reviews in the admin panel
 2: The approved review is published on the website
 
-****Actual Result**s**:
+**Actual Results**:
 1: The review appears in the list of reviews in the admin panel
 2: The approved review is published on the website
 
@@ -185,16 +187,18 @@ This is tested in #10 above with a PASS result.
 2. Click on the 'Register' tab on the navigation menu bar
 3. Create an account with username, email and password
 
-****Expected Result**s**
+**Expected Results**
 1: Message displays 'You have successfully signed in'
 2: Sign In link in navigation changes to Sign Out
 
-****Actual Result**s**
+**Actual Results**
 1: Message displays 'You have successfully signed in'
 2: Sign In link in navigation changes to Sign Out
 
 **Pass/Fail: Pass**
-  * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
+
+#### User Story:
+* As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -202,12 +206,12 @@ This is tested in #10 above with a PASS result.
 3. Click on the 'Sign Out' link to sign out.
 
 
-****Expected Result**s**:
+**Expected Results**:
 1: Message displays 'You have successfully signed in'
 2: Message displays 'You have successfully signed out'
 3: Sign In link in navigation changes to Sign Out and vice versa
 
-****Actual Result**s**:
+**Actual Results**:
 1: Message displays 'You have successfully signed in'
 2: Message displays 'You have successfully signed out'
 3: Sign In link in navigation changes to Sign Out and vice versa
@@ -232,7 +236,7 @@ This is tested in #10 above with a PASS result.
 3. Scroll down to view most recent recipes posted
 4. Scroll down to see button to 'view recipes'
 
-****Expected Result**s**:
+**Expected Results**:
 1: Text visible on hero image explaining site
 2: Call to action 'Register' button on hero image
 3: Text indicating users must sign in to view full recipes and create recipes
@@ -240,7 +244,7 @@ This is tested in #10 above with a PASS result.
 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
 
 
-****Actual Result**s**:
+**Actual Results**:
 1: Text visible on hero image explaining site
 2: Call to action 'Register' button on hero image
 3: Text indicating users must sign in to view full recipes and create recipes
@@ -263,14 +267,14 @@ This is tested in #10 above with a PASS result.
 5. Click on edit beside a recipe in the list to view the recipe form, edit the content and click on 'Submit Recipe' to save changes
 6. Click on delete beside a recipe in the list to delete a recipe. 
 
-****Expected Result**s**
+**Expected Results**
 1: Full recipe detail page opens when view is clicked
 2: Recipe is updated on website when edits are submitted.
 3: Success message displays when updated recipe is submitted.
 4: Confirm delete page displays when user clicks on delete
 5: Success message displays when user successfully deletes recipe.
 
-****Actual Result**s**
+**Actual Results**
 1: Full recipe detail page opens when view is clicked
 2: Recipe is updated on website when edits are submitted.
 3: Success message displays when updated recipe is submitted.
@@ -283,7 +287,7 @@ This is tested in #10 above with a PASS result.
 
 #### Epic: Create recipe list page to showcase content to users
 #### User Story:
-  * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
+* As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -315,6 +319,7 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 **Pass/Fail: Pass**
 
+#### User Story:
 * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
 
 **Testing Steps**:
@@ -348,6 +353,7 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 **Pass/Fail: Pass**
 
+#### User Story:
 * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
 
 **Testing Steps**:
@@ -357,16 +363,17 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 4. Click on the title of a recipe
 5. Click on the star icon to toggle 'favourite' on and off
 
-****Expected Result**s**
+**Expected Results**
 1: When user clicks on star, star becomes full colour to favourite and outline only if not favourite.
 2: Number beside favourites star is updated
 
-****Actual Result**s**
+**Actual Results**
 1: When user clicks on star, star becomes full colour to favourite and outline only if not favourite.
 2: Number beside favourites star is updated
 
 **Pass/Fail: Pass**
 
+#### User Story:
 * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
 
 **Testing Steps**:
@@ -395,7 +402,7 @@ Thankyou message displays thanking user for submitting a review. 'Your review is
 3. Login and click the links in the navbar
 4. Scroll down the page
 
-****Expected Result**s**
+**Expected Results**
 1. Not logged in user can view links to Home, About, Recipes, Register and Sign In
 2. Each of these links opens the expected page
 3. Logged in user can view links to Home, About, Recipes, My Recipes and Sign Out
@@ -465,12 +472,12 @@ Thankyou message displays thanking user for submitting a review. 'Your review is
 3. Click on the register button
 4. Login and view the hero image
 
-****Expected Result**s**
+**Expected Results**
 1. Register button is visible to not logged in users
 2. Register button is not visible when user is loged in
 3. Register button links to sign up page
 
-****Actual Result**s**
+**Actual Results**
 1. Register button is visible to not logged in users
 2. Register button is not visible when user is loged in
 3. Register button links to sign up page
@@ -490,11 +497,11 @@ Thankyou message displays thanking user for submitting a review. 'Your review is
 1. Click on links without logging in
 2. Click on links after logging in
 
-****Expected Result**s**
+**Expected Results**
 1. Both users are directed to Recipes Page
 2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
 
-****Actual Result**s**
+**Actual Results**
 1. Both users ar directed to Recipes Page
 2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
 
@@ -558,11 +565,11 @@ The three recipes are the most recent additions and the most recent is first
 1. Make sure to be signed out and click on recipe title link in selected recipe
 2. Sign in and repeat step 1
 
-****Expected Result**s**
+**Expected Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to full recipe detail page
 
-****Actual Result**s**
+**Actual Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to full recipe detail page
 
@@ -579,13 +586,13 @@ The three recipes are the most recent additions and the most recent is first
 2. Click the search icon
 3. Click the 'x'
 
-****Expected Result**s**
+**Expected Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
 3. The 'x' when clicked returns the full list of recipes
 
-****Actual Result**s**
+**Actual Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
@@ -625,11 +632,11 @@ The three recipes are the most recent additions and the most recent is first
 1. Click on the star
 2. Click again on the star
 
-****Expected Result**s**
+**Expected Results**
 1. When the star is clicked if the recipe is not currently a favourite of the user the star is an outline and will change to full (green) colour star and the number underneath increases by one
 2. When the star is clicked if the recipe is currently a favourite of the user the star is a full green colour and will change to outline only. The number underneath decreases by one
 
-****Actual Result**s**
+**Actual Results**
 1. When the star is clicked if the recipe is not currently a favourite of the user the star is an outline and will change to full (green) colour star and the number underneath increases by one
 2. When the star is clicked if the recipe is currently a favourite of the user the star is a full green colour and will change to outline only. The number underneath decreases by one
 
@@ -653,12 +660,12 @@ The three recipes are the most recent additions and the most recent is first
 4. Check the box beside the review just added and select approve in th dropdown menu
 5. Navigate back to the same recipe
 
-****Expected Result**s**
+**Expected Results**
 1. Review is submitted and can be viewed in the admin panel
 2. Message of success appears on submission and disappears automatically
 3. WHen review is approved it appears in the review section of the recipe
 
-****Actual Result**s**
+**Actual Results**
 1. Review is submitted and can be viewed in the admin panel
 2. Message of success appears on submission and disappears automatically
 3. WHen review is approved it appears in the review section of the recipe
@@ -679,11 +686,11 @@ The three recipes are the most recent additions and the most recent is first
 1. As a not logged in user click on the button
 2. Repeat after logging in
 
-****Expected Result**s**
+**Expected Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to the My Recipes page
 
-****Actual Result**s**
+**Actual Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to the My Recipes page
 
@@ -702,13 +709,13 @@ The three recipes are the most recent additions and the most recent is first
 2. Click the search icon
 3. Click the 'x'
 
-****Expected Result**s**
+**Expected Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
 3. The 'x' when clicked returns the full list of recipes
 
-****Actual Result**s**
+**Actual Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
@@ -756,7 +763,7 @@ The three recipes are the most recent additions and the most recent is first
 9. Select delete again
 7. In the warning message click confirm delete
 
-****Expected Result**s**
+**Expected Results**
 1. When view is clicked the full recipe detail page opens
 2. The user who added the recipe corresponds with the current user
 3. When edit is clicked the completed recipe form opens
@@ -767,7 +774,7 @@ The three recipes are the most recent additions and the most recent is first
 8. A message appears to the user confirming that the recipe has been deleted
 9. If the user selects Go Back in the warning message, the user is redirected to the My Recipes page
 
-****Actual Result**s**
+**Actual Results**
 1. When view is clicked the full recipe detail page opens
 2. The user who added the recipe corresponds with the current user
 3. When edit is clicked the completed recipe form opens
@@ -809,7 +816,7 @@ The three recipes are the most recent additions and the most recent is first
 5. Click Sign Up
 6. Navigate to admin panel to see user listed
 
-****Expected Result**s**
+**Expected Results**
 1. Home button redirects to Home page
 2. User receives error message if password does not conform to requrements of length, difference to username
 3. User registers successfully and success message displays
@@ -834,13 +841,13 @@ The three recipes are the most recent additions and the most recent is first
 3. Click Home
 4. Repeat steps 1 and 2 and click sign in
 
-****Expected Result**s**
+**Expected Results**
 1. Error message displays if usere does not enter a username and password
 2. User signs in successfully with username and password
 3. Success message is displayed and disappears automatically
 4. User is redirected to Home page if Home is clicked
 
-****Actual Result**s**
+**Actual Results**
 1. Error message displays if usere does not enter a username and password
 2. User signs in successfully with username and password
 3. Success message is displayed and disappears automatically
@@ -866,12 +873,12 @@ The three recipes are the most recent additions and the most recent is first
 3. Repeat step 1
 2. Click Sign Out in the Sign Out page
 
-****Expected Result**s**
+**Expected Results**
 1. Home button redirects user to Home page
 2. Sign out button signs user out and message displays to tell user they have signed out
 3. User is redirected to Home page aftere signing out
 
-****Actual Result**s**
+**Actual Results**
 1. Home button redirects user to Home page
 2. Sign out button signs user out and message displays to tell user they have signed out
 3. User is redirected to Home page aftere signing out
@@ -897,7 +904,7 @@ The three recipes are the most recent additions and the most recent is first
 7. Click Submit
 8. Navigate to the Home, Recipes and My Recipes pages to check the recipes are displaying, one with placeholder image and one with user's own
 
-****Expected Result**s**
+**Expected Results**
 * Go Back button at the top redirects users to the My Recipes page
 * Messages appear to indicate if required fields have not been filled in before submission.
 * User can enter text in fields
@@ -908,7 +915,7 @@ The three recipes are the most recent additions and the most recent is first
 * When submit button is clicked the recipe is uploaded to the database and appears on the Home page, Recipes page and My Recipes page
 * The user is redirected to My Recipes page after submitting a recipe
 
-****Actual Result**s**
+**Actual Results**
 * Go Back button at the top redirects users to the My Recipes page
 * Messages appear to indicate if required fields have not been filled in before submission.
 * User can enter text in fields
