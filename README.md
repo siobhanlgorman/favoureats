@@ -546,8 +546,8 @@ git push
 
 13. Final Deployment
 In the IDE: 
-* When development is complete in `settings.py` change the debug setting to: `DEBUG = False`
-* In settings.py add: `X_FRAME_OPTIONS = 'SAMEORIGIN'` which enables the summernote editor to work in Heroku.
+* When development is complete change the debug setting to: `DEBUG = False` in `settings.py` 
+* In this project the [summernote](https://summernote.org/) editor was used so for this to work in Heroku add: `X_FRAME_OPTIONS = 'SAMEORIGIN'` to settings.py.
 * In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0
 * Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku. 
 * To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser. The live deployment of the project can be seen [here](https://favoureats.herokuapp.com)
@@ -555,24 +555,13 @@ In the IDE:
 ## Local Deployment: Forking and Cloning
 ### Forking the Repository
 
-If you wish to fork the repository to make changes without affecting the original you can fork it by navigating to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
+* To fork the project navigate to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
 * Above the list of files click the dropdown code menu.
 * Select the https option and copy the link.
 * Open the terminal.
 * Change the current working directory to the desired destination location.
-* Type the git clone command with the copied URL: `git clone https://github.com/siobhanlgorman/favoureats.git`.
 * Click the 'Fork' button at the top right of the page. A forked copy of the repository will appear in your Repositories page.
-* For this project to run locally an env.py file must be set up by the user containing the following sensitive information:
-"DATABASE_URL" the postgres database address from Heroku
-"SECRET_KEY"
-"CLOUDINARY_URL"
 
-* Create your env.py file in the project directory.
-
-* All the necessary requirements must be added by creating a requirements.txt file
-`pip install -r requirements.txt`
-
-* A Procfile must be created for the project to be deployed to Heroku (see above)
 
 ### Cloning the Repository
 * On Github navigate to the main page of Favoureats [at](https://github.com/siobhanlgorman/favoureats).
@@ -582,7 +571,7 @@ If you wish to fork the repository to make changes without affecting the origina
 * Change the current working directory to the desired destination location.
 * Type the git clone command with the copied URL: `git clone https://github.com/siobhanlgorman/favoureats.git`.
 * Press enter to create the local clone.
-
+* For the project to run an env.py file must be created as in step 4 of 'creating your Heroku app' above
 
 ## Credits
 
@@ -602,14 +591,24 @@ If you wish to fork the repository to make changes without affecting the origina
 
 Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
 
+Chickpea Curry Image by <a href="https://pixabay.com/users/marekonline-1095186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">marekonline</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">Pixabay</a>)
+
 [Lasagne by Daniele Sgura from Pexels](https://www.pexels.com/photo/close-up-photo-of-lasagna-on-ceramic-plate-4162496/)
 
 [Cookbook Image by <a href="https://pixabay.com/users/bru-no-1161770/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1375788">Bruno /Germany</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1375788">Pixabay</a>](https://pixabay.com/photos/cook-cookbook-side-enjoyment-meal-1375788/)
 
 [Tofu Photo by Ella Olsson from Pexels](https://www.pexels.com/photo/vegetable-salad-3026808/)
 
+Chili image by <a href="https://pixabay.com/users/ritae-19628/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">RitaE</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">Pixabay</a>#
+
+Sweet Potato Soup image by <a href="https://pixabay.com/users/einladung_zum_essen-3625323/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Bernadette Wurzinger</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Pixabay</a>
+
 ### Recipes
+[Chili](https://www.theguardian.com/food/2020/oct/03/meera-sodha-recipe-vegan-oven-baked-chilli-butternut-squash-recipe)
+
 [Lasagne](https://www.theguardian.com/food/2020/feb/24/thomasina-miers-recipe-for-cheats-lasagne-with-ricotta-and-greens)
+
+[Sweet Potato and Ginger Soup](https://www.bbc.co.uk/food/recipes/sweet_potato_soup_62834)
 
 ## Acknowledgements
 There would have been no submission without the following people:
