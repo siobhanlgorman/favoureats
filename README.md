@@ -313,6 +313,9 @@ Accessed only by logged in users by clicking the 'view' tab on the My Recipes ta
 #### 404 Page
 A 404 page was created to handle users' navigational errors and to direct them back to the website. The navigation menu and logo are visible on the page
 
+![](documentation/screenshots/404.png)
+
+
 #### 500 Page
 A 500 server error page was created to handle internal server errors
 
