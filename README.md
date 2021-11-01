@@ -379,6 +379,8 @@ The design style of the website is minimalist, fresh and clean looking.
 
 ### Colours
 
+![](documentation/screenshots/colours.png)
+
 The colours are chosen to convey nature, fresh clean and nutritious: green, pale grey, dark grey, black and white.
 The predominant colour is green (#008000): used for buttons, links and icons
 Font colours are charcoal grey, black and white, adjusted for contrast
