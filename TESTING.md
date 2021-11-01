@@ -149,7 +149,6 @@ Description: The site administrator is able to create, read, update and delete r
 2: The number of favourites appears beside the star on the recipes page
 3: The number of favourites appears beside the star on the recipe detail page
 
-
 **Actual Results**:
 1: The names of users who have favourited a recipe are highlighted in the admin panel recipe view
 2: The number of favourites appears beside the star on the recipes page
@@ -179,7 +178,7 @@ This is tested in #10 above with a PASS result.
 
 **Pass/Fail: Pass**
 
-#### Epic: Enable users to register on the site to access full features
+#### Epic: Enable users to set up an account on the site to access full features
 #### *User Story*:
 * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
 
@@ -214,7 +213,6 @@ This is tested in #10 above with a PASS result.
 2. Click on the 'Sign In' link in the navigation menu and sign in with username and password
 3. Click on the 'Sign Out' link to sign out.
 
-
 **Expected Results**:
 1: Message displays 'You have successfully signed in'
 2: Message displays 'You have successfully signed out'
@@ -226,7 +224,6 @@ This is tested in #10 above with a PASS result.
 3: Sign In link in navigation changes to Sign Out and vice versa
 
 **Pass/Fail: Pass**
-
 
 ![](documentation/screenshots/sign_in_msg.png)
 *Sign in success message*
@@ -251,7 +248,6 @@ This is tested in #10 above with a PASS result.
 3: Text indicating users must sign in to view full recipes and create recipes
 4: Three most recent images displaying
 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
-
 
 **Actual Results**:
 1: Text visible on hero image explaining site
@@ -292,7 +288,7 @@ This is tested in #10 above with a PASS result.
 
 **Pass/Fail: Pass**
 
-![](documentation/screenshots/my_recipe_page.png)
+![](documentation/screenshots/my_recipes_page.png)
 
 #### Epic: Create recipe list page to showcase content to users
 #### *User Story*:
@@ -341,7 +337,6 @@ List of recipes corresponding to search query is displayed or 'no recipes to vie
 3. Enter text in the search box and click the search icon
 4. Click the 'x' to clear the search and return to full list of recipes
 
-
 **Expected Result**: 
 List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
 
@@ -352,10 +347,10 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 ![](documentation/screenshots/search_result.png)
 
-
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
 #### *User Story*:
 * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
+
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
