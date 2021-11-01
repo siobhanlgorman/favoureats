@@ -37,7 +37,7 @@ python3 manage.py migrate
 Unittest was used for the automated testing. Urls, Models and Views were tested. 85% coverage was achieved.
 The coverage report: 
 
-![###](documentation/screenshots/coverage_rep.png)
+![](documentation/screenshots/coverage_rep.png)
 
 ## Manual Testing
 
@@ -52,7 +52,7 @@ To test the admin user stories begin with the following steps:
 4. Navigate to [admin page](https://favoureats.herokuapp.com/admin/)
 
 #### *User Story*:
-* As a site admin I can create draft recipe posts so that I can complete the recipes later (must-have / complete)(#8)
+* As a site admin I can create draft recipe posts so that I can complete the recipes later (must-have / complete)[#8](https://github.com/siobhanlgorman/favoureats/issues/8)
 
 Description: The site administrator is able to create draft recipes.
 
@@ -74,7 +74,7 @@ Description: The site administrator is able to create draft recipes.
 **Pass/Fail: Pass**
 
 #### *User Story*:
-* As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
+* As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)[#9](https://github.com/siobhanlgorman/favoureats/issues/9)
 
 Description: The site administrator is able to create, read, update and delete recipes.
 
@@ -119,7 +119,7 @@ Description: The site administrator is able to create, read, update and delete r
 *draft recipe created*
 
 #### *User Story*:
-* As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
+* As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)[#10](https://github.com/siobhanlgorman/favoureats/issues/10)
 
 **Testing Steps**:
 
@@ -137,7 +137,7 @@ Description: The site administrator is able to create, read, update and delete r
 **Pass/Fail: Pass**
 
 #### *User Story*:
-* As an admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
+* As an admin I can view the number of favourites on a recipe post so that I can know which are the most popular[#28](https://github.com/siobhanlgorman/favoureats/issues/28)
 
 1. In the admin panel select a recipe
 2. Scroll down to the favourites field to view highlighted names of users who have favourited the recipe
@@ -157,11 +157,11 @@ Description: The site administrator is able to create, read, update and delete r
 **Pass/Fail: Pass**
 
 #### User Story:
-* As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
+* As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe [#29](https://github.com/siobhanlgorman/favoureats/issues/29)
 This is tested in #10 above with a PASS result.
 
 #### *User Story*:
-* As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
+* As an admin I can create reviews of recipe posts so that I can generate discussion on recipe posts[#31](https://github.com/siobhanlgorman/favoureats/issues/31)
 
 1. In the admin panel select the 'add' button beside 'Reviews'
 2. In the content form select a recipe from the dropdown menu.
@@ -180,7 +180,7 @@ This is tested in #10 above with a PASS result.
 
 #### Epic: Enable users to set up an account on the site to access full features
 #### *User Story*:
-* As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
+* As a user I can register an account so that I can access the full range of features on the site (must-have / complete)[#18](https://github.com/siobhanlgorman/favoureats/issues/18)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -206,7 +206,7 @@ This is tested in #10 above with a PASS result.
 
 
 #### *User Story*:
-* As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
+* As a registered user I can login and logout of the site so that I can access my content (must-have / complete)[#19](https://github.com/siobhanlgorman/favoureats/issues/19)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -234,7 +234,7 @@ This is tested in #10 above with a PASS result.
 
 #### Epic: Create landing page to attract users to the site
 #### User Story:
-* As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)(#24)
+* As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)[#24](https://github.com/siobhanlgorman/favoureats/issues/24)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -262,7 +262,7 @@ This is tested in #10 above with a PASS result.
 
 #### Epic: Enable registered users to CRUD their own recipes
 #### *User Story*:
-* As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)(#12)
+* As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)[#12](https://github.com/siobhanlgorman/favoureats/issues/12)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -292,7 +292,7 @@ This is tested in #10 above with a PASS result.
 
 #### Epic: Create recipe list page to showcase content to users
 #### *User Story*:
-* As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
+* As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)[#15](https://github.com/siobhanlgorman/favoureats/issues/15)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -309,7 +309,7 @@ This is tested in #10 above with a PASS result.
 
 #### Epic: Enable registered users to search through the recipes to enhance UX
 #### *User Story*:
-* As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
+* As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)[#23](https://github.com/siobhanlgorman/favoureats/issues/23)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -329,7 +329,7 @@ List of recipes corresponding to search query is displayed or 'no recipes to vie
 ![](documentation/screenshots/search2.png)
 
 #### *User Story*:
-* As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
+* As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) [#25](https://github.com/siobhanlgorman/favoureats/issues/25)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -349,7 +349,7 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
 #### *User Story*:
-* As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
+* As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)[#20](https://github.com/siobhanlgorman/favoureats/issues/20)
 
 
 **Testing Steps**:
@@ -366,7 +366,7 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 **Pass/Fail: Pass**
 
 #### *User Story*:
-* As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
+* As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)[#11](https://github.com/siobhanlgorman/favoureats/issues/11)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
@@ -395,7 +395,7 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 
 
 #### *User Story*:
-* As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
+* As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)[#32](https://github.com/siobhanlgorman/favoureats/issues/32)
 
 **Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
