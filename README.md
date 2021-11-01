@@ -24,48 +24,48 @@ The target user is someone:
 * who wants to share their favourite recipes
 
 #### Epics and User Stories
-There are 10 Epics and 20 User Stories. The User Stories are numbered so can be easily tracked. However during the planning stage as the stories were being amended their id numbers(#) are no longer in sequence.
+There are 10 Epics and 20 User Stories. The User Stories are numbered so can be easily tracked. However during the planning stage as the stories were being amended their id numbers[#) are no longer in sequence.
 1. Epic: Set up admin page for admin to manage recipe posts, reviews and site users
 * User Stories:
-  * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)(#8)
-  * As a site admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
-  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
-  * As a site admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
-  * As a site admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
-  * As a site admin I can create reviews of recipe posts so that I can generate discussion on recipe posts(#31)
+  * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)[#8](https://github.com/siobhanlgorman/favoureats/issues/8)
+  * As a site admin I can CRUD recipes so that I can manage my site content (must-have / complete)[#9](https://github.com/siobhanlgorman/favoureats/issues/9)
+  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)[#10](https://github.com/siobhanlgorman/favoureats/issues/10))
+  * As a site admin I can view the number of favourites on a recipe post so that I can know which are the most popular[#28](https://github.com/siobhanlgorman/favoureats/issues/28)
+  * As a site admin I can view reviews of a recipe post so that I can read the commentary on a recipe[#29](https://github.com/siobhanlgorman/favoureats/issues/29)
+  * As a site admin I can create reviews of recipe posts so that I can generate discussion on recipe posts[#31](https://github.com/siobhanlgorman/favoureats/issues/31)
 
 2. Epic: Enable users to set up an account on the website to access the full features
 * User Stories:
-  * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
-  * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
+  * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)[#18](https://github.com/siobhanlgorman/favoureats/issues/18)
+  * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)[#19](https://github.com/siobhanlgorman/favoureats/issues/19)
 3. Epic: Create landing page to attract users to the site
 * User Stories:
-  * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)(#24)
+  * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)[#24](https://github.com/siobhanlgorman/favoureats/issues/24)
 4. Epic: Enable registered users to CRUD their own recipes
 * User Stories:
-  * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)(#12)
+  * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)[#12](https://github.com/siobhanlgorman/favoureats/issues/12)
 5. Epic: Create recipe list page to showcase content to users
 * User Stories:
-  * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
-  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)(#33)
+  * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)[#15](https://github.com/siobhanlgorman/favoureats/issues/15)
+  * As a user I can view a paginated list of recipes so that I can easily move through the list of recipes (could-have / future feature)[#33](https://github.com/siobhanlgorman/favoureats/issues/33)
 6. Epic: Enable registered users to search through the recipes to enhance UX
 * User Stories:
-  * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
-  * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
+  * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)[#23](https://github.com/siobhanlgorman/favoureats/issues/23)
+  * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) [#25](https://github.com/siobhanlgorman/favoureats/issues/25)
 7. Epic: Enable registered users to interact with recipe posts to enhance UX
 * User Stories:
-  * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
-  * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
-  * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
+  * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)[#20](https://github.com/siobhanlgorman/favoureats/issues/20)
+  * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)[#11](https://github.com/siobhanlgorman/favoureats/issues/11)
+  * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)[#32](https://github.com/siobhanlgorman/favoureats/issues/32)
 8. Epic: Enable users to filter recipe posts to enhance UX
 * User Stories:
-  * As a user I can filter all recipes by ingredient/favourite so that I can easily sort the recipes (could-have / future feature)(#22)
+  * As a user I can filter all recipes by ingredient/favourite so that I can easily sort the recipes (could-have / future feature)[#22](https://github.com/siobhanlgorman/favoureats/issues/22)
 9. Epic: Enable users to sign-in/register with Google/Facebook account
 * User Stories:
-  * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)(#30)
+  * As a user I can register an account with social networks so that I can streamline my accounts (could-have / future feature)[#30](https://github.com/siobhanlgorman/favoureats/issues/30)
 10. Epic: Enable users to CRUD own reviews
 * User Stories:
-  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (could-have / complete)(#17)
+  * As a registered user I can create/read/update/delete my own review posts so that I can manage my own content (could-have / complete)[#17](https://github.com/siobhanlgorman/favoureats/issues/17)
 
 ### Scope
 
@@ -383,12 +383,12 @@ The design style of the website is minimalist, fresh and clean looking.
 
 The colours are chosen to convey nature, fresh clean and nutritious: green, pale grey, dark grey, black and white.
 The predominant colour is green (#008000): used for buttons, links and icons
-Font colours are charcoal grey, black and white, adjusted for contrast
+Font colours are charcoal grey and white, adjusted for contrast
 Shading is muted grey.
 
 ### Typography
 
-The fonts selected were: Poppins for the text and Roboto for the headings. These were selected for their simple and elegant style.
+The fonts selected were: [Poppins](https://fonts.google.com/specimen/Poppins) for the text and [Roboto](https://fonts.google.com/specimen/Roboto) for the headings. These were selected for their simple and elegant style.
 
 ### Images
 
@@ -571,7 +571,8 @@ In the IDE:
 * Select the https option and copy the link.
 * Open the terminal.
 * Change the current working directory to the desired destination location.
-* Type the git clone command with the copied URL: `git clone https://github.com/siobhanlgorman/favoureats.git`.
+* Type the git clone command with the copied URL: 
+`git clone https://github.com/siobhanlgorman/favoureats.git`.
 * Press enter to create the local clone.
 * For the project to run an env.py file must be created as in step 4 of 'creating your Heroku app' above. As this is not stored in Github it will not be cloned with the rest of the files.
 
