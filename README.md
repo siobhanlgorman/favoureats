@@ -315,7 +315,6 @@ A 404 page was created to handle users' navigational errors and to direct them b
 
 ![](documentation/screenshots/404.png)
 
-
 #### 500 Page
 A 500 server error page was created to handle internal server errors
 
@@ -381,7 +380,10 @@ The design style of the website is minimalist, fresh and clean looking.
 
 ### Colours
 
-The colours are chosen to convey nature, fresh clean and nutritious. Colours are kept very minimal and limited to: white, green, grey, charcoal font? black?
+The colours are chosen to convey nature, fresh clean and nutritious: green, pale grey, dark grey, black and white.
+The predominant colour is green (#008000): used for buttons, links and icons
+Font colours are charcoal grey, black and white, adjusted for contrast
+Shading is muted grey.
 
 ### Typography
 
@@ -393,38 +395,45 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 # Technologies Used
 ## Languages
-* HTML5 semantic markup
-* CSS stylesheets
-* JavaScript??????????
-* Python
-  * Python modules: crispy-forms, summernote, django=allauth, dj-database,
-
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) was used to build the website
+* [CSS](https://en.wikipedia.org/wiki/CSS) was used to style the HTML
+* [JavaScript](https://www.javascript.com/) (no custom JS) was used with Bootstrap
+* [Bootstrap 5.1.3](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used to style the website
+* [Python](https://www.python.org/)
+  
 ## Frameworks
-* Django
-* ?????? Postgres for the database
-* ?????? SQLLite for the local environment
+* [Django 3.2.8](https://docs.djangoproject.com/en/3.2/)
+* Django supporting libraries:
+  - allauth
+  - crispy-forms
+  - summernote
+  - gunicorn
+  - psycopg2
+  - dj-database
+
+## Database
+* Postgres for the production database
+* SQLite for the local environment for automated testing
 
 ## Other Technologies
-* Cloudinary was used to host the static files and media
-* Gitpod as the IDE
-* GitHub for version control
-* Heroku was used as the cloud based platform for deployment
-* Fontawesome
-* Google Fonts
-* Balsamiq
-* Google Dev Tools
-* Favicon.cc
+* [Cloudinary](https://cloudinary.com/) was used to host the static files and media
+* [Gitpod](https://cloudinary.com/) as the IDE
+* [GitHub](https://github.com/) for version control
+* [Heroku](https://www.heroku.com/) was used as the cloud based platform for deployment
+* [Fontawesome](https://fontawesome.com/) for icons
+* [Google Fonts](https://fonts.google.com/) for the fonts
+* [Balsamiq](https://balsamiq.com/) for the wireframes
+* [Google Dev Tools](https://developer.chrome.com/docs/devtools/) for inspection during development
+* [Favicon.io](https://favicon.io/favicon-converter/) for the favicon
 * [Techsini](https://techsini.com/multi-mockup/index.php) was used for the site mockups
-* Google Sheets - for the data models
-* Icon
-* Favicon
-* Summernote
-
+* [Google Chrome](https://www.google.com/intl/en_ie/chrome/) for previewing the project in the browser
+* [Google Sheets](https://www.google.com/sheets/about/) - for the data models
+* [Freelogodesign](https://www.freelogodesign.org/) for the leaf logo
+* [Summernote](https://summernote.org/) - a WYSIWYG editor
+* [Crispy forms](https://django-crispy-forms.readthedocs.io/) - to format the front-end forms
 
 # Testing
 The full testing documentation can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/TESTING.md)
-
-
 
 ## Deployment
 
