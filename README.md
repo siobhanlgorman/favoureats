@@ -503,8 +503,8 @@ python3 manage.py migrate`
 ```
 7. Set up Cloudinary for static and media files storage
 * Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
-* In Heroku  add cloudinary url to 'config vars' add in Heroku: type CLOUDINARY_URL: your url here e.g. cloudinary:// fix here??????
-* In Heroku condfig vars add DISABLE_COLLECTSTATIC with value of '1' (note: this must be removed for final deployment)
+* In Heroku  add cloudinary url to 'config vars'
+* In Heroku config vars add DISABLE_COLLECTSTATIC with value of '1' (note: this must be removed for final deployment)
 * Add Cloudinary libraries to installed apps section of `settings.py` in this order: 
  ```
  'cloudinary_storage'
