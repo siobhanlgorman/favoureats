@@ -361,7 +361,7 @@ The pdf files can be seen [here](https://github.com/siobhanlgorman/favoureats/tr
 
 * Recipe Form Page:
 
-![](documentation/wireframes/recipe_form.png)
+![](documentation/wireframes/recipe_form_page.png)
 
 ### Data Models
 There are two models for the database: A Recipe model and a Review model
