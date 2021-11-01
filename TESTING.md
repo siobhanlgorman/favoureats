@@ -51,12 +51,12 @@ To test the admin user stories begin with the following steps:
 3. Sign in with admin's name and password
 4. Navigate to [admin page](https://favoureats.herokuapp.com/admin/)
 
-#### User Stories:
+#### User Story:
 * As a site admin I can create draft recipe posts so that I can complete the recipes later (must-have / complete)(#8)
 
 Description: The site administrator is able to create draft recipes.
 
-Testing Steps:
+**Testing Steps**:
   
 1. In the admin panel menu beside recipes click the add button
 2. In the recipe form enter content in the fields
@@ -73,13 +73,13 @@ Expected result: A draft recipe is saved by default to the list of recipes in th
 
 Actual result: A draft recipe is saved to the list of recipes in the admin panel
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 * As a Site Admin I can CRUD recipes so that I can manage my site content (must-have / complete)(#9)
 
 Description: The site administrator is able to create, read, update and delete recipes.
 
-Testing Steps:
+**Testing Steps**:
 To create a recipe:
   
 1. In the admin panel menu beside recipes click the add button
@@ -90,7 +90,7 @@ To create a recipe:
 Expected result: The recipe is saved as 'published' to the list of recipes in the admin panel. The recipe is viewable on the website
 
 Actual result: The recipe is saved as 'published' to the list of recipes in the admin panel. The recipe is viewable on the website
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 To read/update a recipe:
 
@@ -100,7 +100,7 @@ To read/update a recipe:
 Expected result: The viewed/updated recipe is saved to the list of recipes
 
 Actual result: The viewed/updated recipe is saved to the list of recipes
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 To delete a recipe:
 1. From the list of recipes in the admin panel select the recipe to be deleted in the checkbox beside the title
@@ -110,33 +110,31 @@ Expected result: The viewed/updated recipe is deleted from the list of recipes a
 
 Actual result: The viewed/updated recipe is deleted from the list of recipes and is not visible on the website
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
   
 ![](documentation/screenshots/admin_create.png)
-
+*admin add recipe page*
 
 ![](documentation/screenshots/default_draft.png)
-
-
-![](documentation/screenshots/admin_draft2.png)
+*draft recipe created*
 
 
 * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)(#10)
 
-Testing Steps:
+**Testing Steps**:
 
 1. In the admin panel select reviews to view a list of draft and published reviews
 2. In the list select a review in the checkbox
 3. In the action dropdown menu above the list select 'approve selected review' or 'delete selected review' and then 'go'
 
-Expected results
+**Expected Results**
 1: The approved review is published on the website
 2: The deleted review is removed from the list of reviews
 
-Actual results
+**Actual Results**
 1: The approved review is published on the website
 2: The deleted review is removed from the list of reviews
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 * As an admin I can view the number of favourites on a recipe post so that I can know which are the most popular(#28)
 
@@ -145,18 +143,18 @@ Pass/Fail: Pass
 3. On the website navigate to the recipe list page where the number of favourites awarded is shown under the recipe 
 4. On the website click on a recipe to open the full detail to see the number of favourites beside the recipe
 
-Expected results:
+**Expected Results**:
 1: The names of users who have favourited a recipe are highlighted in the admin panel recipe view
 2: The number of favourites appears beside the star on the recipes page
 3: The number of favourites appears beside the star on the recipe detail page
 
 
-Actual results:
+**Actual Results**:
 1: The names of users who have favourited a recipe are highlighted in the admin panel recipe view
 2: The number of favourites appears beside the star on the recipes page
 3: The number of favourites appears beside the star on the recipe detail page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 * As an admin I can view reviews of a recipe post so that I can read the commentary on a recipe(#29)
 This is tested in #10 above with a PASS result.
@@ -168,53 +166,53 @@ This is tested in #10 above with a PASS result.
 3. Complete the content fields and the checkbox 'approved' to publish or leave blank to create a draft
 4. Click save
 
-Expected results:
+**Expected Results**:
 1: The review appears in the list of reviews in the admin panel
 2: The approved review is published on the website
 
-Actual results:
+**Actual Results**:
 1: The review appears in the list of reviews in the admin panel
 2: The approved review is published on the website
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 #### Epic: Enable users to register on the site to access full features
-#### User Stories:
+#### User Story:
 * As a user I can register an account so that I can access the full range of features on the site (must-have / complete)(#18)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Click on the 'Register' tab on the navigation menu bar
 3. Create an account with username, email and password
 
-Expected results
+**Expected Results**
 1: Message displays 'You have successfully signed in'
 2: Sign In link in navigation changes to Sign Out
 
-Actual results
+**Actual Results**
 1: Message displays 'You have successfully signed in'
 2: Sign In link in navigation changes to Sign Out
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
   * As a registered user I can login and logout of the site so that I can access my content (must-have / complete)(#19)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Click on the 'Sign In' link in the navigation menu and sign in with username and password
 3. Click on the 'Sign Out' link to sign out.
 
 
-Expected results:
+**Expected Results**:
 1: Message displays 'You have successfully signed in'
 2: Message displays 'You have successfully signed out'
 3: Sign In link in navigation changes to Sign Out and vice versa
 
-Actual results:
+**Actual Results**:
 1: Message displays 'You have successfully signed in'
 2: Message displays 'You have successfully signed out'
 3: Sign In link in navigation changes to Sign Out and vice versa
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 
 ![](documentation/screenshots/sign_in_msg.png)
@@ -225,16 +223,16 @@ Pass/Fail: Pass
 *View to signed in user*
 
 #### Epic: Create landing page to attract users to the site
-#### User Stories:
+#### User Story:
 * As a user I can view a snapshot of the site on the landing page so that know what the site's purpose is (must-have/complete)(#24)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Scroll down the page to view the text in the hero image
 3. Scroll down to view most recent recipes posted
 4. Scroll down to see button to 'view recipes'
 
-Expected results:
+**Expected Results**:
 1: Text visible on hero image explaining site
 2: Call to action 'Register' button on hero image
 3: Text indicating users must sign in to view full recipes and create recipes
@@ -242,22 +240,22 @@ Expected results:
 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
 
 
-Actual results:
+**Actual Results**:
 1: Text visible on hero image explaining site
 2: Call to action 'Register' button on hero image
 3: Text indicating users must sign in to view full recipes and create recipes
 4: Three most recent images displaying
 5: Call to action 'View recipes' button on below three latest images directing users to recipes list page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/home.png)
 
 #### Epic: Enable registered users to CRUD their own recipes
-#### User Stories:
+#### User Story:
 * As a registered user I can CRUD my own recipes so that I can manage my own content (should-have / complete)(#12)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Click on the 'Sign In' link in the navigation menu and sign in with username and password
 3. Navigate to the page of [favoureats](https://favoureats.herokuapp.com/myrecipes) to view a list of the logged in user's recipes
@@ -265,29 +263,29 @@ Testing Steps:
 5. Click on edit beside a recipe in the list to view the recipe form, edit the content and click on 'Submit Recipe' to save changes
 6. Click on delete beside a recipe in the list to delete a recipe. 
 
-Expected results
+**Expected Results**
 1: Full recipe detail page opens when view is clicked
 2: Recipe is updated on website when edits are submitted.
 3: Success message displays when updated recipe is submitted.
 4: Confirm delete page displays when user clicks on delete
 5: Success message displays when user successfully deletes recipe.
 
-Actual results
+**Actual Results**
 1: Full recipe detail page opens when view is clicked
 2: Recipe is updated on website when edits are submitted.
 3: Success message displays when updated recipe is submitted.
 4: Confirm delete page displays when user clicks on delete
 5: Success message displays when user successfully deletes recipe.
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/my_recipe_page.png)
 
 #### Epic: Create recipe list page to showcase content to users
-#### User Stories:
+#### User Story:
   * As a user I can view a list of recipes so that I can see what I would like to select if registered (must-have / complete)(#15)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Click on the 'recipes' link in the navigation menu or the 'view recipes' button at the bottom of the page
 3. Scroll down to view a summary list of recipes posted
@@ -296,13 +294,13 @@ Expected result: User is redirected to Recipes page
 
 Actual result: User is redirected to Recipes page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 #### Epic: Enable registered users to search through the recipes to enhance UX
-#### User Stories:
+#### User Story:
 * As a user I can search my own recipe posts by title and ingredient so that easily find a recipe (should-have / complete)(#23)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Login to the website
 3. Click on the 'myrecipes' link in the navigation menu
@@ -315,11 +313,11 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 Actual result: 
 List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 * As a user I can search through the recipe list page by title and ingredient so that I can easily find a recipe (should-have / complete) (25)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Click on the 'recipes' link in the navigation menu
 3. Enter text in the search box and click the search icon
@@ -331,13 +329,13 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 Actual result: 
 List of recipes corresponding to search query is displayed or 'no recipes found' if there is no match
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 #### Epic: Enable registered users to interact with recipe posts to enhance UX
-#### User Stories:
+#### User Story:
 * As a registered user I can click on a post in the recipe list so that I open the full recipe post (must-have / complete)(#20)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Login to the website
 3. Click on the 'recipes' link in the navigation menu
@@ -348,30 +346,30 @@ Expected result: User is redirected to full recipe detail page. User not logged 
 
 Actual result: User is redirected to full recipe detail page. User not logged in is directed to 'sign in' page.
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 * As a registered user I can favorite/unfavorite recipes so that I can interact with the site content (must-have / complete)(#11)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Login to the website
 3. Click on the 'recipes' link in the navigation menu
 4. Click on the title of a recipe
 5. Click on the star icon to toggle 'favourite' on and off
 
-Expected results
+**Expected Results**
 1: When user clicks on star, star becomes full colour to favourite and outline only if not favourite.
 2: Number beside favourites star is updated
 
-Actual results
+**Actual Results**
 1: When user clicks on star, star becomes full colour to favourite and outline only if not favourite.
 2: Number beside favourites star is updated
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to the website of [favoureats](https://favoureats.herokuapp.com/)
 2. Login to the website
 3. Click on the 'recipes' link in the navigation menu
@@ -384,20 +382,20 @@ Thankyou message displays thanking user for submitting a review. 'Your review is
 Actual result: 
 Thankyou message displays thanking user for submitting a review. 'Your review is pending approval'. Review appears as draft in admin panel list of reviews.
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ## Testing Features
 
 ### Navigation
 - check that all navigation links work as expected
 
-Testing Steps:
+**Testing Steps**:
 1. Navigate to [favoureats](https://favoureats.herokuapp.com/)
 2. Without logging in click on the links in the navbar
 3. Login and click the links in the navbar
 4. Scroll down the page
 
-Expected Results
+**Expected Results**
 1. Not logged in user can view links to Home, About, Recipes, Register and Sign In
 2. Each of these links opens the expected page
 3. Logged in user can view links to Home, About, Recipes, My Recipes and Sign Out
@@ -421,13 +419,13 @@ Actual Result
 
 ![](documentation/screenshots/sticky_nav.png)
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ### Logo
 
 - check that logo links back to the home page:
 
-Testing Steps:
+**Testing Steps**:
 1. Open each page and click on logo
 
 Expected Result
@@ -436,7 +434,7 @@ Expected Result
 Actual result
 - logo links back to home page from each page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![Logo](documentation/screenshots/logo_screenshot.png)
 
@@ -444,7 +442,7 @@ Pass/Fail: Pass
 ### Footer
 - check that social media links direct the user to the correct website of Facebook, Instagram and Twitter pages
 
-Testing Steps
+**Testing Steps**
 
 1. Click on each icon
 
@@ -454,30 +452,30 @@ Expected result
 Actual Result
 1. Each icon opens on a separate tab to its corresponding social media website
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ### Home Page
 ### Register Button
 
 * Check that hero register button on hero image is not visible when user is signed in and that the register link navigates to the sign up page
 
-Testing Steps
+**Testing Steps**
 1. Navigate to [favoureats](https://favoureats.herokuapp.com/)
 2. Without logging in look at the hero image
 3. Click on the register button
 4. Login and view the hero image
 
-Expected Results
+**Expected Results**
 1. Register button is visible to not logged in users
 2. Register button is not visible when user is loged in
 3. Register button links to sign up page
 
-Actual Results
+**Actual Results**
 1. Register button is visible to not logged in users
 2. Register button is not visible when user is loged in
 3. Register button links to sign up page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/navbar_no_log.png)
 *View to not signed in user*
@@ -488,19 +486,19 @@ Pass/Fail: Pass
 ### Recipes/My Recipes text links
 * Check that links in Latest Recipes text direct users to correct page. Recipes page link goes to Recipes page and My Recipes link takes not logged in users to Sign In page and logged in users to My Recipes page
 
-Testing Steps
+**Testing Steps**
 1. Click on links without logging in
 2. Click on links after logging in
 
-Expected results
+**Expected Results**
 1. Both users are directed to Recipes Page
 2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
 
-Actual results
+**Actual Results**
 1. Both users ar directed to Recipes Page
 2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/latest.png)
 *Latest recipe information*
@@ -509,7 +507,7 @@ Pass/Fail: Pass
 ### Snapshot images
 - check that images are of three most recent recipe posts with title, date added and author. 
 
-Testing Steps
+**Testing Steps**
 1. Log in to admin panel
 2. Check list of recipes
 3. Check that the three images correspond to the most recent recipe additions
@@ -520,7 +518,7 @@ The three recipes are the most recent additions and the most recent is first
 Actual Result:
 The three recipes are the most recent additions and the most recent is first
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/snapshot.png)
 *Three latest recipes*
@@ -529,13 +527,13 @@ Pass/Fail: Pass
 ### View the Recipes button
 * Check that the 'View the Recipes' button links to Recipes page
 
-Testing Steps
+**Testing Steps**
 1. Click on the View the Recipes button
 
 Expected Result
 1. When button is clicked the user is redirected to the Recipes page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/view_btn.png)
 *View the Recipes button*
@@ -544,31 +542,31 @@ Pass/Fail: Pass
 
 * Check that 'View the Recipes' button redirects users the Recipes page
 
-Testing Steps
+**Testing Steps**
 1. Click on the View the Recipes button
 
 Expected Result
 1. When button is clicked the user is redirected to the Recipes page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 #### Recipes Page
 #### Image Link
 * Check that images with summary description of all the recipes are visible on the page and that title link redirects logged in users to full recipe detail page. Logged in users are redirected to the Sign In page. 
 
-Testing Steps
+**Testing Steps**
 1. Make sure to be signed out and click on recipe title link in selected recipe
 2. Sign in and repeat step 1
 
-Expected Results
+**Expected Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to full recipe detail page
 
-Actual Results
+**Actual Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to full recipe detail page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/recipes_page.png)
 *Recipes Page*
@@ -576,24 +574,24 @@ Pass/Fail: Pass
 
 * Check that search bar locates a recipe when a keyword is entered into the box. Check that the search icons startes the search and that the full recipe list page is returned after the 'x' is clicked. 
 
-Testing Steps
+**Testing Steps**
 1. Enter a word in the search box.
 2. Click the search icon
 3. Click the 'x'
 
-Expected Results
+**Expected Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
 3. The 'x' when clicked returns the full list of recipes
 
-Actual Results
+**Actual Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
 3. The 'x' when clicked returns the full list of recipes
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/search_result.png)
 *Search results for flour*
@@ -601,7 +599,7 @@ Pass/Fail: Pass
 ### Back to Top Arrow
 - check that back to top arrow remains on screen once user has started scrolling
 
-Testing Steps
+**Testing Steps**
 1. Start scrolling on the Recipes page
 
 Expected Result
@@ -612,7 +610,7 @@ Actual Result
 1. Back to Top arrow appears
 2. Arrow remains on screen as user scrolls
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/scroll.png)
 *Back to top arrow*
@@ -623,19 +621,19 @@ Pass/Fail: Pass
 * Check the number of favourite stars given to the recipe updates when the star is clicked and unclicked
 * Check that confirmation of the favourite/unfavourite actions are displayed
 
-Testing Steps
+**Testing Steps**
 1. Click on the star
 2. Click again on the star
 
-Expected results
+**Expected Results**
 1. When the star is clicked if the recipe is not currently a favourite of the user the star is an outline and will change to full (green) colour star and the number underneath increases by one
 2. When the star is clicked if the recipe is currently a favourite of the user the star is a full green colour and will change to outline only. The number underneath decreases by one
 
-Actual results
+**Actual Results**
 1. When the star is clicked if the recipe is not currently a favourite of the user the star is an outline and will change to full (green) colour star and the number underneath increases by one
 2. When the star is clicked if the recipe is currently a favourite of the user the star is a full green colour and will change to outline only. The number underneath decreases by one
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/star_fv.png)
 *Star icon when user has favourited the recipe with success message*
@@ -648,19 +646,19 @@ Pass/Fail: Pass
 - Check that a success message appears and disappears shortly after
 - Check that 'Your review is pending approval' is shown until the admin approves the review for publication:
 
-Testing Steps
+**Testing Steps**
 1. Enter text into the body of the review
 2. Click submit
 3. Log into the admin panel
 4. Check the box beside the review just added and select approve in th dropdown menu
 5. Navigate back to the same recipe
 
-Expected results
+**Expected Results**
 1. Review is submitted and can be viewed in the admin panel
 2. Message of success appears on submission and disappears automatically
 3. WHen review is approved it appears in the review section of the recipe
 
-Actual results
+**Actual Results**
 1. Review is submitted and can be viewed in the admin panel
 2. Message of success appears on submission and disappears automatically
 3. WHen review is approved it appears in the review section of the recipe
@@ -677,19 +675,19 @@ Actual results
 ### 'Add a Recipe' button 
 - check that the Add a Recipe button redirects logged in users to the My Recipes page and non-logged in users to the sign in page.
 
-Testing Steps
+**Testing Steps**
 1. As a not logged in user click on the button
 2. Repeat after logging in
 
-Expected Results
+**Expected Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to the My Recipes page
 
-Actual Results
+**Actual Results**
 1. Not logged in user is redirected to Sign In page
 2. Logged in user is redirected to the My Recipes page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/add_btn.png)
 *Add a Recipe Button*
@@ -699,24 +697,24 @@ Pass/Fail: Pass
 
 * Check that search bar locates a recipe when a keyword is entered into the box. Check that the search icons startes the search and that the full recipe list page is returned after the 'x' is clicked. 
 
-Testing Steps
+**Testing Steps**
 1. Enter a word in the search box.
 2. Click the search icon
 3. Click the 'x'
 
-Expected Results
+**Expected Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
 3. The 'x' when clicked returns the full list of recipes
 
-Actual Results
+**Actual Results**
 1. The search icon starts the search function
 2. The search result displays one or more recipes.
 2. 'No recipes to view' is displayed if none are found
 3. The 'x' when clicked returns the full list of recipes
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/search2.png)
 *Search bar*
@@ -724,7 +722,7 @@ Pass/Fail: Pass
 #### 'Add a Recipe' button. 
 - check that when a user clicks on this button the recipe form opens where the user can enter all the fields of the recipe:
 
-Testing Steps
+**Testing Steps**
 1. Click on the Add a Recipe button
 
 Expected Result
@@ -733,7 +731,7 @@ Expected Result
 Actual Result
 1. Recipe form opens
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/add_btn.png)
 *Add a Recipe Button*
@@ -746,7 +744,7 @@ Pass/Fail: Pass
 - Check that the success and warning messages appear for each function
 - Check that the recipe is updated and deleted as appropriate for each function
 
-Testing Steps
+**Testing Steps**
 1. In the My Recipes list click on the view link for a recipe
 2. Check in the recipe detail that the recipe was added by the current user
 3. In the My Recipes list click on the edit link
@@ -758,7 +756,7 @@ Testing Steps
 9. Select delete again
 7. In the warning message click confirm delete
 
-Expected results
+**Expected Results**
 1. When view is clicked the full recipe detail page opens
 2. The user who added the recipe corresponds with the current user
 3. When edit is clicked the completed recipe form opens
@@ -769,7 +767,7 @@ Expected results
 8. A message appears to the user confirming that the recipe has been deleted
 9. If the user selects Go Back in the warning message, the user is redirected to the My Recipes page
 
-Actual results
+**Actual Results**
 1. When view is clicked the full recipe detail page opens
 2. The user who added the recipe corresponds with the current user
 3. When edit is clicked the completed recipe form opens
@@ -780,7 +778,7 @@ Actual results
 8. A message appears to the user confirming that the recipe has been deleted
 9. If the user selects Go Back in the warning message, the user is redirected to the My Recipes page
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/recipe_tbl.png)
 *Recipes table*
@@ -803,7 +801,7 @@ Pass/Fail: Pass
 * Check that the button Sign Up registers the user
 * Check that the Home button redirects to the home page
 
-Testing Steps
+**Testing Steps**
 1. Click Register
 2. Click the Home button
 3. Click on the Register button again
@@ -811,13 +809,13 @@ Testing Steps
 5. Click Sign Up
 6. Navigate to admin panel to see user listed
 
-Expected Results
+**Expected Results**
 1. Home button redirects to Home page
 2. User receives error message if password does not conform to requrements of length, difference to username
 3. User registers successfully and success message displays
 4. User is listed as User in admin panel
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/register_form.png)
 *Register form*
@@ -830,25 +828,25 @@ Pass/Fail: Pass
 * Check that Sign In button submits the form
 * Check that Home button redirects to the home page
 
-Testing Steps
+**Testing Steps**
 1. Enter a username without password
 2. Enter a username with password
 3. Click Home
 4. Repeat steps 1 and 2 and click sign in
 
-Expected results
+**Expected Results**
 1. Error message displays if usere does not enter a username and password
 2. User signs in successfully with username and password
 3. Success message is displayed and disappears automatically
 4. User is redirected to Home page if Home is clicked
 
-Actual results
+**Actual Results**
 1. Error message displays if usere does not enter a username and password
 2. User signs in successfully with username and password
 3. Success message is displayed and disappears automatically
 4. User is redirected to Home page if Home is clicked
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/sign_in_form.png)
 *Sign In Form*
@@ -862,23 +860,23 @@ Pass/Fail: Pass
 * Check that Home button redirects user to Home page
 * Check that user is redirected to home page after signing out:
 
-Testing Steps
+**Testing Steps**
 1. Click Sign Out in the navigation menu
 2. Click Home button
 3. Repeat step 1
 2. Click Sign Out in the Sign Out page
 
-Expected Results
+**Expected Results**
 1. Home button redirects user to Home page
 2. Sign out button signs user out and message displays to tell user they have signed out
 3. User is redirected to Home page aftere signing out
 
-Actual Results
+**Actual Results**
 1. Home button redirects user to Home page
 2. Sign out button signs user out and message displays to tell user they have signed out
 3. User is redirected to Home page aftere signing out
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/sign_out_pg.png)
 *Sign out page*
@@ -889,7 +887,7 @@ Pass/Fail: Pass
 
 * Check that user can submit a recipe to the database for display on the website and is then redirected to the My Recipes page
 
-Testing Steps
+**Testing Steps**
 1. Click Add a Recipe in the My Recipes page
 2. Click Go Back button
 3. Repeat step 1
@@ -899,7 +897,7 @@ Testing Steps
 7. Click Submit
 8. Navigate to the Home, Recipes and My Recipes pages to check the recipes are displaying, one with placeholder image and one with user's own
 
-Expected Results
+**Expected Results**
 * Go Back button at the top redirects users to the My Recipes page
 * Messages appear to indicate if required fields have not been filled in before submission.
 * User can enter text in fields
@@ -910,7 +908,7 @@ Expected Results
 * When submit button is clicked the recipe is uploaded to the database and appears on the Home page, Recipes page and My Recipes page
 * The user is redirected to My Recipes page after submitting a recipe
 
-Actual Results
+**Actual Results**
 * Go Back button at the top redirects users to the My Recipes page
 * Messages appear to indicate if required fields have not been filled in before submission.
 * User can enter text in fields
@@ -921,7 +919,7 @@ Actual Results
 * When submit button is clicked the recipe is uploaded to the database and appears on the Home page, Recipes page and My Recipes page
 * The user is redirected to My Recipes page after submitting a recipe
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ![](documentation/screenshots/recipe_add.png)
 *Recipe form*
@@ -936,7 +934,7 @@ Pass/Fail: Pass
 #### 404 Page
 * Check that the 404 page displays when the user enters a url which does not exist. 
 
-Testing Steps
+**Testing Steps**
 1. Navigate to [favoureats](https://favoureats.herokuapp.com/)
 2. Type in an incorrect url
 
@@ -948,12 +946,12 @@ Actual result
 
 ![](documentation/screenshots/404.png)
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 #### 500 Page
 * Check that a 500 server error page displays to handle internal server errors
 
-Testing Steps
+**Testing Steps**
 1. Create incorrect file path for image
 2. Navigate to [favoureats](https://favoureats.herokuapp.com/)
 
@@ -963,7 +961,7 @@ Expected result
 Actual result
 1. 500 page displays
 
-Pass/Fail: Pass
+**Pass/Fail: Pass**
 
 ## Browser compatibility
 The project was developed on Google Chrome and no issues were detected
