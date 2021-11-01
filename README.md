@@ -555,19 +555,6 @@ In the IDE:
 ## Local Deployment: Forking and Cloning
 ### Forking the Repository
 
-??????
-* For this project to run locally an env.py file must be set up by the user containing the following sensitive information:
-"DATABASE_URL" the postgres database address from Heroku
-"SECRET_KEY"
-"CLOUDINARY_URL"
-
-To create an env.py file??????????????:
-
-* All the necessary requirements must be added by creating a requirements.txt file
-`pip install -r requirements.txt`
-
-* Procfile
-
 If you wish to fork the repository to make changes without affecting the original you can fork it by navigating to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
 * Above the list of files click the dropdown code menu.
 * Select the https option and copy the link.
@@ -575,6 +562,18 @@ If you wish to fork the repository to make changes without affecting the origina
 * Change the current working directory to the desired destination location.
 * Type the git clone command with the copied URL: `git clone https://github.com/siobhanlgorman/favoureats.git`.
 * Click the 'Fork' button at the top right of the page. A forked copy of the repository will appear in your Repositories page.
+* For this project to run locally an env.py file must be set up by the user containing the following sensitive information:
+"DATABASE_URL" the postgres database address from Heroku
+"SECRET_KEY"
+"CLOUDINARY_URL"
+
+* Create your env.py file in the project directory.
+
+* All the necessary requirements must be added by creating a requirements.txt file
+`pip install -r requirements.txt`
+
+* A Procfile must be created for the project to be deployed to Heroku (see above)
+
 ### Cloning the Repository
 * On Github navigate to the main page of Favoureats [at](https://github.com/siobhanlgorman/favoureats).
 * Above the list of files click the dropdown code menu.
