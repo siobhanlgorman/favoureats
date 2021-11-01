@@ -393,6 +393,12 @@ List of recipes corresponding to search query is displayed or 'no recipes found'
 ![](documentation/screenshots/full_recipe.png)
 
 
+![](documentation/screenshots/star_fv.png)
+
+
+![](documentation/screenshots/star_un_fv.png)
+
+
 #### *User Story*:
 * As a logged-in user I can review a recipe so that I can interact with the site (must-have / complete)(#32)
 
@@ -528,7 +534,7 @@ Thankyou message displays thanking user for submitting a review. 'Your review is
 2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
 
 **Actual Results**
-1. Both users ar directed to Recipes Page
+1. Both users are directed to Recipes Page
 2. Only logged in user can open My Recipes page while not logged in user is directed to Sign In page
 
 **Pass/Fail: Pass**
