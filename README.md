@@ -29,7 +29,7 @@ There are 10 Epics and 20 User Stories. The User Stories are numbered so can be 
 * User Stories:
   * As a site admin I can CRUD draft recipe posts so that I can complete the recipes later (must-have / complete)[#8](https://github.com/siobhanlgorman/favoureats/issues/8)
   * As a site admin I can CRUD recipes so that I can manage my site content (must-have / complete)[#9](https://github.com/siobhanlgorman/favoureats/issues/9)
-  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)[#10](https://github.com/siobhanlgorman/favoureats/issues/10))
+  * As a site admin I can approve reviews so that I can filter out inappropriate content (must-have / complete)[#10](https://github.com/siobhanlgorman/favoureats/issues/10)
   * As a site admin I can view the number of favourites on a recipe post so that I can know which are the most popular[#28](https://github.com/siobhanlgorman/favoureats/issues/28)
   * As a site admin I can view reviews of a recipe post so that I can read the commentary on a recipe[#29](https://github.com/siobhanlgorman/favoureats/issues/29)
   * As a site admin I can create reviews of recipe posts so that I can generate discussion on recipe posts[#31](https://github.com/siobhanlgorman/favoureats/issues/31)
@@ -396,42 +396,47 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 
 # Technologies Used
 ## Languages
-* [HTML5](https://en.wikipedia.org/wiki/HTML5) was used to build the website
-* [CSS](https://en.wikipedia.org/wiki/CSS) was used to style the HTML
-* [JavaScript](https://www.javascript.com/) (no custom JS) was used with Bootstrap
-* [Bootstrap 5.1.3](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used to style the website
-* [Python](https://www.python.org/)
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) was used to build the front-end website
+* [CSS](https://en.wikipedia.org/wiki/CSS) was used to style the HTML and add responsiveness
+* [JavaScript](https://www.javascript.com/) (no custom JS) was used with Bootstrap to provide interaction on the front-end
+* [Bootstrap 5.1.3](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used to style the website, add responsiveness and interactivity
+* [Python](https://www.python.org/) was used to code the back end of the project
+* [Python packages](https://pypi.org/)
   
 ## Frameworks
 * [Django 3.2.8](https://docs.djangoproject.com/en/3.2/)
 * Django supporting libraries:
-  - allauth
-  - crispy-forms
-  - summernote
-  - gunicorn
-  - psycopg2
-  - dj-database
+  - [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) for authentication, registration, account management as well as 3rd party (social) account authentication
+  - [crispy-forms](https://django-crispy-forms.readthedocs.io/) to style the forms
+  - [summernote](https://summernote.org/) as editor
+  - [gunicorn](https://gunicorn.org/) as the server for Heroku
+  - [psycopg2](https://pypi.org/project/psycopg2/)as an adaptor for Python and PostgreSQL databases
+  - [dj-database](https://pypi.org/project/dj-database-url/) to parse the database URL from the environment variables in Heroku
 
 ## Database
-* Postgres for the production database
+* Heroku Postgres for the production database
 * SQLite for the local environment for automated testing
 
 ## Other Technologies
 * [Cloudinary](https://cloudinary.com/) was used to host the static files and media
 * [Gitpod](https://cloudinary.com/) as the IDE
-* [GitHub](https://github.com/) for version control
+* [Git](https://git-scm.com/) used for version control via the terminal in Gitpod
+* [GitHub](https://github.com/) used to store the code in the repository
 * [Heroku](https://www.heroku.com/) was used as the cloud based platform for deployment
 * [Fontawesome](https://fontawesome.com/) for icons
 * [Google Fonts](https://fonts.google.com/) for the fonts
 * [Balsamiq](https://balsamiq.com/) for the wireframes
-* [Google Dev Tools](https://developer.chrome.com/docs/devtools/) for inspection during development
+* [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) for inspection during development to check reponsiveness and contrast and JS errors in the console
 * [Favicon.io](https://favicon.io/favicon-converter/) for the favicon
 * [Techsini](https://techsini.com/multi-mockup/index.php) was used for the site mockups
 * [Google Chrome](https://www.google.com/intl/en_ie/chrome/) for previewing the project in the browser
-* [Google Sheets](https://www.google.com/sheets/about/) - for the data models
+* [Google Sheets](https://www.google.com/sheets/about/) - for the database model tables
 * [Freelogodesign](https://www.freelogodesign.org/) for the leaf logo
-* [Summernote](https://summernote.org/) - a WYSIWYG editor
-* [Crispy forms](https://django-crispy-forms.readthedocs.io/) - to format the front-end forms
+* [Coverage](https://coverage.readthedocs.io/) to generate a report on the automated testing
+* [W3C Markup Validation Service](https://validator.w3.org/)
+* [W3C CSS Validation Service(Jigsaw)](https://jigsaw.w3.org/css-validator/)
+* [PEP8](https://www.python.org/dev/peps/pep-0008/) to validate the Python code
+* [Picresize](https://picresize.com/) to resize images
 
 ## Testing
 The full testing documentation can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/TESTING.md)
