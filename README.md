@@ -619,12 +619,16 @@ Muesli Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=li
 
 Sicilian Stew Image by <a href="https://pixabay.com/users/ion68-2001618/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Ion68</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Pixabay</a>
 
+Pavlova Image by <a href="https://pixabay.com/users/blandinejoannic-15617008/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Blandine JOANNIC</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Pixabay</a>
+
 ### Recipes
 [Chili](https://www.theguardian.com/food/2020/oct/03/meera-sodha-recipe-vegan-oven-baked-chilli-butternut-squash-recipe)
 
 [Lasagne](https://www.theguardian.com/food/2020/feb/24/thomasina-miers-recipe-for-cheats-lasagne-with-ricotta-and-greens)
 
 [Sweet Potato and Ginger Soup](https://www.bbc.co.uk/food/recipes/sweet_potato_soup_62834)
+
+[Pavlova](https://www.bbcgoodfood.com/recipes/strawberry-pavlova)
 
 ## Acknowledgements
 There would have been no submission without the following people:
