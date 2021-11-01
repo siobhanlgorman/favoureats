@@ -316,6 +316,7 @@ A 404 page was created to handle users' navigational errors and to direct them b
 #### 500 Page
 A 500 server error page was created to handle internal server errors
 
+![](documentation/screenshots/500_error.png)
 
 ### Future Features
 * Improvement could be made to the search feature. During implementation with a clear function inside the search box it was found that this only cleared the search but left the search findings list. It was decided that better UX would be to clear back to the full list so the form was changed and an 'x' was added outside the box to reload the page. Given further time I would look for a neater solution.

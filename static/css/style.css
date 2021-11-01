@@ -7,7 +7,7 @@ body {
 }
 
 p {
-    font-family: 'Poppins', sans-serif
+    font-family: 'Poppins', sans-serif;
 }
 
 h1,
@@ -24,7 +24,6 @@ h5 {
 }
 
 /* Icons */
-
 i {
     color: green;
 }
@@ -142,13 +141,13 @@ a {
 }
 
 h2.card-title {
-    color: #3a3a3a
+    color: #3a3a3a;
 }
 
 /* Account forms */
 .account-form {
     width: 75%;
-    margin: auto
+    margin: auto;
 }
 
 /* Cursor */
@@ -182,6 +181,11 @@ a.page-link {
     color: white;
     background-color: green;
     border: none;
+}
+
+.btn-success {
+    background-color: green;
+    color: white;
 }
 
 .grn-btn i {
@@ -254,6 +258,7 @@ table {
     text-align: center;
     padding: 10px;
     background-color: white;
+    color: #3a3a3a;
 }
 
 .favourite-icon {
