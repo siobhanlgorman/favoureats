@@ -1104,34 +1104,35 @@ Sign Out Page
 
 The following files were checked:
 
-* favoureats/views.py
+* **favoureats/views.py**
 ![](documentation/screenshots/pep8_views2.png)
 
-* recipe/views.py
+
+* **recipe/views.py**
 ![](documentation/screenshots/pep8_views.png)
 
-* models.py
+* **models.py**
 ![](documentation/screenshots/pep8_models.png)
 
-* forms.py
+* **forms.py**
 ![](documentation/screenshots/pep8_forms.png)
 
-* urls.py
+* **urls.py**
 ![](documentation/screenshots/pep8_urls.png)
 
-* admin.py
+* **admin.py**
 ![](documentation/screenshots/pep8_admin.png)
 
-* test_models.py
+* **test_models.py**
 ![](documentation/screenshots/pep8_test_models.png)
 
-* test_views.py
+* **test_views.py**
 ![](documentation/screenshots/pep8_test_views.png)
 
-* test_urls.py
+* **test_urls.py**
 ![](documentation/screenshots/pep8_test_urls.png)
 
-* settings.py
+* **settings.py**
 
 The test returned the following line too long errors
 ![](documentation/screenshots/pep8_settings.png)
