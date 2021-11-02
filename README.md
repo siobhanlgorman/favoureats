@@ -578,6 +578,7 @@ In the IDE:
 * Open the terminal.
 * Change the current working directory to the desired destination location.
 * Type the git clone command with the copied URL: 
+
 `git clone https://github.com/siobhanlgorman/favoureats.git`.
 * Press enter to create the local clone.
 * For the project to run an env.py file must be created as in step 4 of 'creating your Heroku app' above. As this is not stored in Github it will not be cloned with the rest of the files.
@@ -594,7 +595,7 @@ In the IDE:
   * This series: [Django Testing Tutorial - What Is Testing? #1](https://www.youtube.com/watch?v=qwypH3YvMKc)
 
 
-* [Stack Overflow](https://stackoverflow.com/) was used for general queries
+* [Stack Overflow](https://stackoverflow.com/) and [Slack](https://slack.com/) were used for general queries
 
 ### Images
 
@@ -640,7 +641,7 @@ Recipes are from my own handwritten recipe books apart from these:
 There would have been no submission without the following people:
 * My colleagues on the course: in particular:
   - Elaine Roche for help with setting up local environment for automated testing
-  - Catriona McDonnell for endless support
+  - Catriona McDonnell for constant support
   - Moira Hartigan, Laura Hartnett, Miwa Mullane, Kavitha Santhanesh for resources, tips and support
 * Our Course Facilitator Kasia Bogucka: for always being there advising, encouraging and supporting
 * My mentor Tim Nelson: for his endless knowledge, patience and advice
