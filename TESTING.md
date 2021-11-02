@@ -1006,17 +1006,18 @@ The project was developed on Google Chrome and no issues were detected
 Additional tests were conducted on Mozilla Firefox and Microsoft Edge with no issues detected
 
 ![](documentation/screenshots/edge.png)
+*Microsoft Edge*
 
 ![](documentation/screenshots/firefox.png)
+*Mozilla Firefox*
 
 ## Responsiveness
-
 The website was developed on a 15" laptop and a 24" monitor and no issues were found.
 
 Chrome Developer tools were used to check responsiveness on all sized devices throughout the process and adjustments were made.
 
 Additional tests were conducted in the later stages on various mobile devices: 
-* Moto g8+
+* Moto G8+
 * IPhone 11
 * Iphone SE2 
 * IPhone XR. 
@@ -1024,6 +1025,8 @@ Additional tests were conducted in the later stages on various mobile devices:
 Results: Some problems were found in rendering the search bar on the IPhone 11 and SE2 (see bug reports) which were addressed. However an issue remains with the XR (see unresolved bug report) which warrants further investigation.
 
 ![](documentation/screenshots/mob_view.png)
+
+
 ![](documentation/screenshots/ipad_view.png)
 
 
