@@ -563,7 +563,7 @@ In the IDE:
 ### Local Deployment: Forking and Cloning
 #### Forking the Repository
 
-* To fork the project navigate to the favoureats repository [at](https://github.com/siobhanlgorman/favoureats). 
+* To fork the project navigate to the favoureats repository at https://github.com/siobhanlgorman/favoureats
 * Above the list of files click the dropdown code menu.
 * Select the https option and copy the link.
 * Open the terminal.
@@ -572,7 +572,7 @@ In the IDE:
 
 
 #### Cloning the Repository
-* On Github navigate to the main page of Favoureats [at](https://github.com/siobhanlgorman/favoureats).
+* On Github navigate to the main page of Favoureats at https://github.com/siobhanlgorman/favoureats
 * Above the list of files click the dropdown code menu.
 * Select the https option and copy the link.
 * Open the terminal.
