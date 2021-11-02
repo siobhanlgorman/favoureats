@@ -105,7 +105,7 @@ WSGI_APPLICATION = 'favoureats.wsgi.application'
 
 development = os.environ.get('DEVELOPMENT', False)
 
-# Toggle between development and production environments for automated testing
+# Toggle between development/production environments (from Elaine Roche)
 
 if development == 'True':
     DATABASES = {

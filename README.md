@@ -621,7 +621,12 @@ Sicilian Stew Image by <a href="https://pixabay.com/users/ion68-2001618/?utm_sou
 
 Pavlova Image by <a href="https://pixabay.com/users/blandinejoannic-15617008/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Blandine JOANNIC</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Pixabay</a>
 
+Pizza Image by <a href="https://pixabay.com/users/igorovsyannykov-6222956/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Igor Ovsyannykov</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Pixabay</a>
+
 ### Recipes
+
+Other than these the recipes are my own.
+
 [Chili](https://www.theguardian.com/food/2020/oct/03/meera-sodha-recipe-vegan-oven-baked-chilli-butternut-squash-recipe)
 
 [Lasagne](https://www.theguardian.com/food/2020/feb/24/thomasina-miers-recipe-for-cheats-lasagne-with-ricotta-and-greens)
