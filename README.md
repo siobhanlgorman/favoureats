@@ -599,9 +599,9 @@ In the IDE:
 
 ### Images
 
-Dinner Party Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
+[Dinner Party](https://pixabay.com/images/id-1852926/) Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1852926">Pixabay</a>
 
-Chickpea Curry Image by <a href="https://pixabay.com/users/marekonline-1095186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">marekonline</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">Pixabay</a>)
+[Chickpea Curry](https://pixabay.com/images/id-1271639/) Image by <a href="https://pixabay.com/users/marekonline-1095186/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">marekonline</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1271639">Pixabay</a>)
 
 [Lasagne by Daniele Sgura from Pexels](https://www.pexels.com/photo/close-up-photo-of-lasagna-on-ceramic-plate-4162496/)
 
@@ -609,23 +609,23 @@ Chickpea Curry Image by <a href="https://pixabay.com/users/marekonline-1095186/?
 
 [Tofu Photo by Ella Olsson from Pexels](https://www.pexels.com/photo/vegetable-salad-3026808/)
 
-Chili image by <a href="https://pixabay.com/users/ritae-19628/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">RitaE</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">Pixabay</a>
+[Chili image](https://pixabay.com/images/id-6383373/) by <a href="https://pixabay.com/users/ritae-19628/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">RitaE</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=6383373">Pixabay</a>
 
-Sweet Potato Soup image by <a href="https://pixabay.com/users/einladung_zum_essen-3625323/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Bernadette Wurzinger</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Pixabay</a>
+[Sweet Potato Soup](https://pixabay.com/images/id-1776639/) image by <a href="https://pixabay.com/users/einladung_zum_essen-3625323/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Bernadette Wurzinger</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1776639">Pixabay</a>
 
 [Brown Bread](https://pixabay.com/images/id-1508064/) by <a href="https://pixabay.com/users/madmoissele-2895357/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1508064">madmoissele</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1508064">Pixabay</a>
 
-Sourdough Bread Image by <a href="https://pixabay.com/users/markcraemers-9384631/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">markcraemers</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">Pixabay</a>
+[Sourdough Bread](https://pixabay.com/images/id-3666570/) Image by <a href="https://pixabay.com/users/markcraemers-9384631/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">markcraemers</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3666570">Pixabay</a>
 
-Muesli Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pixabay</a>
+[Muesli](https://pixabay.com/images/id-1846085/) Image by <a href="https://pixabay.com/users/pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1846085">Pixabay</a>
 
-Sicilian Stew Image by <a href="https://pixabay.com/users/ion68-2001618/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Ion68</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Pixabay</a>
+[Sicilian Stew](https://pixabay.com/images/id-1252654/) Image by <a href="https://pixabay.com/users/ion68-2001618/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Ion68</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1252654">Pixabay</a>
 
-Pavlova Image by <a href="https://pixabay.com/users/blandinejoannic-15617008/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Blandine JOANNIC</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Pixabay</a>
+[Pavlova](https://pixabay.com/images/id-5280271/) Image by <a href="https://pixabay.com/users/blandinejoannic-15617008/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Blandine JOANNIC</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5280271">Pixabay</a>
 
-Pizza Image by <a href="https://pixabay.com/users/igorovsyannykov-6222956/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Igor Ovsyannykov</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Pixabay</a>
+[Pizza Image](https://pixabay.com/images/id-3007395/) by <a href="https://pixabay.com/users/igorovsyannykov-6222956/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Igor Ovsyannykov</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Pixabay</a>
 
-Calamari (Image by <a href="https://pixabay.com/users/jonathanvalencia5-4638583/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Jonathan Valencia</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Pixabay</a>)
+[Calamari](https://pixabay.com/images/id-2536527/) (Image by <a href="https://pixabay.com/users/jonathanvalencia5-4638583/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Jonathan Valencia</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Pixabay</a>)
 
 ### Recipes
 
