@@ -1151,9 +1151,9 @@ The test returned the following line too long errors
 
 This refers to the following lines which are built in to Django settings. It is acceptable not to force a line break in these cases.
 
-![](documentation/screenshots/pep8_settings.png)
+![](documentation/screenshots/pep8_lines1.png)
 
-![](documentation/screenshots/pep8_settings.png)
+![](documentation/screenshots/pep8_lines2.png)
 
 
 ### Lighthouse
