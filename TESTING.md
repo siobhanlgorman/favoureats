@@ -1105,31 +1105,40 @@ Sign Out Page
 The following files were checked:
 
 * **favoureats/views.py**
+
 ![](documentation/screenshots/pep8_views2.png)
 
 
 * **recipe/views.py**
+
 ![](documentation/screenshots/pep8_views.png)
 
 * **models.py**
+
 ![](documentation/screenshots/pep8_models.png)
 
 * **forms.py**
+
 ![](documentation/screenshots/pep8_forms.png)
 
 * **urls.py**
+
 ![](documentation/screenshots/pep8_urls.png)
 
 * **admin.py**
+
 ![](documentation/screenshots/pep8_admin.png)
 
 * **test_models.py**
+
 ![](documentation/screenshots/pep8_test_models.png)
 
 * **test_views.py**
+
 ![](documentation/screenshots/pep8_test_views.png)
 
 * **test_urls.py**
+
 ![](documentation/screenshots/pep8_test_urls.png)
 
 * **settings.py**
@@ -1146,8 +1155,26 @@ This refers to the following lines which are built in to Django settings. It is 
 
 ### Lighthouse
 
-All pages were checked on lighthouse with the results between 80% and 100% for each page. Here is one example:
+All pages were checked on lighthouse with the results between 80% and 100% for each page on mobile and desktop. Desktop results: 
+
+* **Home Page**
+
+![](documentation/screenshots/lighthouse1.png)
+
+* **About Page**
+
+![](documentation/screenshots/lighthouse2.png)
+
+
+* **Recipes Page**
 
 ![](documentation/screenshots/lighthouse3.png)
 
 
+* **My Recipes Page**
+
+![](documentation/screenshots/lighthouse4.png)
+
+* **Recipe Detail Page**
+
+![](documentation/screenshots/lighthouse5.png)
