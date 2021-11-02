@@ -625,6 +625,8 @@ Pavlova Image by <a href="https://pixabay.com/users/blandinejoannic-15617008/?ut
 
 Pizza Image by <a href="https://pixabay.com/users/igorovsyannykov-6222956/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Igor Ovsyannykov</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3007395">Pixabay</a>
 
+[Calamari](Image by <a href="https://pixabay.com/users/jonathanvalencia5-4638583/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Jonathan Valencia</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2536527">Pixabay</a>)
+
 ### Recipes
 
 Recipes are from my own handwritten recipe books apart from these:
