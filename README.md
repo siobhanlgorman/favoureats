@@ -382,10 +382,9 @@ The design style of the website is minimalist, fresh and clean looking.
 The following colour palette was used from [Coolors](https://coolors.co/ffffff-008000-f5f5f5-cccccc-3a3a3a):
 ![](documentation/screenshots/colours.png)
 
-The colours are chosen to convey nature, fresh clean and nutritious: green, pale grey, dark grey, black and white.
-The predominant colour is green (#008000): used for buttons, links and icons
-Font colours are charcoal grey and white, adjusted for contrast
-Shading is muted grey.
+The colours are chosen to convey nature, fresh clean and nutritious: green, pale grey, dark grey, black and white. 
+
+The predominant colour is green (#008000): used for buttons, links and icons. Font colours are charcoal grey and white, adjusted for contrast. Shading is muted grey.
 
 ### Typography
 
@@ -402,7 +401,7 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * [JavaScript](https://www.javascript.com/) (no custom JS) was used with Bootstrap to provide interaction on the front-end
 * [Bootstrap 5.1.3](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used to style the website, add responsiveness and interactivity
 * [Python](https://www.python.org/) was used to code the back end of the project
-* [Python packages](https://pypi.org/)
+* [PyPI](https://pypi.org/) to install the python packages
   
 ## Frameworks
 * [Django 3.2.8](https://docs.djangoproject.com/en/3.2/)
@@ -438,7 +437,7 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * [W3C CSS Validation Service(Jigsaw)](https://jigsaw.w3.org/css-validator/)
 * [PEP8](https://www.python.org/dev/peps/pep-0008/) to validate the Python code
 * [Picresize](https://picresize.com/) to resize images
-* [Coolors](https://coolors.co)
+* [Coolors](https://coolors.co) to generate the colour palette
 
 ## Testing
 The full testing documentation can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/TESTING.md)
@@ -627,7 +626,7 @@ Pizza Image by <a href="https://pixabay.com/users/igorovsyannykov-6222956/?utm_s
 
 ### Recipes
 
-Other than these the recipes are my own.
+Recipes are from my own handwritten recipe books apart from these:
 
 [Chili](https://www.theguardian.com/food/2020/oct/03/meera-sodha-recipe-vegan-oven-baked-chilli-butternut-squash-recipe)
 
