@@ -1149,7 +1149,7 @@ The following files were checked:
 The test returned the following line too long errors
 ![](documentation/screenshots/pep8_settings.png)
 
-This refers to the following lines which are built in to Django settings. It is acceptable not to force a line break in these cases.
+This refers to the following lines which are built in to Django settings. This is a known Django error and it is acceptable not to force a line break in these cases.
 
 ![](documentation/screenshots/pep8_lines1.png)
 

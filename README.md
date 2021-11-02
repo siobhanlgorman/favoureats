@@ -379,6 +379,7 @@ The design style of the website is minimalist, fresh and clean looking.
 
 ### Colours
 
+The following colour palette was used from [Coolors](https://coolors.co/ffffff-008000-f5f5f5-cccccc-3a3a3a):
 ![](documentation/screenshots/colours.png)
 
 The colours are chosen to convey nature, fresh clean and nutritious: green, pale grey, dark grey, black and white.
@@ -437,6 +438,7 @@ The hero image was chosen as the food is primarily vegetarian. The image is simp
 * [W3C CSS Validation Service(Jigsaw)](https://jigsaw.w3.org/css-validator/)
 * [PEP8](https://www.python.org/dev/peps/pep-0008/) to validate the Python code
 * [Picresize](https://picresize.com/) to resize images
+* [Coolors](https://coolors.co)
 
 ## Testing
 The full testing documentation can be seen [here](https://github.com/siobhanlgorman/favoureats/blob/main/TESTING.md)
